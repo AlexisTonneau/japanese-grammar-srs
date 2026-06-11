@@ -6,3 +6,6 @@ dist
 .env.local
 .vscode
 .idea
+
+# Personal Anki deck export (contains user's full vocab list with intervals)
+/data/

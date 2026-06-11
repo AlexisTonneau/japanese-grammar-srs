@@ -14,6 +14,24 @@ function readAll(): Record<string, Progress> {
 
 function writeAll(map: Record<string, Progress>): void {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(map));
+  notifyChange(STORAGE_KEY);
+}
+
+const CHANGE_EVENT = "minna-srs:change";
+
+function notifyChange(key: string): void {
+  if (typeof window !== "undefined") {
+    window.dispatchEvent(new CustomEvent(CHANGE_EVENT, { detail: { key } }));
+  }
+}
+
+export function onLocalChange(handler: (key: string) => void): () => void {
+  if (typeof window === "undefined") return () => {};
+  const listener = (e: Event) => {
+    handler((e as CustomEvent<{ key: string }>).detail?.key ?? "");
+  };
+  window.addEventListener(CHANGE_EVENT, listener);
+  return () => window.removeEventListener(CHANGE_EVENT, listener);
 }
 
 export const localProgressStore: ProgressStore = {
@@ -41,4 +59,5 @@ export function readActiveChapters(): number[] {
 
 export function writeActiveChapters(chapters: number[]): void {
   localStorage.setItem(ACTIVE_CHAPTERS_KEY, JSON.stringify(chapters));
+  notifyChange(ACTIVE_CHAPTERS_KEY);
 }

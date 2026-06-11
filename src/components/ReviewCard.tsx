@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { Volume2 } from "lucide-react";
 import type { GrammarItem } from "../data/grammarData";
 import type { Grade } from "../srs/types";
@@ -12,6 +12,11 @@ interface Props {
 export function ReviewCard({ item, onGrade }: Props) {
   const [revealed, setRevealed] = useState(false);
 
+  const sentence = useMemo(() => {
+    const list = item.sentences.length ? item.sentences : [{ jp: "", en: "" }];
+    return list[Math.floor(Math.random() * list.length)];
+  }, [item.id]);
+
   const handleGrade = (g: Grade) => {
     setRevealed(false);
     onGrade(g);
@@ -21,7 +26,7 @@ export function ReviewCard({ item, onGrade }: Props) {
     <div className="w-full max-w-2xl mx-auto">
       <div className="bg-white rounded-2xl border border-neutral-200 p-10 sm:p-14 min-h-[24rem] flex flex-col justify-center">
         <button
-          onClick={() => speakJapanese(item.japaneseSentence)}
+          onClick={() => speakJapanese(sentence.jp)}
           className="self-end text-neutral-400 hover:text-neutral-700 transition-colors"
           aria-label="Play audio"
         >
@@ -29,7 +34,7 @@ export function ReviewCard({ item, onGrade }: Props) {
         </button>
 
         <p className="font-jp text-3xl sm:text-4xl text-neutral-900 text-center leading-relaxed mt-2">
-          {item.japaneseSentence}
+          {sentence.jp}
         </p>
 
         {revealed && (
@@ -43,7 +48,7 @@ export function ReviewCard({ item, onGrade }: Props) {
               Translation
             </div>
             <p className="text-lg text-neutral-700 leading-relaxed">
-              {item.englishTranslation}
+              {sentence.en}
             </p>
 
             <div className="text-xs uppercase tracking-wider text-neutral-400 pt-2">

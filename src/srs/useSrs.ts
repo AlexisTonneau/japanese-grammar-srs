@@ -4,6 +4,7 @@ import type { GrammarItem } from "../data/grammarData";
 import { gradeProgress, initialProgress, isDue, isMastered } from "./algorithm";
 import {
   localProgressStore,
+  onLocalChange,
   readActiveChapters,
   writeActiveChapters,
 } from "./storage";
@@ -23,16 +24,23 @@ export function useSrs() {
   );
 
   useEffect(() => {
-    const handler = (e: StorageEvent) => {
-      if (e.key && e.key.startsWith("minna-srs:progress")) {
+    const refresh = (key: string) => {
+      if (key.startsWith("minna-srs:progress")) {
         setProgressMap(localProgressStore.all());
       }
-      if (e.key && e.key.startsWith("minna-srs:active-chapters")) {
+      if (key.startsWith("minna-srs:active-chapters")) {
         setActiveChapters(new Set(readActiveChapters()));
       }
     };
-    window.addEventListener("storage", handler);
-    return () => window.removeEventListener("storage", handler);
+    const storageHandler = (e: StorageEvent) => {
+      if (e.key) refresh(e.key);
+    };
+    window.addEventListener("storage", storageHandler);
+    const offLocal = onLocalChange(refresh);
+    return () => {
+      window.removeEventListener("storage", storageHandler);
+      offLocal();
+    };
   }, []);
 
   const getProgress = useCallback(
