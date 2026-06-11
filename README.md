@@ -15,9 +15,14 @@ This app trades feature breadth for a clean review loop and a 3-button "vibe che
 ## Screenshots
 
 ### Dashboard
-Chapter grid with per-chapter mastered counts and a single "Review Due" CTA.
+Chapter grid with per-chapter mastered counts and a single "Review Due" CTA. Inactive chapters are locked so you only review what you've actually studied.
 
 ![Dashboard](docs/screenshots/dashboard.png)
+
+### Selecting which chapters you've studied
+Tap **Edit** to toggle chapters on or off. Only active chapters count toward reviews.
+
+![Edit chapter selection](docs/screenshots/dashboard-edit.png)
 
 ### Review card — front
 Large Japanese typography, optional TTS, single "Show Answer" action.

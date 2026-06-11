@@ -1,6 +1,7 @@
 import type { Progress, ProgressStore } from "./types";
 
 const STORAGE_KEY = "minna-srs:progress:v1";
+const ACTIVE_CHAPTERS_KEY = "minna-srs:active-chapters:v1";
 
 function readAll(): Record<string, Progress> {
   try {
@@ -28,3 +29,16 @@ export const localProgressStore: ProgressStore = {
     return readAll();
   },
 };
+
+export function readActiveChapters(): number[] {
+  try {
+    const raw = localStorage.getItem(ACTIVE_CHAPTERS_KEY);
+    return raw ? (JSON.parse(raw) as number[]) : [];
+  } catch {
+    return [];
+  }
+}
+
+export function writeActiveChapters(chapters: number[]): void {
+  localStorage.setItem(ACTIVE_CHAPTERS_KEY, JSON.stringify(chapters));
+}

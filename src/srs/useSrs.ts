@@ -2,7 +2,11 @@ import { useCallback, useEffect, useState } from "react";
 import { grammarData } from "../data/grammarData";
 import type { GrammarItem } from "../data/grammarData";
 import { gradeProgress, initialProgress, isDue, isMastered } from "./algorithm";
-import { localProgressStore } from "./storage";
+import {
+  localProgressStore,
+  readActiveChapters,
+  writeActiveChapters,
+} from "./storage";
 import type { Grade, Progress } from "./types";
 
 export interface ItemWithProgress {
@@ -14,11 +18,17 @@ export function useSrs() {
   const [progressMap, setProgressMap] = useState<Record<string, Progress>>(() =>
     localProgressStore.all()
   );
+  const [activeChapters, setActiveChapters] = useState<Set<number>>(
+    () => new Set(readActiveChapters())
+  );
 
   useEffect(() => {
     const handler = (e: StorageEvent) => {
-      if (e.key && e.key.startsWith("minna-srs:")) {
+      if (e.key && e.key.startsWith("minna-srs:progress")) {
         setProgressMap(localProgressStore.all());
+      }
+      if (e.key && e.key.startsWith("minna-srs:active-chapters")) {
+        setActiveChapters(new Set(readActiveChapters()));
       }
     };
     window.addEventListener("storage", handler);
@@ -46,12 +56,13 @@ export function useSrs() {
   const dueItems = useCallback((): ItemWithProgress[] => {
     const now = new Date();
     return grammarData
+      .filter((item) => activeChapters.has(item.chapter))
       .map((item) => ({
         item,
         progress: progressMap[item.id] ?? initialProgress(item.id, now),
       }))
       .filter(({ progress }) => isDue(progress, now));
-  }, [progressMap]);
+  }, [progressMap, activeChapters]);
 
   const chapterStats = useCallback(
     (chapter: number) => {
@@ -65,5 +76,36 @@ export function useSrs() {
     [progressMap]
   );
 
-  return { progressMap, getProgress, grade, dueItems, chapterStats };
+  const isChapterActive = useCallback(
+    (chapter: number) => activeChapters.has(chapter),
+    [activeChapters]
+  );
+
+  const toggleChapterActive = useCallback((chapter: number) => {
+    setActiveChapters((prev) => {
+      const next = new Set(prev);
+      if (next.has(chapter)) next.delete(chapter);
+      else next.add(chapter);
+      writeActiveChapters([...next]);
+      return next;
+    });
+  }, []);
+
+  const setAllChaptersActive = useCallback((chapters: number[]) => {
+    const next = new Set(chapters);
+    writeActiveChapters([...next]);
+    setActiveChapters(next);
+  }, []);
+
+  return {
+    progressMap,
+    getProgress,
+    grade,
+    dueItems,
+    chapterStats,
+    activeChapters,
+    isChapterActive,
+    toggleChapterActive,
+    setAllChaptersActive,
+  };
 }
