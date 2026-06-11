@@ -35,7 +35,16 @@ Grammar point, translation, and a structural/nuance note. Three grades: **Forgot
 - **Simplified SM-2 algorithm** with per-item `interval`, `easeFactor`, and `nextReviewDate`
 - **localStorage-backed progress** — no account, no backend
 - **Web Speech API** for Japanese TTS (uses your OS's `ja-JP` voices)
+- **Installable as a PWA** — works offline, full-screen on iOS/Android home screen
 - **153 grammar items** seeded across all 25 chapters of Book 2
+
+## Install as an iPhone app
+
+1. Open the [live site](https://alexistonneau.github.io/japanese-grammar-srs/) in **Safari** (not Chrome — iOS only allows Safari to install PWAs).
+2. Tap **Share** → **Add to Home Screen**.
+3. Launch from the home screen — full-screen, no browser chrome, works offline.
+
+On Android, Chrome will offer an install prompt automatically.
 
 ## Tech
 
