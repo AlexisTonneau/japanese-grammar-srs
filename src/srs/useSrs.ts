@@ -26,8 +26,8 @@ export function useSrs() {
   }, []);
 
   const getProgress = useCallback(
-    (itemId: string): Progress => {
-      return progressMap[itemId] ?? initialProgress(itemId, new Date());
+    (itemId: string): Progress | null => {
+      return progressMap[itemId] ?? null;
     },
     [progressMap]
   );
@@ -46,9 +46,12 @@ export function useSrs() {
   const dueItems = useCallback((): ItemWithProgress[] => {
     const now = new Date();
     return grammarData
-      .map((item) => ({ item, progress: getProgress(item.id) }))
+      .map((item) => ({
+        item,
+        progress: progressMap[item.id] ?? initialProgress(item.id, now),
+      }))
       .filter(({ progress }) => isDue(progress, now));
-  }, [getProgress]);
+  }, [progressMap]);
 
   const chapterStats = useCallback(
     (chapter: number) => {
