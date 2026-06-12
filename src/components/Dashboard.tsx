@@ -2,6 +2,7 @@ import { useState } from "react";
 import { BookOpen, Check, Lock, Pencil, Sparkles } from "lucide-react";
 import { grammarData } from "../data/grammarData";
 import { useSrs } from "../srs/useSrs";
+import { SyncStatus } from "./SyncStatus";
 
 interface Props {
   onStartReview: () => void;
@@ -31,25 +32,28 @@ export function Dashboard({ onStartReview, onOpenChapter }: Props) {
 
   return (
     <div className="max-w-4xl mx-auto px-6 py-12">
-      <header className="mb-12 flex items-start justify-between gap-4">
-        <div>
-          <div className="flex items-center gap-2 text-neutral-400 text-sm mb-2">
-            <BookOpen size={14} />
-            <span>Minna no Nihongo · Book 2</span>
+      <header className="mb-12">
+        <div className="flex items-start justify-between gap-4 mb-3">
+          <div>
+            <div className="flex items-center gap-2 text-neutral-400 text-sm mb-2">
+              <BookOpen size={14} />
+              <span>Minna no Nihongo · Book 2</span>
+            </div>
+            <h1 className="text-3xl font-semibold text-neutral-900">Grammar Review</h1>
           </div>
-          <h1 className="text-3xl font-semibold text-neutral-900">Grammar Review</h1>
+          <button
+            onClick={() => setEditing((v) => !v)}
+            className={`flex items-center gap-1.5 text-sm px-3 py-2 rounded-lg border transition-colors ${
+              editing
+                ? "bg-neutral-900 text-white border-neutral-900"
+                : "bg-white text-neutral-700 border-neutral-200 hover:border-neutral-400"
+            }`}
+          >
+            {editing ? <Check size={16} /> : <Pencil size={16} />}
+            {editing ? "Done" : "Edit"}
+          </button>
         </div>
-        <button
-          onClick={() => setEditing((v) => !v)}
-          className={`flex items-center gap-1.5 text-sm px-3 py-2 rounded-lg border transition-colors ${
-            editing
-              ? "bg-neutral-900 text-white border-neutral-900"
-              : "bg-white text-neutral-700 border-neutral-200 hover:border-neutral-400"
-          }`}
-        >
-          {editing ? <Check size={16} /> : <Pencil size={16} />}
-          {editing ? "Done" : "Edit"}
-        </button>
+        <SyncStatus />
       </header>
 
       {editing ? (

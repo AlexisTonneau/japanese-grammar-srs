@@ -68,16 +68,19 @@ src/
 ├── srs/
 │   ├── types.ts             Grade, Progress, ProgressStore
 │   ├── algorithm.ts         pure SM-2-lite (no React)
-│   ├── storage.ts           localStorage adapter
+│   ├── storage.ts           localStorage adapter (source of truth)
+│   ├── supabase.ts          Supabase client (null when env vars unset)
+│   ├── sync.ts              local ↔ Supabase reconciliation, auth helpers
 │   └── useSrs.ts            React hook over algorithm + store
 ├── lib/tts.ts               Web Speech API wrapper
 └── components/
     ├── Dashboard.tsx
     ├── ReviewSession.tsx
-    └── ReviewCard.tsx
+    ├── ReviewCard.tsx
+    └── SyncStatus.tsx       sign-in / sign-out chip
 ```
 
-The curriculum (`grammarData.ts`) and the progress layer (`storage.ts`) are deliberately separated — swapping localStorage for Supabase later means changing `storage.ts` only.
+The curriculum (`grammarData.ts`) is immutable. Progress flows: UI writes hit `localStorage` first (always), then `sync.ts` pushes the same write to Supabase if a user is signed in. Reads come from `localStorage` only — there's no read-time network round-trip. On startup, `initSync()` does a one-shot pull-and-merge so the local cache catches up with anything written from another device.
 
 ## Development
 
@@ -91,12 +94,27 @@ npm run build        # typecheck + production bundle to dist/
 
 Pushes to `main` trigger `.github/workflows/deploy.yml`, which builds and publishes to GitHub Pages. The Vite `base` config is set to `/japanese-grammar-srs/` to match the Pages subpath.
 
+## Optional: Supabase sync
+
+Progress is local-first; when Supabase is configured the same data also syncs across devices via magic-link sign-in. With no env vars set the app runs in localStorage-only mode (no sign-in UI, no network calls).
+
+To enable:
+
+1. Create a free Supabase project at [supabase.com](https://supabase.com).
+2. Run [`docs/supabase-schema.sql`](docs/supabase-schema.sql) in the project's SQL editor — creates the `progress` and `active_chapters` tables with Row Level Security so each user only sees their own rows.
+3. In **Auth → URL Configuration**, add your Pages URL (e.g. `https://alexistonneau.github.io/japanese-grammar-srs/`) to the redirect allow-list so magic links land back on the app.
+4. Add two repository secrets under **Settings → Secrets and variables → Actions**:
+   - `VITE_SUPABASE_URL` — your project URL (e.g. `https://abc123.supabase.co`)
+   - `VITE_SUPABASE_ANON_KEY` — the public anon key (Settings → API). Safe to embed in client code; Row Level Security is what enforces access control.
+5. Push to `main` to redeploy.
+
+After that, the dashboard shows a "Sign in to sync" link. Enter your email; click the magic link in your inbox; subsequent reviews sync automatically. Sign in on another device with the same email to pull your progress there.
+
 ## Roadmap
 
 - Keyboard shortcuts (Space = show answer, 1/2/3 = grade)
 - Daily new-card cap and review limit
 - Settings panel: reset progress, export/import
-- Migrate progress to Supabase (multi-device sync)
 
 ## Source attribution
 

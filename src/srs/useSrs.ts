@@ -8,6 +8,7 @@ import {
   readActiveChapters,
   writeActiveChapters,
 } from "./storage";
+import { pushActiveChapters, pushProgress } from "./sync";
 import type { Grade, Progress } from "./types";
 
 export interface ItemWithProgress {
@@ -57,6 +58,8 @@ export function useSrs() {
       const next = gradeProgress(prev, g, now);
       localProgressStore.set(next);
       setProgressMap((m) => ({ ...m, [itemId]: next }));
+      // Fire-and-forget Supabase write — local state is the source of truth.
+      void pushProgress(next);
     },
     [progressMap]
   );
@@ -94,14 +97,18 @@ export function useSrs() {
       const next = new Set(prev);
       if (next.has(chapter)) next.delete(chapter);
       else next.add(chapter);
-      writeActiveChapters([...next]);
+      const list = [...next];
+      writeActiveChapters(list);
+      void pushActiveChapters(list);
       return next;
     });
   }, []);
 
   const setAllChaptersActive = useCallback((chapters: number[]) => {
     const next = new Set(chapters);
-    writeActiveChapters([...next]);
+    const list = [...next];
+    writeActiveChapters(list);
+    void pushActiveChapters(list);
     setActiveChapters(next);
   }, []);
 
