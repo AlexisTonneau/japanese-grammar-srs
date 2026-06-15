@@ -188,12 +188,32 @@ function rowToProgress(row: ProgressRow): Progress {
 }
 
 // ---- auth helpers ----
+//
+// Two-step OTP flow rather than magic link. Magic links don't work on iOS
+// PWAs: tapping the link in Mail opens Safari, which has a separate storage
+// origin from the home-screen PWA, so the session never reaches the PWA.
+// The 6-digit code in Supabase's default email template lets the user stay
+// inside the PWA the whole time.
 
-export async function signInWithEmail(email: string): Promise<{ error?: string }> {
+export async function requestSignInCode(
+  email: string
+): Promise<{ error?: string }> {
   if (!supabase) return { error: "Supabase not configured" };
-  const { error } = await supabase.auth.signInWithOtp({
+  // shouldCreateUser defaults to true — passwordless sign-up + sign-in share
+  // this endpoint. No emailRedirectTo: we don't want the link path at all.
+  const { error } = await supabase.auth.signInWithOtp({ email });
+  return error ? { error: error.message } : {};
+}
+
+export async function verifySignInCode(
+  email: string,
+  code: string
+): Promise<{ error?: string }> {
+  if (!supabase) return { error: "Supabase not configured" };
+  const { error } = await supabase.auth.verifyOtp({
     email,
-    options: { emailRedirectTo: window.location.origin + window.location.pathname },
+    token: code,
+    type: "email",
   });
   return error ? { error: error.message } : {};
 }
