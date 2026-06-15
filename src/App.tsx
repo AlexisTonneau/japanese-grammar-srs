@@ -11,12 +11,22 @@ type View =
   | { kind: "review"; queue: GrammarItem[] }
   | { kind: "study"; chapter: number; items: GrammarItem[] };
 
+// Fisher-Yates shuffle. Returns a new array; doesn't mutate the input.
+function shuffle<T>(items: T[]): T[] {
+  const out = [...items];
+  for (let i = out.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [out[i], out[j]] = [out[j], out[i]];
+  }
+  return out;
+}
+
 export default function App() {
   const [view, setView] = useState<View>({ kind: "dashboard" });
   const { dueItems } = useSrs();
 
   const startDueReview = () => {
-    const queue = dueItems().map(({ item }) => item);
+    const queue = shuffle(dueItems().map(({ item }) => item));
     if (queue.length === 0) return;
     setView({ kind: "review", queue });
   };
