@@ -96,21 +96,22 @@ Pushes to `main` trigger `.github/workflows/deploy.yml`, which builds and publis
 
 ## Optional: Supabase sync
 
-Progress is local-first; when Supabase is configured the same data also syncs across devices via email one-time-code (OTP) sign-in. With no env vars set the app runs in localStorage-only mode (no sign-in UI, no network calls).
+Progress is local-first; when Supabase is configured the same data also syncs across devices via anonymous sign-in plus a paste-able sync code. With no env vars set the app runs in localStorage-only mode (no sign-in UI, no network calls).
 
-**Why OTP and not magic links?** iOS opens email links in Safari, which has a separate storage origin from a home-screen PWA — the magic-link session never reaches the PWA. A 6-digit code keeps the whole flow inside the PWA: type email → check Mail → tap-and-hold the code (iOS autofills it via QuickType) → paste in PWA → signed in.
+**Why anonymous + sync code, instead of email?** iOS opens email links in Safari, which has a separate storage origin from a home-screen PWA — magic links never reach the PWA. Email OTP codes work but require editing the email template, which Supabase locks behind custom SMTP on free projects. Anonymous sign-in skips email entirely: the first device creates an anonymous user, then exports a one-time sync code that the second device pastes to share the same `auth.uid()`.
 
 To enable:
 
 1. Create a free Supabase project at [supabase.com](https://supabase.com).
 2. Run [`docs/supabase-schema.sql`](docs/supabase-schema.sql) in the project's SQL editor — creates the `progress` and `active_chapters` tables with Row Level Security so each user only sees their own rows.
-3. In **Auth → Email Templates → Magic Link**, edit the template so the 6-digit code is prominent and the link is de-emphasized or removed. Supabase's default template includes both `{{ .Token }}` (the code) and `{{ .ConfirmationURL }}` (the link); keep the token, drop or shrink the link. Otherwise users will tap the link out of habit and end up in Safari instead of the PWA.
-4. Add two repository secrets under **Settings → Secrets and variables → Actions**:
+3. In **Authentication → Sign In/Up**, toggle **"Allow anonymous sign-ins"** ON.
+4. In **Authentication → Sessions**, set **"Refresh token rotation"** to OFF (or extend the reuse interval). Default rotation invalidates the refresh token after first use, which would break the second device when its session refreshes. For a single-user, multi-device setup, disabling rotation is fine.
+5. Add two repository secrets under **Settings → Secrets and variables → Actions**:
    - `VITE_SUPABASE_URL` — your project URL (e.g. `https://abc123.supabase.co`)
    - `VITE_SUPABASE_ANON_KEY` — the public anon key (Settings → API). Safe to embed in client code; Row Level Security is what enforces access control.
-5. Push to `main` to redeploy.
+6. Push to `main` to redeploy.
 
-After that, the dashboard shows a "Sign in to sync" link. Enter your email, paste the 6-digit code from your inbox, and subsequent reviews sync automatically. Sign in on another device with the same email to pull your progress there.
+After that, the dashboard shows a "Sign in to sync" chip. On the first device, click **Enable sync** — your progress starts syncing immediately. To add a second device, click **Add device** to copy a sync code, then paste it on the new device under "I have a sync code from another device". Anyone with the code gets full access to your data — treat it like a password, store it in your password manager.
 
 ## Roadmap
 

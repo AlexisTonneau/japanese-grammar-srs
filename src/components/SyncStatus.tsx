@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
-import { Cloud, CloudOff, LogOut } from "lucide-react";
+import { Cloud, CloudOff, Copy, LogOut } from "lucide-react";
 import { isSupabaseConfigured, supabase } from "../srs/supabase";
-import { requestSignInCode, signOut, verifySignInCode } from "../srs/sync";
+import { enableSync, getSyncCode, redeemSyncCode, signOut } from "../srs/sync";
 
-type Step = "closed" | "email" | "code";
+type Step = "closed" | "menu" | "redeem" | "share";
 
 export function SyncStatus() {
-  const [email, setEmail] = useState<string | null>(null);
+  const [userId, setUserId] = useState<string | null>(null);
   const [step, setStep] = useState<Step>("closed");
-  const [inputEmail, setInputEmail] = useState("");
-  const [inputCode, setInputCode] = useState("");
+  const [code, setCode] = useState("");
+  const [shareCode, setShareCode] = useState<string | null>(null);
   const [status, setStatus] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
 
@@ -18,14 +18,13 @@ export function SyncStatus() {
     let cancelled = false;
     supabase.auth.getSession().then(({ data }) => {
       if (cancelled) return;
-      setEmail(data.session?.user.email ?? null);
+      setUserId(data.session?.user.id ?? null);
     });
     const { data: sub } = supabase.auth.onAuthStateChange((_event, session) => {
-      setEmail(session?.user.email ?? null);
-      if (session?.user.email) {
+      setUserId(session?.user.id ?? null);
+      if (session?.user.id) {
         setStep("closed");
-        setInputEmail("");
-        setInputCode("");
+        setCode("");
         setStatus(null);
       }
     });
@@ -47,11 +46,70 @@ export function SyncStatus() {
     );
   }
 
-  if (email) {
+  // Signed in
+  if (userId) {
+    if (step === "share" && shareCode) {
+      return (
+        <div className="flex flex-col gap-2 text-xs">
+          <div className="text-neutral-700">
+            Paste this code on another device's "Sync from another device" form.
+            Anyone with the code gets full access — keep it private.
+          </div>
+          <textarea
+            readOnly
+            value={shareCode}
+            onClick={(e) => (e.target as HTMLTextAreaElement).select()}
+            className="font-mono text-[10px] p-2 rounded border border-neutral-300 bg-neutral-50 break-all"
+            rows={3}
+          />
+          <div className="flex gap-2">
+            <button
+              onClick={async () => {
+                try {
+                  await navigator.clipboard.writeText(shareCode);
+                  setStatus("Copied.");
+                } catch {
+                  setStatus("Couldn't copy — select and copy manually.");
+                }
+              }}
+              className="flex items-center gap-1 px-2 py-1 rounded bg-neutral-900 text-white hover:bg-neutral-800"
+            >
+              <Copy size={12} /> Copy
+            </button>
+            <button
+              onClick={() => {
+                setStep("closed");
+                setShareCode(null);
+                setStatus(null);
+              }}
+              className="text-neutral-400 hover:text-neutral-700"
+            >
+              Done
+            </button>
+            {status && <span className="text-neutral-500 ml-2">{status}</span>}
+          </div>
+        </div>
+      );
+    }
+
     return (
       <div className="flex items-center gap-2 text-xs text-neutral-500">
         <Cloud size={12} className="text-emerald-600" />
-        <span>{email}</span>
+        <span>Synced</span>
+        <button
+          onClick={async () => {
+            const c = await getSyncCode();
+            if (!c) {
+              setStatus("No active session.");
+              return;
+            }
+            setShareCode(c);
+            setStep("share");
+          }}
+          className="text-neutral-500 hover:text-neutral-900 underline-offset-4 hover:underline"
+        >
+          Add device
+        </button>
         <button
           onClick={() => signOut()}
           className="text-neutral-400 hover:text-neutral-700"
@@ -63,10 +121,11 @@ export function SyncStatus() {
     );
   }
 
+  // Signed out
   if (step === "closed") {
     return (
       <button
-        onClick={() => setStep("email")}
+        onClick={() => setStep("menu")}
         className="flex items-center gap-1.5 text-xs text-neutral-500 hover:text-neutral-900"
       >
         <CloudOff size={12} />
@@ -75,104 +134,92 @@ export function SyncStatus() {
     );
   }
 
-  const handleRequestCode = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleEnable = async () => {
     setBusy(true);
-    setStatus("Sending code…");
-    const { error } = await requestSignInCode(inputEmail.trim());
-    setBusy(false);
-    if (error) {
-      setStatus(`Error: ${error}`);
-    } else {
-      setStatus("Check your email for a 6-digit code.");
-      setStep("code");
-    }
-  };
-
-  const handleVerifyCode = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setBusy(true);
-    setStatus("Verifying…");
-    const { error } = await verifySignInCode(inputEmail.trim(), inputCode.trim());
+    setStatus("Setting up sync…");
+    const { error } = await enableSync();
     setBusy(false);
     if (error) setStatus(`Error: ${error}`);
-    // Success path is handled by the auth state listener above.
+    // Success path handled by auth listener.
   };
 
-  const cancel = () => {
-    setStep("closed");
-    setInputEmail("");
-    setInputCode("");
-    setStatus(null);
+  const handleRedeem = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setBusy(true);
+    setStatus("Verifying code…");
+    const { error } = await redeemSyncCode(code);
+    setBusy(false);
+    if (error) setStatus(`Error: ${error}`);
+    // Success path handled by auth listener.
   };
 
-  if (step === "email") {
+  if (step === "menu") {
     return (
-      <form onSubmit={handleRequestCode} className="flex flex-wrap items-center gap-2">
-        <input
-          type="email"
-          required
-          autoFocus
-          autoComplete="email"
-          inputMode="email"
-          placeholder="you@example.com"
-          value={inputEmail}
-          onChange={(e) => setInputEmail(e.target.value)}
-          className="text-xs px-2 py-1 rounded border border-neutral-300 focus:outline-none focus:border-neutral-900"
-        />
-        <button
-          type="submit"
-          disabled={busy}
-          className="text-xs px-2 py-1 rounded bg-neutral-900 text-white hover:bg-neutral-800 disabled:opacity-50"
-        >
-          Send code
-        </button>
-        <button
-          type="button"
-          onClick={cancel}
-          className="text-xs text-neutral-400 hover:text-neutral-700"
-        >
-          Cancel
-        </button>
-        {status && <span className="text-xs text-neutral-500 ml-2">{status}</span>}
-      </form>
+      <div className="flex flex-col gap-2 text-xs">
+        <div className="text-neutral-700">
+          Sync your progress across devices.
+        </div>
+        <div className="flex flex-wrap gap-2">
+          <button
+            onClick={handleEnable}
+            disabled={busy}
+            className="px-2 py-1 rounded bg-neutral-900 text-white hover:bg-neutral-800 disabled:opacity-50"
+          >
+            Enable sync (this is my first device)
+          </button>
+          <button
+            onClick={() => setStep("redeem")}
+            className="px-2 py-1 rounded border border-neutral-300 text-neutral-700 hover:border-neutral-500"
+          >
+            I have a sync code from another device
+          </button>
+          <button
+            onClick={() => {
+              setStep("closed");
+              setStatus(null);
+            }}
+            className="text-neutral-400 hover:text-neutral-700"
+          >
+            Cancel
+          </button>
+        </div>
+        {status && <span className="text-neutral-500">{status}</span>}
+      </div>
     );
   }
 
-  // step === "code"
+  // step === "redeem"
   return (
-    <form onSubmit={handleVerifyCode} className="flex flex-wrap items-center gap-2">
-      <input
-        type="text"
+    <form onSubmit={handleRedeem} className="flex flex-col gap-2 text-xs">
+      <div className="text-neutral-700">
+        Paste the sync code from your other device.
+      </div>
+      <textarea
         required
         autoFocus
-        // iOS Mail surfaces 6-digit codes via the QuickType bar when the
-        // input has type="text" + autocomplete="one-time-code" + inputmode
-        // numeric. Tap-and-hold the suggestion in Mail to AutoFill here.
-        autoComplete="one-time-code"
-        inputMode="numeric"
-        pattern="[0-9]{6}"
-        maxLength={6}
-        placeholder="6-digit code"
-        value={inputCode}
-        onChange={(e) => setInputCode(e.target.value.replace(/\D/g, ""))}
-        className="text-xs px-2 py-1 rounded border border-neutral-300 focus:outline-none focus:border-neutral-900 tracking-widest font-mono"
+        placeholder="Paste your sync code…"
+        value={code}
+        onChange={(e) => setCode(e.target.value)}
+        className="font-mono text-[10px] p-2 rounded border border-neutral-300 focus:outline-none focus:border-neutral-900 break-all"
+        rows={3}
       />
-      <button
-        type="submit"
-        disabled={busy || inputCode.length !== 6}
-        className="text-xs px-2 py-1 rounded bg-neutral-900 text-white hover:bg-neutral-800 disabled:opacity-50"
-      >
-        Verify
-      </button>
-      <button
-        type="button"
-        onClick={() => setStep("email")}
-        className="text-xs text-neutral-400 hover:text-neutral-700"
-      >
-        Back
-      </button>
-      {status && <span className="text-xs text-neutral-500 ml-2">{status}</span>}
+      <div className="flex gap-2">
+        <button
+          type="submit"
+          disabled={busy || code.trim().length === 0}
+          className="px-2 py-1 rounded bg-neutral-900 text-white hover:bg-neutral-800 disabled:opacity-50"
+        >
+          Sync this device
+        </button>
+        <button
+          type="button"
+          onClick={() => setStep("menu")}
+          className="text-neutral-400 hover:text-neutral-700"
+        >
+          Back
+        </button>
+        {status && <span className="text-neutral-500 ml-2">{status}</span>}
+      </div>
     </form>
   );
 }

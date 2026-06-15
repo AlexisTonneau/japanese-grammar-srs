@@ -189,31 +189,58 @@ function rowToProgress(row: ProgressRow): Progress {
 
 // ---- auth helpers ----
 //
-// Two-step OTP flow rather than magic link. Magic links don't work on iOS
-// PWAs: tapping the link in Mail opens Safari, which has a separate storage
-// origin from the home-screen PWA, so the session never reaches the PWA.
-// The 6-digit code in Supabase's default email template lets the user stay
-// inside the PWA the whole time.
+// We deliberately avoid email-based auth because magic links don't work on
+// iOS PWAs (Safari has a separate storage origin from home-screen PWAs) and
+// editing email templates to use OTP codes is locked behind custom SMTP on
+// Supabase free projects.
+//
+// Instead: anonymous sign-in. Device 1 calls signInAnonymously() to mint an
+// auth.users row with a UUID. To sync to device 2, we export the session's
+// refresh token as a paste-able code; device 2 calls setSession() with that
+// token, and both devices then share the same auth.uid() — RLS keeps working
+// unchanged.
+//
+// This requires two project-level Supabase settings:
+//   - Auth → Sign In/Up → Anonymous Sign-Ins: ON
+//   - Auth → Sessions → Refresh Token Rotation: OFF (otherwise token rotation
+//     invalidates one device when the other refreshes).
 
-export async function requestSignInCode(
-  email: string
-): Promise<{ error?: string }> {
+export async function enableSync(): Promise<{ error?: string }> {
   if (!supabase) return { error: "Supabase not configured" };
-  // shouldCreateUser defaults to true — passwordless sign-up + sign-in share
-  // this endpoint. No emailRedirectTo: we don't want the link path at all.
-  const { error } = await supabase.auth.signInWithOtp({ email });
+  const { error } = await supabase.auth.signInAnonymously();
   return error ? { error: error.message } : {};
 }
 
-export async function verifySignInCode(
-  email: string,
+// Returns the current refresh token, base64-encoded so it's safe to paste
+// across devices via password manager / AirDrop / etc. Returns null if no
+// session is active.
+export async function getSyncCode(): Promise<string | null> {
+  if (!supabase) return null;
+  const { data } = await supabase.auth.getSession();
+  const refresh = data.session?.refresh_token;
+  if (!refresh) return null;
+  // btoa is fine here — refresh tokens are ASCII.
+  return btoa(JSON.stringify({ v: 1, refresh_token: refresh }));
+}
+
+export async function redeemSyncCode(
   code: string
 ): Promise<{ error?: string }> {
   if (!supabase) return { error: "Supabase not configured" };
-  const { error } = await supabase.auth.verifyOtp({
-    email,
-    token: code,
-    type: "email",
+  let refreshToken: string;
+  try {
+    const decoded = JSON.parse(atob(code.trim()));
+    if (decoded.v !== 1 || typeof decoded.refresh_token !== "string") {
+      return { error: "Unrecognized sync code format" };
+    }
+    refreshToken = decoded.refresh_token;
+  } catch {
+    return { error: "Couldn't parse sync code — check for paste artifacts" };
+  }
+  // refreshSession exchanges the token for a fresh access+refresh pair and
+  // installs the result as the active session.
+  const { error } = await supabase.auth.refreshSession({
+    refresh_token: refreshToken,
   });
   return error ? { error: error.message } : {};
 }
