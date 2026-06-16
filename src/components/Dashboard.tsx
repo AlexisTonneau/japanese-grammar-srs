@@ -1,5 +1,12 @@
 import { useState } from "react";
-import { BookOpen, Check, Lock, Pencil, Sparkles } from "lucide-react";
+import {
+  BarChart3,
+  BookOpen,
+  Check,
+  Lock,
+  Pencil,
+  Sparkles,
+} from "lucide-react";
 import { grammarData } from "../data/grammarData";
 import { useSrs } from "../srs/useSrs";
 import { SyncStatus } from "./SyncStatus";
@@ -7,11 +14,12 @@ import { SyncStatus } from "./SyncStatus";
 interface Props {
   onStartReview: () => void;
   onOpenChapter: (chapter: number) => void;
+  onOpenStats: () => void;
 }
 
 const ALL_CHAPTERS = Array.from({ length: 25 }, (_, i) => 26 + i);
 
-export function Dashboard({ onStartReview, onOpenChapter }: Props) {
+export function Dashboard({ onStartReview, onOpenChapter, onOpenStats }: Props) {
   const {
     dueItems,
     chapterStats,
@@ -41,17 +49,26 @@ export function Dashboard({ onStartReview, onOpenChapter }: Props) {
             </div>
             <h1 className="text-3xl font-semibold text-neutral-900">Grammar Review</h1>
           </div>
-          <button
-            onClick={() => setEditing((v) => !v)}
-            className={`flex items-center gap-1.5 text-sm px-3 py-2 rounded-lg border transition-colors ${
-              editing
-                ? "bg-neutral-900 text-white border-neutral-900"
-                : "bg-white text-neutral-700 border-neutral-200 hover:border-neutral-400"
-            }`}
-          >
-            {editing ? <Check size={16} /> : <Pencil size={16} />}
-            {editing ? "Done" : "Edit"}
-          </button>
+          <div className="flex items-center gap-2">
+            <button
+              onClick={onOpenStats}
+              className="flex items-center gap-1.5 text-sm px-3 py-2 rounded-lg border bg-white text-neutral-700 border-neutral-200 hover:border-neutral-400 transition-colors"
+              title="Stats"
+            >
+              <BarChart3 size={16} />
+            </button>
+            <button
+              onClick={() => setEditing((v) => !v)}
+              className={`flex items-center gap-1.5 text-sm px-3 py-2 rounded-lg border transition-colors ${
+                editing
+                  ? "bg-neutral-900 text-white border-neutral-900"
+                  : "bg-white text-neutral-700 border-neutral-200 hover:border-neutral-400"
+              }`}
+            >
+              {editing ? <Check size={16} /> : <Pencil size={16} />}
+              {editing ? "Done" : "Edit"}
+            </button>
+          </div>
         </div>
         <SyncStatus />
       </header>

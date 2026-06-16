@@ -5,17 +5,20 @@
 // The dispatchChange notifier from storage.ts is reused so the rest of the
 // app can stay agnostic about whether Supabase is wired up at all.
 
-import type { Progress } from "./types";
+import type { Progress, ReviewLogEntry } from "./types";
 import { supabase, isSupabaseConfigured } from "./supabase";
-import type { ProgressRow } from "./supabase";
+import type { ProgressRow, ReviewRow } from "./supabase";
 import {
   localProgressStore,
   readActiveChapters,
+  readReviewLog,
   writeActiveChapters,
+  writeReviewLog,
 } from "./storage";
 
 const PROGRESS_TABLE = "progress";
 const ACTIVE_TABLE = "active_chapters";
+const REVIEWS_TABLE = "reviews";
 
 let currentUserId: string | null = null;
 let pullInFlight: Promise<void> | null = null;
@@ -112,6 +115,54 @@ export async function pullAll(): Promise<void> {
         // Nothing remote — push current local state
         await pushActiveChapters(readActiveChapters());
       }
+
+      // Reviews — append-only log, dedupe by (item_id, reviewed_at).
+      // We pull everything; for a personal app the log will fit easily.
+      const { data: reviewRows, error: reviewErr } = await supabase
+        .from(REVIEWS_TABLE)
+        .select("*")
+        .eq("user_id", currentUserId)
+        .order("reviewed_at", { ascending: true });
+      if (reviewErr) {
+        console.warn("supabase: pull reviews failed", reviewErr);
+      } else {
+        const localLog = readReviewLog();
+        const seen = new Set(
+          localLog.map((e) => `${e.itemId}|${e.reviewedAt}`)
+        );
+        const merged = [...localLog];
+        const toPushUp: ReviewLogEntry[] = [];
+        for (const row of reviewRows ?? []) {
+          const r = row as ReviewRow;
+          const key = `${r.item_id}|${r.reviewed_at}`;
+          if (!seen.has(key)) {
+            merged.push({
+              itemId: r.item_id,
+              grade: r.grade,
+              reviewedAt: r.reviewed_at,
+            });
+            seen.add(key);
+          }
+        }
+        // Local entries missing from remote: push up.
+        const remoteSet = new Set(
+          (reviewRows ?? []).map(
+            (r) => `${(r as ReviewRow).item_id}|${(r as ReviewRow).reviewed_at}`
+          )
+        );
+        for (const e of localLog) {
+          if (!remoteSet.has(`${e.itemId}|${e.reviewedAt}`)) {
+            toPushUp.push(e);
+          }
+        }
+        if (merged.length !== localLog.length) {
+          merged.sort((a, b) => a.reviewedAt.localeCompare(b.reviewedAt));
+          writeReviewLog(merged);
+        }
+        if (toPushUp.length > 0) {
+          await pushReviewBatch(toPushUp);
+        }
+      }
     } finally {
       pullInFlight = null;
     }
@@ -155,6 +206,37 @@ async function pushProgressBatch(items: Progress[]): Promise<void> {
     .from(PROGRESS_TABLE)
     .upsert(rows, { onConflict: "user_id,item_id" });
   if (error) console.warn("supabase: push batch failed", error);
+}
+
+export async function pushReview(entry: ReviewLogEntry): Promise<void> {
+  if (!supabase || !currentUserId) return;
+  const { error } = await supabase.from(REVIEWS_TABLE).upsert(
+    {
+      user_id: currentUserId,
+      item_id: entry.itemId,
+      grade: entry.grade,
+      reviewed_at: entry.reviewedAt,
+    },
+    { onConflict: "user_id,item_id,reviewed_at", ignoreDuplicates: true }
+  );
+  if (error) console.warn("supabase: push review failed", error);
+}
+
+async function pushReviewBatch(entries: ReviewLogEntry[]): Promise<void> {
+  if (!supabase || !currentUserId || entries.length === 0) return;
+  const rows = entries.map((e) => ({
+    user_id: currentUserId,
+    item_id: e.itemId,
+    grade: e.grade,
+    reviewed_at: e.reviewedAt,
+  }));
+  const { error } = await supabase
+    .from(REVIEWS_TABLE)
+    .upsert(rows, {
+      onConflict: "user_id,item_id,reviewed_at",
+      ignoreDuplicates: true,
+    });
+  if (error) console.warn("supabase: push review batch failed", error);
 }
 
 export async function pushActiveChapters(chapters: number[]): Promise<void> {

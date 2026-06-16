@@ -3,12 +3,15 @@ import { grammarData } from "../data/grammarData";
 import type { GrammarItem } from "../data/grammarData";
 import { gradeProgress, initialProgress, isDue, isMastered } from "./algorithm";
 import {
+  appendReview,
   localProgressStore,
   onLocalChange,
   readActiveChapters,
+  readReviewLog,
   writeActiveChapters,
 } from "./storage";
-import { pushActiveChapters, pushProgress } from "./sync";
+import { pushActiveChapters, pushProgress, pushReview } from "./sync";
+import type { ReviewLogEntry } from "./types";
 import type { Grade, Progress } from "./types";
 
 export interface ItemWithProgress {
@@ -23,6 +26,9 @@ export function useSrs() {
   const [activeChapters, setActiveChapters] = useState<Set<number>>(
     () => new Set(readActiveChapters())
   );
+  const [reviewLog, setReviewLog] = useState<ReviewLogEntry[]>(() =>
+    readReviewLog()
+  );
 
   useEffect(() => {
     const refresh = (key: string) => {
@@ -31,6 +37,9 @@ export function useSrs() {
       }
       if (key.startsWith("minna-srs:active-chapters")) {
         setActiveChapters(new Set(readActiveChapters()));
+      }
+      if (key.startsWith("minna-srs:reviews")) {
+        setReviewLog(readReviewLog());
       }
     };
     const storageHandler = (e: StorageEvent) => {
@@ -58,8 +67,13 @@ export function useSrs() {
       const next = gradeProgress(prev, g, now);
       localProgressStore.set(next);
       setProgressMap((m) => ({ ...m, [itemId]: next }));
-      // Fire-and-forget Supabase write — local state is the source of truth.
+      // Append to the review log so the stats view can build heatmaps,
+      // streaks, and grade distribution.
+      const entry = { itemId, grade: g, reviewedAt: now.toISOString() };
+      appendReview(entry);
+      // Fire-and-forget Supabase writes — local state is the source of truth.
       void pushProgress(next);
+      void pushReview(entry);
     },
     [progressMap]
   );
@@ -122,5 +136,6 @@ export function useSrs() {
     isChapterActive,
     toggleChapterActive,
     setAllChaptersActive,
+    reviewLog,
   };
 }

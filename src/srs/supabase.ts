@@ -36,3 +36,10 @@ export interface ActiveChaptersRow {
   chapters: number[];
   updated_at: string;
 }
+
+export interface ReviewRow {
+  user_id: string;
+  item_id: string;
+  grade: "forgot" | "understood" | "easy";
+  reviewed_at: string;
+}
