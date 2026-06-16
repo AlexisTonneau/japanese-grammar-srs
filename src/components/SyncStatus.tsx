@@ -1,7 +1,15 @@
 import { useEffect, useState } from "react";
-import { Cloud, CloudOff, Copy, LogOut } from "lucide-react";
+import { Cloud, CloudOff, Copy, Loader2, LogOut } from "lucide-react";
 import { isSupabaseConfigured, supabase } from "../srs/supabase";
-import { enableSync, getSyncCode, redeemSyncCode, signOut } from "../srs/sync";
+import {
+  enableSync,
+  getSyncCode,
+  getSyncStatus,
+  onSyncStatusChange,
+  redeemSyncCode,
+  signOut,
+  type SyncStatus as SyncActivity,
+} from "../srs/sync";
 
 type Step = "closed" | "menu" | "redeem" | "share";
 
@@ -12,6 +20,11 @@ export function SyncStatus() {
   const [shareCode, setShareCode] = useState<string | null>(null);
   const [status, setStatus] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
+  const [activity, setActivity] = useState<SyncActivity>(() => getSyncStatus());
+
+  useEffect(() => {
+    return onSyncStatusChange(setActivity);
+  }, []);
 
   useEffect(() => {
     if (!supabase) return;
@@ -94,8 +107,17 @@ export function SyncStatus() {
 
     return (
       <div className="flex items-center gap-2 text-xs text-neutral-500">
-        <Cloud size={12} className="text-emerald-600" />
-        <span>Synced</span>
+        {activity === "syncing" ? (
+          <>
+            <Loader2 size={12} className="text-neutral-400 animate-spin" />
+            <span>Syncing…</span>
+          </>
+        ) : (
+          <>
+            <Cloud size={12} className="text-emerald-600" />
+            <span>Synced</span>
+          </>
+        )}
         <button
           onClick={async () => {
             const c = await getSyncCode();

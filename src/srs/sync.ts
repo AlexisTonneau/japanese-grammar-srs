@@ -23,26 +23,56 @@ const REVIEWS_TABLE = "reviews";
 let currentUserId: string | null = null;
 let pullInFlight: Promise<void> | null = null;
 
+// Sync activity observable — used by UI to show a "syncing" indicator while
+// the auth check or initial pull is in flight. "idle" when nothing is
+// happening; "syncing" while either is active. Components subscribe via
+// onSyncStatusChange.
+export type SyncStatus = "idle" | "syncing";
+let syncStatus: SyncStatus = "idle";
+const syncStatusListeners = new Set<(status: SyncStatus) => void>();
+
+export function getSyncStatus(): SyncStatus {
+  return syncStatus;
+}
+
+export function onSyncStatusChange(
+  listener: (status: SyncStatus) => void
+): () => void {
+  syncStatusListeners.add(listener);
+  return () => syncStatusListeners.delete(listener);
+}
+
+function setSyncStatus(next: SyncStatus): void {
+  if (syncStatus === next) return;
+  syncStatus = next;
+  for (const l of syncStatusListeners) l(next);
+}
+
 export function isSyncEnabled(): boolean {
   return isSupabaseConfigured && currentUserId !== null;
 }
 
 export async function initSync(): Promise<void> {
   if (!supabase) return;
-  const { data } = await supabase.auth.getSession();
-  currentUserId = data.session?.user.id ?? null;
+  setSyncStatus("syncing");
+  try {
+    const { data } = await supabase.auth.getSession();
+    currentUserId = data.session?.user.id ?? null;
 
-  supabase.auth.onAuthStateChange(async (_event, session) => {
-    const newId = session?.user.id ?? null;
-    if (newId === currentUserId) return;
-    currentUserId = newId;
-    if (newId) {
+    supabase.auth.onAuthStateChange(async (_event, session) => {
+      const newId = session?.user.id ?? null;
+      if (newId === currentUserId) return;
+      currentUserId = newId;
+      if (newId) {
+        await pullAll();
+      }
+    });
+
+    if (currentUserId) {
       await pullAll();
     }
-  });
-
-  if (currentUserId) {
-    await pullAll();
+  } finally {
+    setSyncStatus("idle");
   }
 }
 
@@ -53,6 +83,7 @@ export async function pullAll(): Promise<void> {
   if (!supabase || !currentUserId) return;
   if (pullInFlight) return pullInFlight;
 
+  setSyncStatus("syncing");
   pullInFlight = (async () => {
     try {
       const { data: rows, error } = await supabase
@@ -165,6 +196,7 @@ export async function pullAll(): Promise<void> {
       }
     } finally {
       pullInFlight = null;
+      setSyncStatus("idle");
     }
   })();
 
