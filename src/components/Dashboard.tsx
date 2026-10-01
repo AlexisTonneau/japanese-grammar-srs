@@ -1,12 +1,5 @@
 import { useState } from "react";
-import {
-  BarChart3,
-  BookOpen,
-  Check,
-  Lock,
-  Pencil,
-  Sparkles,
-} from "lucide-react";
+import { BarChart3, BookOpen, Check, Pencil, Sparkles } from "lucide-react";
 import { grammarData } from "../data/grammarData";
 import { useSrs } from "../srs/useSrs";
 import { SyncStatus } from "./SyncStatus";
@@ -35,7 +28,7 @@ export function Dashboard({ onStartReview, onOpenChapter, onOpenStats }: Props) 
   const handleCardClick = (ch: number, empty: boolean) => {
     if (empty) return;
     if (editing) toggleChapterActive(ch);
-    else if (isChapterActive(ch)) onOpenChapter(ch);
+    else onOpenChapter(ch);
   };
 
   return (
@@ -126,13 +119,13 @@ export function Dashboard({ onStartReview, onOpenChapter, onOpenStats }: Props) 
           const stats = chapterStats(ch);
           const empty = stats.total === 0;
           const active = isChapterActive(ch);
-          const showAsLocked = !editing && !active;
+          const showInactive = !editing && !active;
 
           return (
             <button
               key={ch}
               onClick={() => handleCardClick(ch, empty)}
-              disabled={empty || (!editing && !active)}
+              disabled={empty}
               className={`relative text-left p-4 rounded-xl border transition-colors ${
                 empty
                   ? "bg-white border-neutral-200 opacity-40 cursor-not-allowed"
@@ -140,8 +133,8 @@ export function Dashboard({ onStartReview, onOpenChapter, onOpenStats }: Props) 
                   ? active
                     ? "bg-neutral-900 border-neutral-900 text-white"
                     : "bg-white border-neutral-200 hover:border-neutral-400"
-                  : showAsLocked
-                  ? "bg-neutral-100 border-neutral-200 text-neutral-400 cursor-not-allowed"
+                  : showInactive
+                  ? "bg-neutral-50 border-neutral-200 text-neutral-500 hover:border-neutral-400 hover:text-neutral-900"
                   : "bg-white border-neutral-200 hover:border-neutral-400"
               }`}
             >
@@ -153,12 +146,6 @@ export function Dashboard({ onStartReview, onOpenChapter, onOpenStats }: Props) 
                 >
                   {active && <Check size={12} className="text-neutral-900" />}
                 </div>
-              )}
-              {showAsLocked && !empty && (
-                <Lock
-                  size={14}
-                  className="absolute top-3 right-3 text-neutral-300"
-                />
               )}
               <div
                 className={`text-sm ${
@@ -187,6 +174,11 @@ export function Dashboard({ onStartReview, onOpenChapter, onOpenStats }: Props) 
                   </div>
                   {!editing && active && stats.due > 0 && (
                     <div className="text-xs text-rose-600 mt-1">{stats.due} due</div>
+                  )}
+                  {showInactive && (
+                    <div className="text-xs text-neutral-400 mt-1">
+                      Not in reviews
+                    </div>
                   )}
                 </>
               )}

@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { ArrowLeft, BookOpen, RefreshCw, Volume2 } from "lucide-react";
+import { ArrowLeft, BookOpen, Minus, Plus, RefreshCw, Volume2 } from "lucide-react";
 import type { GrammarItem, SentencePair } from "../data/grammarData";
 import { speakJapanese } from "../lib/tts";
+import { useSrs } from "../srs/useSrs";
 
 interface Props {
   chapter: number;
@@ -10,6 +11,9 @@ interface Props {
 }
 
 export function StudySession({ chapter, items, onExit }: Props) {
+  const { isChapterActive, toggleChapterActive } = useSrs();
+  const active = isChapterActive(chapter);
+
   return (
     <div className="min-h-screen flex flex-col">
       <div className="max-w-2xl w-full mx-auto px-6 pt-6 flex items-center justify-between">
@@ -33,6 +37,38 @@ export function StudySession({ chapter, items, onExit }: Props) {
         <p className="text-sm text-neutral-500">
           {items.length} grammar point{items.length === 1 ? "" : "s"}
         </p>
+
+        <div
+          className={`mt-5 flex items-center justify-between gap-3 rounded-xl border px-4 py-3 ${
+            active
+              ? "bg-white border-neutral-200"
+              : "bg-neutral-50 border-neutral-200"
+          }`}
+        >
+          <div className="text-sm">
+            <div
+              className={active ? "text-neutral-900" : "text-neutral-700 font-medium"}
+            >
+              {active ? "In review rotation" : "Not in review rotation"}
+            </div>
+            <div className="text-xs text-neutral-500 mt-0.5">
+              {active
+                ? "Items from this chapter appear in your due queue."
+                : "Reading here won't add items to your reviews."}
+            </div>
+          </div>
+          <button
+            onClick={() => toggleChapterActive(chapter)}
+            className={`shrink-0 flex items-center gap-1.5 text-sm px-3 py-2 rounded-lg border transition-colors ${
+              active
+                ? "bg-white text-neutral-600 border-neutral-200 hover:border-neutral-400 hover:text-neutral-900"
+                : "bg-neutral-900 text-white border-neutral-900 hover:bg-neutral-800"
+            }`}
+          >
+            {active ? <Minus size={14} /> : <Plus size={14} />}
+            {active ? "Remove" : "Add to reviews"}
+          </button>
+        </div>
       </div>
 
       <div className="max-w-2xl w-full mx-auto px-6 pb-16 space-y-8">
