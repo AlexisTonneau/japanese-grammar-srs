@@ -43,3 +43,10 @@ export interface ReviewRow {
   grade: "forgot" | "understood" | "easy";
   reviewed_at: string;
 }
+
+export interface MockAttemptRow {
+  user_id: string;
+  question_id: string;
+  correct: boolean;
+  at: string;
+}

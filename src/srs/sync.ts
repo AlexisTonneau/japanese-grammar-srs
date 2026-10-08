@@ -7,7 +7,7 @@
 
 import type { Progress, ReviewLogEntry } from "./types";
 import { supabase, isSupabaseConfigured } from "./supabase";
-import type { ProgressRow, ReviewRow } from "./supabase";
+import type { MockAttemptRow, ProgressRow, ReviewRow } from "./supabase";
 import {
   localProgressStore,
   readActiveChapters,
@@ -15,10 +15,16 @@ import {
   writeActiveChapters,
   writeReviewLog,
 } from "./storage";
+import type { MockAttempt } from "../mockStats/storage";
+import {
+  readMockAttempts,
+  writeMockAttempts,
+} from "../mockStats/storage";
 
 const PROGRESS_TABLE = "progress";
 const ACTIVE_TABLE = "active_chapters";
 const REVIEWS_TABLE = "reviews";
+const MOCK_ATTEMPTS_TABLE = "mock_attempts";
 
 let currentUserId: string | null = null;
 let pullInFlight: Promise<void> | null = null;
@@ -194,6 +200,49 @@ export async function pullAll(): Promise<void> {
           await pushReviewBatch(toPushUp);
         }
       }
+
+      // Mock exam attempts — append-only, dedupe by (question_id, at).
+      const { data: mockRows, error: mockErr } = await supabase
+        .from(MOCK_ATTEMPTS_TABLE)
+        .select("*")
+        .eq("user_id", currentUserId)
+        .order("at", { ascending: true });
+      if (mockErr) {
+        console.warn("supabase: pull mock attempts failed", mockErr);
+      } else {
+        const localMock = readMockAttempts();
+        const localKey = (e: MockAttempt) => `${e.questionId}|${e.at}`;
+        const seenMock = new Set(localMock.map(localKey));
+        const mergedMock = [...localMock];
+        const toPushMock: MockAttempt[] = [];
+        for (const row of mockRows ?? []) {
+          const r = row as MockAttemptRow;
+          const key = `${r.question_id}|${r.at}`;
+          if (!seenMock.has(key)) {
+            mergedMock.push({
+              questionId: r.question_id,
+              correct: r.correct,
+              at: r.at,
+            });
+            seenMock.add(key);
+          }
+        }
+        const remoteMockSet = new Set(
+          (mockRows ?? []).map(
+            (r) => `${(r as MockAttemptRow).question_id}|${(r as MockAttemptRow).at}`
+          )
+        );
+        for (const e of localMock) {
+          if (!remoteMockSet.has(localKey(e))) toPushMock.push(e);
+        }
+        if (mergedMock.length !== localMock.length) {
+          mergedMock.sort((a, b) => a.at.localeCompare(b.at));
+          writeMockAttempts(mergedMock);
+        }
+        if (toPushMock.length > 0) {
+          await pushMockAttemptBatch(toPushMock);
+        }
+      }
     } finally {
       pullInFlight = null;
       setSyncStatus("idle");
@@ -269,6 +318,37 @@ async function pushReviewBatch(entries: ReviewLogEntry[]): Promise<void> {
       ignoreDuplicates: true,
     });
   if (error) console.warn("supabase: push review batch failed", error);
+}
+
+export async function pushMockAttempt(entry: MockAttempt): Promise<void> {
+  if (!supabase || !currentUserId) return;
+  const { error } = await supabase.from(MOCK_ATTEMPTS_TABLE).upsert(
+    {
+      user_id: currentUserId,
+      question_id: entry.questionId,
+      correct: entry.correct,
+      at: entry.at,
+    },
+    { onConflict: "user_id,question_id,at", ignoreDuplicates: true }
+  );
+  if (error) console.warn("supabase: push mock attempt failed", error);
+}
+
+async function pushMockAttemptBatch(entries: MockAttempt[]): Promise<void> {
+  if (!supabase || !currentUserId || entries.length === 0) return;
+  const rows = entries.map((e) => ({
+    user_id: currentUserId,
+    question_id: e.questionId,
+    correct: e.correct,
+    at: e.at,
+  }));
+  const { error } = await supabase
+    .from(MOCK_ATTEMPTS_TABLE)
+    .upsert(rows, {
+      onConflict: "user_id,question_id,at",
+      ignoreDuplicates: true,
+    });
+  if (error) console.warn("supabase: push mock attempt batch failed", error);
 }
 
 export async function pushActiveChapters(chapters: number[]): Promise<void> {

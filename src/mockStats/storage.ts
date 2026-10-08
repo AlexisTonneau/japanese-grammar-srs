@@ -35,6 +35,11 @@ export function appendMockAttempt(entry: MockAttempt): void {
   notifyChange();
 }
 
+export function writeMockAttempts(entries: MockAttempt[]): void {
+  localStorage.setItem(KEY, JSON.stringify(entries));
+  notifyChange();
+}
+
 export function clearMockAttempts(): void {
   localStorage.removeItem(KEY);
   notifyChange();

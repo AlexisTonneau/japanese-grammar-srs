@@ -5,6 +5,7 @@ import {
   type MockQuestion,
 } from "../data/mockExamData";
 import { appendMockAttempt } from "../mockStats/storage";
+import { pushMockAttempt } from "../srs/sync";
 import {
   aggregate,
   weakest,
@@ -63,11 +64,13 @@ export function MockExamSession({ onExit, onViewStats }: Props) {
   const pick = (choice: number) => {
     if (answered) return;
     const correct = choice === q.answer;
-    appendMockAttempt({
+    const entry = {
       questionId: q.id,
       correct,
       at: new Date().toISOString(),
-    });
+    };
+    appendMockAttempt(entry);
+    void pushMockAttempt(entry);
     setView({
       ...view,
       picked: choice,
