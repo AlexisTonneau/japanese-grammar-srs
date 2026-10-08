@@ -3,6 +3,8 @@ import { Dashboard } from "./components/Dashboard";
 import { ReviewSession } from "./components/ReviewSession";
 import { StudySession } from "./components/StudySession";
 import { StatsView } from "./components/StatsView";
+import { MockExamSession } from "./components/MockExamSession";
+import { MockStatsView } from "./components/MockStatsView";
 import { grammarData } from "./data/grammarData";
 import type { GrammarItem } from "./data/grammarData";
 import { useSrs } from "./srs/useSrs";
@@ -11,7 +13,9 @@ type View =
   | { kind: "dashboard" }
   | { kind: "review"; queue: GrammarItem[] }
   | { kind: "study"; chapter: number; items: GrammarItem[] }
-  | { kind: "stats" };
+  | { kind: "stats" }
+  | { kind: "mock" }
+  | { kind: "mock-stats" };
 
 // Fisher-Yates shuffle. Returns a new array; doesn't mutate the input.
 function shuffle<T>(items: T[]): T[] {
@@ -41,6 +45,8 @@ export default function App() {
 
   const exit = () => setView({ kind: "dashboard" });
   const openStats = () => setView({ kind: "stats" });
+  const openMock = () => setView({ kind: "mock" });
+  const openMockStats = () => setView({ kind: "mock-stats" });
 
   return (
     <div className="min-h-screen bg-neutral-50 text-neutral-900">
@@ -49,6 +55,8 @@ export default function App() {
           onStartReview={startDueReview}
           onOpenChapter={openChapterStudy}
           onOpenStats={openStats}
+          onOpenMock={openMock}
+          onOpenMockStats={openMockStats}
         />
       )}
       {view.kind === "review" && (
@@ -58,6 +66,12 @@ export default function App() {
         <StudySession chapter={view.chapter} items={view.items} onExit={exit} />
       )}
       {view.kind === "stats" && <StatsView onExit={exit} />}
+      {view.kind === "mock" && (
+        <MockExamSession onExit={exit} onViewStats={openMockStats} />
+      )}
+      {view.kind === "mock-stats" && (
+        <MockStatsView onExit={exit} onOpenChapter={openChapterStudy} />
+      )}
     </div>
   );
 }

@@ -1,5 +1,13 @@
 import { useState } from "react";
-import { BarChart3, BookOpen, Check, Pencil, Sparkles } from "lucide-react";
+import {
+  BarChart3,
+  BookOpen,
+  Check,
+  GraduationCap,
+  Pencil,
+  Sparkles,
+  Target,
+} from "lucide-react";
 import { grammarData } from "../data/grammarData";
 import { useSrs } from "../srs/useSrs";
 import { SyncStatus } from "./SyncStatus";
@@ -8,11 +16,19 @@ interface Props {
   onStartReview: () => void;
   onOpenChapter: (chapter: number) => void;
   onOpenStats: () => void;
+  onOpenMock: () => void;
+  onOpenMockStats: () => void;
 }
 
 const ALL_CHAPTERS = Array.from({ length: 25 }, (_, i) => 26 + i);
 
-export function Dashboard({ onStartReview, onOpenChapter, onOpenStats }: Props) {
+export function Dashboard({
+  onStartReview,
+  onOpenChapter,
+  onOpenStats,
+  onOpenMock,
+  onOpenMockStats,
+}: Props) {
   const {
     dueItems,
     chapterStats,
@@ -109,6 +125,45 @@ export function Dashboard({ onStartReview, onOpenChapter, onOpenStats }: Props) 
             ? `Review ${due} item${due > 1 ? "s" : ""} due`
             : "Nothing due — come back later"}
         </button>
+      )}
+
+      {!editing && (
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-12 -mt-8">
+          <button
+            onClick={onOpenMock}
+            className="flex items-center justify-between gap-3 px-5 py-4 rounded-2xl border border-neutral-200 bg-white hover:border-neutral-400 transition-colors text-left"
+          >
+            <div className="flex items-center gap-3">
+              <GraduationCap size={18} className="text-neutral-500" />
+              <div>
+                <div className="text-sm font-medium text-neutral-900">
+                  JLPT N4 Grammar Mock
+                </div>
+                <div className="text-xs text-neutral-500">
+                  Fill-in-the-blank · instant feedback
+                </div>
+              </div>
+            </div>
+            <div className="text-xs text-neutral-400">Open</div>
+          </button>
+          <button
+            onClick={onOpenMockStats}
+            className="flex items-center justify-between gap-3 px-5 py-4 rounded-2xl border border-neutral-200 bg-white hover:border-neutral-400 transition-colors text-left"
+          >
+            <div className="flex items-center gap-3">
+              <Target size={18} className="text-neutral-500" />
+              <div>
+                <div className="text-sm font-medium text-neutral-900">
+                  Mock Exam Analytics
+                </div>
+                <div className="text-xs text-neutral-500">
+                  Weak grammar points · chapter heatmap
+                </div>
+              </div>
+            </div>
+            <div className="text-xs text-neutral-400">Open</div>
+          </button>
+        </div>
       )}
 
       <div className="mb-4 text-xs uppercase tracking-wider text-neutral-400">

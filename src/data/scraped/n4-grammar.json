@@ -1,0 +1,3930 @@
+[
+  {
+    "id": "mn-001",
+    "question": "あの人は病気ではない ＿＿ くすりをたくさん飲んでいます。",
+    "choices": [
+      "ので",
+      "ために",
+      "のに",
+      "から"
+    ],
+    "answer": 2,
+    "chapter": 45,
+    "grammarPoint": "～のに",
+    "explanation": "Despite not being sick, he drinks medicine. のに shows contradiction between clauses.",
+    "sourceSlug": "01"
+  },
+  {
+    "id": "mn-002",
+    "question": "これから日本に行くけど１週間で戻る。戻ったらすぐに会いたいと思う。それまで、なにも ＿＿ 。",
+    "choices": [
+      "決めないようほしい",
+      "決めないほしい",
+      "決めなくてほしい",
+      "決めないでほしい"
+    ],
+    "answer": 3,
+    "chapter": 34,
+    "grammarPoint": "～ないで",
+    "explanation": "Don't decide anything before my return. ～ないで expresses manner or substitution in requests.",
+    "sourceSlug": "01"
+  },
+  {
+    "id": "mn-003",
+    "question": "社長から電話が ＿＿ とき、私は子供とピクニックに出かける準備をしていた。",
+    "choices": [
+      "かかってきた",
+      "かかっていった",
+      "かかっておいた",
+      "かかってみた"
+    ],
+    "answer": 0,
+    "grammarPoint": "～てくる",
+    "explanation": "When a call came in, he was preparing. かかってくる describes something arriving to you.",
+    "sourceSlug": "01"
+  },
+  {
+    "id": "mn-004",
+    "question": "でもあなたと話が ＿＿ よ。だって二人で話をしたことなんて一度もなかったものな。",
+    "choices": [
+      "できてよい",
+      "できてよかった",
+      "できたらよかった",
+      "できればよかった"
+    ],
+    "answer": 1,
+    "grammarPoint": "～てよかった",
+    "explanation": "I'm glad we could finally talk. ～てよかった expresses happiness about good things happening.",
+    "sourceSlug": "01"
+  },
+  {
+    "id": "mn-005",
+    "question": "彼は私たちが部屋に入った ＿＿ ドアを閉めた。",
+    "choices": [
+      "ごで",
+      "あとで",
+      "まえで",
+      "まえに"
+    ],
+    "answer": 1,
+    "chapter": 34,
+    "grammarPoint": "～たあとで",
+    "explanation": "He closed the door after we entered. あとで shows sequence of one action following another.",
+    "sourceSlug": "01"
+  },
+  {
+    "id": "mn-006",
+    "question": "このバスは郵便局の前 ＿＿ 通りますか？",
+    "choices": [
+      "で",
+      "に",
+      "へ",
+      "を"
+    ],
+    "answer": 3,
+    "grammarPoint": "を (path particle)",
+    "explanation": "Does this bus pass by the post office? を marks the path/route through which things move.",
+    "sourceSlug": "01"
+  },
+  {
+    "id": "mn-007",
+    "question": "この本のほうがあなたには ＿＿ はずだ。",
+    "choices": [
+      "わかったやすい",
+      "わかるやすい",
+      "わかりやすい",
+      "わかってやすい"
+    ],
+    "answer": 2,
+    "chapter": 44,
+    "grammarPoint": "～やすい",
+    "explanation": "This book should be easier for you. やすい indicates ease or likelihood of doing something.",
+    "sourceSlug": "01"
+  },
+  {
+    "id": "mn-008",
+    "question": "電車を待っていたとき、わたしは友だち ＿＿ 名前を呼ばれました。",
+    "choices": [
+      "を",
+      "が",
+      "に",
+      "で"
+    ],
+    "answer": 2,
+    "grammarPoint": "に (indirect object)",
+    "explanation": "My friend called me while waiting. に marks the indirect object/recipient in this context.",
+    "sourceSlug": "01"
+  },
+  {
+    "id": "mn-009",
+    "question": "昨日は仕事を守れる ＿＿ が不安だった。しかしいまは、命を守れる ＿＿ が不安だ。",
+    "choices": [
+      "かどうか/かどうか",
+      "か/か",
+      "じゃないか/じゃないか",
+      "の/の"
+    ],
+    "answer": 0,
+    "chapter": 40,
+    "grammarPoint": "～かどうか",
+    "explanation": "Whether I could protect my job made me anxious. かどうか expresses uncertainty about truth.",
+    "sourceSlug": "01"
+  },
+  {
+    "id": "mn-010",
+    "question": "明日の夕方 ＿＿ 東京に戻りたい。アルバイトに行かなければならないから。",
+    "choices": [
+      "までで",
+      "まで",
+      "までに",
+      "にまで"
+    ],
+    "answer": 2,
+    "grammarPoint": "までに",
+    "explanation": "I want to return to Tokyo by tomorrow. までに marks a deadline or final time limit.",
+    "sourceSlug": "01"
+  },
+  {
+    "id": "mn-011",
+    "question": "男の子がバケツ一杯の水をもって帰る ＿＿ 一時間近くもかかった。",
+    "choices": [
+      "のに",
+      "のを",
+      "のは",
+      "ので"
+    ],
+    "answer": 0,
+    "chapter": 42,
+    "grammarPoint": "～のに (time/effort)",
+    "explanation": "It took an hour to carry home water. のに expresses effort or time required for action.",
+    "sourceSlug": "2"
+  },
+  {
+    "id": "mn-012",
+    "question": "食事は果物と野菜 ＿＿ にしています。",
+    "choices": [
+      "しか",
+      "だけ",
+      "など",
+      "くらい"
+    ],
+    "answer": 1,
+    "grammarPoint": "だけ",
+    "explanation": "I eat only fruits and vegetables. だけ specifies exclusive inclusion of mentioned items.",
+    "sourceSlug": "2"
+  },
+  {
+    "id": "mn-013",
+    "question": "三週間たっても彼女 ＿＿ 返事は来なかった。",
+    "choices": [
+      "までの",
+      "からの",
+      "のまでの",
+      "のからの"
+    ],
+    "answer": 1,
+    "grammarPoint": "からの",
+    "explanation": "After three weeks, no reply came. からの indicates source or the starting point.",
+    "sourceSlug": "2"
+  },
+  {
+    "id": "mn-014",
+    "question": "あなた ＿＿ 一番したいことはなんですか？",
+    "choices": [
+      "が",
+      "は",
+      "に",
+      "も"
+    ],
+    "answer": 0,
+    "grammarPoint": "が (subject focus)",
+    "explanation": "What one thing do you most want to do? が marks the subject in desire questions.",
+    "sourceSlug": "2"
+  },
+  {
+    "id": "mn-015",
+    "question": "このとき、二階でことんという音 ＿＿ が誰も気づかなかった。",
+    "choices": [
+      "をした",
+      "になった",
+      "にした",
+      "がした"
+    ],
+    "answer": 3,
+    "grammarPoint": "～がした",
+    "explanation": "A sound went 'clunk' upstairs unnoticed. ～がする expresses making or producing sounds.",
+    "sourceSlug": "2"
+  },
+  {
+    "id": "mn-016",
+    "question": "兄さんったら、寝ながら ＿＿ するもんだから、僕は半分ぐらいしか眠れないよ。",
+    "choices": [
+      "動きまわるし、しゃべるし",
+      "動きまわると、しゃべると",
+      "動きまわったり、しゃべったり",
+      "動きまわっても、しゃべっても"
+    ],
+    "answer": 2,
+    "grammarPoint": "～たり、～たり",
+    "explanation": "My brother moves and talks while sleeping. ～たり、～たり lists multiple repeated actions.",
+    "sourceSlug": "2"
+  },
+  {
+    "id": "mn-017",
+    "question": "今日はうんと楽しんで、好きなだけ ＿＿ つもりよ。",
+    "choices": [
+      "食べ",
+      "食べる",
+      "食べている",
+      "食べよう"
+    ],
+    "answer": 1,
+    "chapter": 31,
+    "grammarPoint": "つもりです",
+    "explanation": "I intend to enjoy and eat what I like. つもりです expresses intention with dictionary form.",
+    "sourceSlug": "2"
+  },
+  {
+    "id": "mn-018",
+    "question": "電話で彼に叫んだ ＿＿ わ。「そんなの違うじゃない」って。",
+    "choices": [
+      "ことがいます",
+      "ことがいました",
+      "ことがあります",
+      "ことがありました"
+    ],
+    "answer": 2,
+    "grammarPoint": "ことがあります",
+    "explanation": "I yelled at him saying 'That's wrong!'. ～ことがあります expresses past experience.",
+    "sourceSlug": "2"
+  },
+  {
+    "id": "mn-019",
+    "question": "子どものころきらいだったやさいが、さいきん ＿＿ ようになりました。",
+    "choices": [
+      "食べる",
+      "食べた",
+      "食べられる",
+      "食べられた"
+    ],
+    "answer": 2,
+    "chapter": 36,
+    "grammarPoint": "～ようになりました (可能形)",
+    "explanation": "I can now eat vegetables I hated. Potential + ようになりました shows acquired ability.",
+    "sourceSlug": "2"
+  },
+  {
+    "id": "mn-020",
+    "question": "わたしは弟に ＿＿ と思って、この本を買いました。",
+    "choices": [
+      "読ませよう",
+      "読ませる",
+      "読みたい",
+      "読みたがる"
+    ],
+    "answer": 0,
+    "chapter": 48,
+    "grammarPoint": "使役形",
+    "explanation": "I bought this book to make my brother read. 使役形 expresses making someone do something.",
+    "sourceSlug": "2"
+  },
+  {
+    "id": "mn-021",
+    "question": "私はどうしても家に帰らなければ ＿＿ 。",
+    "choices": [
+      "いかない",
+      "ならない",
+      "なってない",
+      "いってない"
+    ],
+    "answer": 1,
+    "grammarPoint": "～なければならない",
+    "explanation": "I absolutely must return home. ～なければならない expresses necessity or obligation.",
+    "sourceSlug": "3"
+  },
+  {
+    "id": "mn-022",
+    "question": "窓の外では雨が ＿＿ いる。",
+    "choices": [
+      "降りつづけて",
+      "降ってつづけて",
+      "降るつづけて",
+      "降ったつづけて"
+    ],
+    "answer": 0,
+    "grammarPoint": "～つづける",
+    "explanation": "Rain keeps falling outside the window. ～つづける indicates continuation of an action.",
+    "sourceSlug": "3"
+  },
+  {
+    "id": "mn-023",
+    "question": "高木くんはこの仕事が気に入らなかった ＿＿ だけど、僕はとっても楽しかったです。",
+    "choices": [
+      "みたい",
+      "のみたい",
+      "にみたい",
+      "なみたい"
+    ],
+    "answer": 0,
+    "grammarPoint": "～みたい",
+    "explanation": "Takaki didn't like it, but I did. ～みたい expresses appearance or reported information.",
+    "sourceSlug": "3"
+  },
+  {
+    "id": "mn-024",
+    "question": "生まれた ＿＿ の子牛が立ち上がり、歩こうとしている。",
+    "choices": [
+      "だけ",
+      "とき",
+      "ところ",
+      "ばかり"
+    ],
+    "answer": 3,
+    "grammarPoint": "～ばかり",
+    "explanation": "A newborn calf is getting up. ～ばかり means just recently or only just happened.",
+    "sourceSlug": "3"
+  },
+  {
+    "id": "mn-025",
+    "question": "A 「今すぐ何かして働きたいと思うわ。」 B 「何かやさしいお料理を ＿＿ どうですか？」",
+    "choices": [
+      "習うと",
+      "習うなら",
+      "習っても",
+      "習ったら"
+    ],
+    "answer": 3,
+    "chapter": 35,
+    "grammarPoint": "たら",
+    "explanation": "How about learning an easy recipe? Conditional たら frames suggestions or proposals.",
+    "sourceSlug": "3"
+  },
+  {
+    "id": "mn-026",
+    "question": "しゃべりたくない ＿＿ 、 しゃべらなくてもいいですよ。",
+    "choices": [
+      "のたら",
+      "のなら",
+      "のと",
+      "のは"
+    ],
+    "answer": 1,
+    "grammarPoint": "～のなら",
+    "explanation": "If you don't want to talk, you needn't. のなら sets conditions or hypothetical situations.",
+    "sourceSlug": "3"
+  },
+  {
+    "id": "mn-027",
+    "question": "中国を旅しているあいだ、実家への連絡はあまり ＿＿ 。",
+    "choices": [
+      "した",
+      "しないでいた",
+      "していた",
+      "していなかった"
+    ],
+    "answer": 3,
+    "grammarPoint": "～ていなかった",
+    "explanation": "I barely kept in touch with family. ～ていなかった expresses not doing something regularly.",
+    "sourceSlug": "3"
+  },
+  {
+    "id": "mn-028",
+    "question": "機械工作をすごいと言ったけど、鈴木は手を ＿＿ 。",
+    "choices": [
+      "汚しがらなかった",
+      "汚したくなかった",
+      "汚したがらなくなった",
+      "汚したがらなかった"
+    ],
+    "answer": 3,
+    "grammarPoint": "～たがらなかった",
+    "explanation": "Suzuki was reluctant to get his hands dirty. ～たがらない expresses unwillingness or reluctance.",
+    "sourceSlug": "3"
+  },
+  {
+    "id": "mn-029",
+    "question": "駅へ行きたいんですが、どう ＿＿ いいですか。",
+    "choices": [
+      "行って",
+      "行けば",
+      "行くなら",
+      "行くのは"
+    ],
+    "answer": 1,
+    "chapter": 35,
+    "grammarPoint": "条件形 ば",
+    "explanation": "If I go that way, would it be good? Conditional ば with いいですか asks for advice.",
+    "sourceSlug": "3"
+  },
+  {
+    "id": "mn-030",
+    "question": "けさはいつもより早く学校へ行きました。しかし、山田さんはもう ＿＿ 。",
+    "choices": [
+      "きます",
+      "きています",
+      "きてでした",
+      "きていました"
+    ],
+    "answer": 3,
+    "chapter": 29,
+    "grammarPoint": "～ていました",
+    "explanation": "Yamada was already there that morning. ～ていました expresses a past resultant state.",
+    "sourceSlug": "3"
+  },
+  {
+    "id": "mn-031",
+    "question": "今日は寒いので、風邪をひいて ＿＿ そうです。",
+    "choices": [
+      "しまい",
+      "み",
+      "いき",
+      "おき"
+    ],
+    "answer": 0,
+    "chapter": 43,
+    "grammarPoint": "～そうです",
+    "explanation": "The V-stem + そう pattern describes actions about to happen. Catching a cold appears imminent using this form for apparent/approaching situations.",
+    "sourceSlug": "4"
+  },
+  {
+    "id": "mn-032",
+    "question": "彼は「クラシック音楽」をタップした。悲しいメロディーと歌詞が ＿＿ 。",
+    "choices": [
+      "流れはじめた",
+      "流れいった",
+      "流れつづけた",
+      "流れみた"
+    ],
+    "answer": 0,
+    "explanation": "流れはじめた (began flowing) shows inceptive aspect—the action's starting point. This tests basic aspect selection rather than advanced MnN grammar.",
+    "sourceSlug": "4"
+  },
+  {
+    "id": "mn-033",
+    "question": "わたしはけさ山田さんがひとりで ＿＿ を見ました。",
+    "choices": [
+      "走る",
+      "走ること",
+      "走っているの",
+      "走っていること"
+    ],
+    "answer": 2,
+    "chapter": 38,
+    "grammarPoint": "Verb-の",
+    "explanation": "The nominalizer Verb-ている + の converts an action to a noun object. Required because the verb 見ました (saw) takes a noun complement.",
+    "sourceSlug": "4"
+  },
+  {
+    "id": "mn-034",
+    "question": "彼とはじめてデートした ＿＿ 、新しい生活をはじめたいと思っていました。",
+    "choices": [
+      "とき",
+      "ところ",
+      "あと",
+      "ごろ"
+    ],
+    "answer": 0,
+    "explanation": "とき (when) marks temporal positioning. While important, this basic temporal marker isn't in the advanced MnN Book 2 chapters.",
+    "sourceSlug": "4"
+  },
+  {
+    "id": "mn-035",
+    "question": "十五分 ＿＿ パトカーのサイレンがきこえた。",
+    "choices": [
+      "おきに",
+      "までに",
+      "ように",
+      "あとに"
+    ],
+    "answer": 0,
+    "explanation": "おきに (every X interval) marks regular recurrence. This frequency pattern isn't explicitly covered in MnN Book 2 chapters.",
+    "sourceSlug": "4"
+  },
+  {
+    "id": "mn-036",
+    "question": "両親はふたりともわたしを理解して ＿＿ いた。",
+    "choices": [
+      "あげて",
+      "くれて",
+      "やって",
+      "もらって"
+    ],
+    "answer": 1,
+    "chapter": 41,
+    "grammarPoint": "～てくれる",
+    "explanation": "～てくれる shows someone did something benefiting the speaker. Parents 'gave' understanding to the child—showing received favor.",
+    "sourceSlug": "4"
+  },
+  {
+    "id": "mn-037",
+    "question": "これから新宿駅で松本さんに ＿＿ 予定です。",
+    "choices": [
+      "会っている",
+      "会える",
+      "会おう",
+      "会う"
+    ],
+    "answer": 3,
+    "chapter": 31,
+    "grammarPoint": "～予定です",
+    "explanation": "Plain verb form + ～予定です expresses intended plans. The plain form 会う states the action planned for Shinjuku Station.",
+    "sourceSlug": "4"
+  },
+  {
+    "id": "mn-038",
+    "question": "このようなプロダクトを開発させて ＿＿ 。",
+    "choices": [
+      "いる",
+      "ほしい",
+      "ひつよう",
+      "したい"
+    ],
+    "answer": 1,
+    "chapter": 48,
+    "grammarPoint": "使役形",
+    "explanation": "The causative form makes someone else the agent of an action. 開発させてほしい requests that someone develop the product.",
+    "sourceSlug": "4"
+  },
+  {
+    "id": "mn-039",
+    "question": "同じような趣味を持つ人の集まりに参加 ＿＿ はいかがでしょうか？",
+    "choices": [
+      "していて",
+      "していって",
+      "してきて",
+      "してみて"
+    ],
+    "answer": 3,
+    "chapter": 40,
+    "grammarPoint": "～てみる",
+    "explanation": "～てみます means 'try doing.' Suggests trying participation in a gathering, showing experimental/attempted action.",
+    "sourceSlug": "4"
+  },
+  {
+    "id": "mn-040",
+    "question": "彼らはいつも ＿＿ ソファーの上でレコードをきいていた。",
+    "choices": [
+      "のように",
+      "のような",
+      "みたいに",
+      "みたいな"
+    ],
+    "answer": 0,
+    "explanation": "～のように (in the manner of) is an adverbial form. While important, this comparison pattern isn't in the MnN chapters provided.",
+    "sourceSlug": "4"
+  },
+  {
+    "id": "mn-041",
+    "question": "お時間をとりましたことを ＿＿ ください。ご健康とご幸福を祈ります。",
+    "choices": [
+      "おゆるし",
+      "ゆるして",
+      "おゆるして",
+      "ゆるし"
+    ],
+    "answer": 0,
+    "chapter": 49,
+    "grammarPoint": "お + Verb-stem + ください",
+    "explanation": "This honorific pattern creates formal, polite requests. おゆるし formally requests forgiveness—showing respectful language.",
+    "sourceSlug": "5"
+  },
+  {
+    "id": "mn-042",
+    "question": "はじめにうまく ＿＿ 、何度でも、何度でも、やってみるんだね。",
+    "choices": [
+      "いかなかったら",
+      "いかなくて",
+      "いかないと",
+      "いかないで"
+    ],
+    "answer": 0,
+    "chapter": 35,
+    "grammarPoint": "～たら",
+    "explanation": "The flexible conditional ～たら expresses hypothetical situations. Negative past ～たら means 'if it didn't work out.'",
+    "sourceSlug": "5"
+  },
+  {
+    "id": "mn-043",
+    "question": "子供たちが動物園への ＿＿ をたずねた。",
+    "choices": [
+      "行方",
+      "行き方",
+      "行く方",
+      "行った方"
+    ],
+    "answer": 1,
+    "explanation": "Verb-stem + 方 creates nouns meaning 'way/method.' 行き方 (way to go) is a nominalization pattern not in MnN Book 2 chapters.",
+    "sourceSlug": "5"
+  },
+  {
+    "id": "mn-044",
+    "question": "電車を ＿＿ としたとき、 ころんでけがをしました。",
+    "choices": [
+      "おり",
+      "おりる",
+      "おりて",
+      "おりよう"
+    ],
+    "answer": 3,
+    "chapter": 31,
+    "grammarPoint": "意向形",
+    "explanation": "The volitional form ～ようとする means 'about to' or 'trying to.' Shows attempting action—was trying to get off the train.",
+    "sourceSlug": "5"
+  },
+  {
+    "id": "mn-045",
+    "question": "誰が相手 ＿＿ 、どんなこと ＿＿ 、彼は納得させてしまう。",
+    "choices": [
+      "ても/ても",
+      "など/など",
+      "でも/でも",
+      "なら/なら"
+    ],
+    "answer": 2,
+    "chapter": 45,
+    "grammarPoint": "～でも",
+    "explanation": "The universal ～でも (repeated) means 'no matter who or what.' Shows that regardless of opponent or situation, he convinces anyone.",
+    "sourceSlug": "5"
+  },
+  {
+    "id": "mn-046",
+    "question": "隠れるところがない ＿＿ ！",
+    "choices": [
+      "じゃないが",
+      "じゃないかな",
+      "じゃないかしら",
+      "じゃないか"
+    ],
+    "answer": 3,
+    "explanation": "The emphatic じゃないか is colloquial/casual. This sentence-ending particle pattern isn't in MnN Book 2's formal grammar.",
+    "sourceSlug": "5"
+  },
+  {
+    "id": "mn-047",
+    "question": "りんごとバナナとではどちら ＿＿ すきですか。",
+    "choices": [
+      "で",
+      "が",
+      "は",
+      "と"
+    ],
+    "answer": 1,
+    "explanation": "The particle が after question words in comparisons marks the focus. This basic particle usage isn't in advanced MnN chapters.",
+    "sourceSlug": "5"
+  },
+  {
+    "id": "mn-048",
+    "question": "彼女は自分がとてもひどいことをして ＿＿ と思って後悔した。",
+    "choices": [
+      "みたんだ",
+      "しまったんだ",
+      "きたんだ",
+      "おいたんだ"
+    ],
+    "answer": 1,
+    "chapter": 29,
+    "grammarPoint": "～てしまった",
+    "explanation": "～てしまった expresses regretful/unwanted completion. She regretted having done something terrible—showing the emotional dimension.",
+    "sourceSlug": "5"
+  },
+  {
+    "id": "mn-049",
+    "question": "私、父から五百万円を借りる ＿＿ 。",
+    "choices": [
+      "ものができた",
+      "ものができていた",
+      "ことができていた",
+      "ことができた"
+    ],
+    "answer": 3,
+    "explanation": "ことができた (was able to) is a standard ability expression. While important, this isn't an advanced grammar pattern in MnN.",
+    "sourceSlug": "5"
+  },
+  {
+    "id": "mn-050",
+    "question": "一人 ＿＿ 子供のいない両親はあまり仲が良くないっていうのは本当だと思う？",
+    "choices": [
+      "もう",
+      "しか",
+      "だけ",
+      "ばかり"
+    ],
+    "answer": 1,
+    "chapter": 27,
+    "grammarPoint": "～しか～ない",
+    "explanation": "～しか～ない means 'only/nothing but.' Parents with only one child uses this restrictive particle with negation.",
+    "sourceSlug": "5"
+  },
+  {
+    "id": "mn-051",
+    "question": "わたしたちはバーでビールを ＿＿ モノポリというゲームもした。",
+    "choices": [
+      "飲むと",
+      "飲むなら",
+      "飲んだら",
+      "飲みながら"
+    ],
+    "answer": 3,
+    "chapter": 28,
+    "grammarPoint": "～ながら",
+    "explanation": "～ながら shows simultaneous actions happening together. Drank beer while playing Monopoly—the two actions overlap.",
+    "sourceSlug": "6"
+  },
+  {
+    "id": "mn-052",
+    "question": "そんなこと気に ＿＿ もいいわ。",
+    "choices": [
+      "しなくて",
+      "しないで",
+      "しない",
+      "しないよう"
+    ],
+    "answer": 0,
+    "explanation": "The negative te-form ～なくてもいい means 'don't have to.' While common, this conditional pattern isn't in MnN Book 2 chapters.",
+    "sourceSlug": "6"
+  },
+  {
+    "id": "mn-053",
+    "question": "あのあたりには、バッテリー ＿＿ レーダー ＿＿ 、かっこいい仕事をしている人がたくさんいるんだ。",
+    "choices": [
+      "とか/とか",
+      "と/と",
+      "など/など",
+      "や/や"
+    ],
+    "answer": 0,
+    "chapter": 36,
+    "grammarPoint": "～とか",
+    "explanation": "～とか (colloquial listing) informally lists examples. Batteries, radars, and such—shows casual, approximate enumeration.",
+    "sourceSlug": "6"
+  },
+  {
+    "id": "mn-054",
+    "question": "じつはわたしにはあまり ＿＿ いない秘密があります。",
+    "choices": [
+      "知れて",
+      "知らせて",
+      "知られて",
+      "知らせられて"
+    ],
+    "answer": 2,
+    "chapter": 37,
+    "grammarPoint": "受身形",
+    "explanation": "The passive form 受身 shows the subject receiving an action. 知られて (isn't known) marks the secret as not being known by many.",
+    "sourceSlug": "6"
+  },
+  {
+    "id": "mn-055",
+    "question": "大事なお皿をこわしてわたしは母 ＿＿ しかられました。",
+    "choices": [
+      "に",
+      "が",
+      "で",
+      "を"
+    ],
+    "answer": 0,
+    "chapter": 37,
+    "grammarPoint": "受身形",
+    "explanation": "In passive sentences, particle に marks the agent performing the action. 母に (by mother) shows who performed the scolding.",
+    "sourceSlug": "6"
+  },
+  {
+    "id": "mn-056",
+    "question": "どの店も建物はきれいで、中は明る ＿＿ だった。",
+    "choices": [
+      "よう",
+      "そう",
+      "みたい",
+      "らしい"
+    ],
+    "answer": 1,
+    "chapter": 43,
+    "grammarPoint": "～そう",
+    "explanation": "Adjective + ～そう expresses apparent qualities. 明るそう (looked bright) describes how the interior appeared to the observer.",
+    "sourceSlug": "6"
+  },
+  {
+    "id": "mn-057",
+    "question": "あなたにはお姉さんがいるの。すてきな人で有名人よ。東京へ連れて行って ＿＿ 。",
+    "choices": [
+      "会ってもらう",
+      "会ってあげる",
+      "会わせてあげる",
+      "会わせてもらう"
+    ],
+    "answer": 2,
+    "chapter": 41,
+    "grammarPoint": "～てあげる",
+    "explanation": "～てあげる shows doing something for another's benefit. 会わせてあげる (introduce/have meet) performs a favor for someone.",
+    "sourceSlug": "6"
+  },
+  {
+    "id": "mn-058",
+    "question": "さあ、お掛けなさい。少し事情を説明したほうが ＿＿ だ。",
+    "choices": [
+      "よそう",
+      "よいそう",
+      "よさそう",
+      "よかったそう"
+    ],
+    "answer": 2,
+    "chapter": 43,
+    "grammarPoint": "～そう",
+    "explanation": "い-adjective + ～そう describes apparent quality. よさそう (seems better) shows how explaining the situation appears/seems.",
+    "sourceSlug": "6"
+  },
+  {
+    "id": "mn-059",
+    "question": "わたしたちの家に泊まりなさいよ。そうすればお金もかからない ＿＿ 、時間を気にしないでゆっくり話もできる ＿＿ 。",
+    "choices": [
+      "ば/ば",
+      "が/が",
+      "し/し",
+      "で/で"
+    ],
+    "answer": 2,
+    "chapter": 28,
+    "grammarPoint": "～し、～",
+    "explanation": "～し、～ lists multiple reasons or benefits. Not only won't money be needed, but also you can relax—listing two advantages.",
+    "sourceSlug": "6"
+  },
+  {
+    "id": "mn-060",
+    "question": "正直に言ってくれたらよかった ＿＿ 。お金が必要だと言ってくれればわたしの分はあげた ＿＿ 。",
+    "choices": [
+      "から/から",
+      "のに/のに",
+      "なら/なら",
+      "ので/ので"
+    ],
+    "answer": 1,
+    "chapter": 45,
+    "grammarPoint": "～のに",
+    "explanation": "～のに expresses regretful contrast or disappointed expectation. If you had told me (implying you didn't) shows counter-factual regret.",
+    "sourceSlug": "6"
+  },
+  {
+    "id": "mn-061",
+    "question": "わたしはしょうらい医者になる ＿＿ です。",
+    "choices": [
+      "ところ",
+      "ように",
+      "つもり",
+      "そうに"
+    ],
+    "answer": 2,
+    "chapter": 31,
+    "grammarPoint": "つもり",
+    "explanation": "Dictionary form + つもり expresses the speaker's personal intention or plan. Becoming a doctor describes the intended goal.",
+    "sourceSlug": "7"
+  },
+  {
+    "id": "mn-062",
+    "question": "スナックを持って ＿＿ いいですか？",
+    "choices": [
+      "くるなら",
+      "きたら",
+      "きても",
+      "くると"
+    ],
+    "answer": 2,
+    "chapter": 45,
+    "grammarPoint": "～てもいいですか",
+    "explanation": "Te-form + もいいですか requests permission. Bringing a snack seeks approval for acceptability of an action.",
+    "sourceSlug": "7"
+  },
+  {
+    "id": "mn-063",
+    "question": "山田さんは食事に ＿＿ ところだったので、わたしも一緒に食堂に行ってゆうしょくを食べた。",
+    "choices": [
+      "行き",
+      "行った",
+      "行く",
+      "行こう"
+    ],
+    "answer": 2,
+    "chapter": 46,
+    "grammarPoint": "～ところです",
+    "explanation": "Dictionary form + ところ means about to happen or in progress. Yamada was in the process of going to eat.",
+    "sourceSlug": "7"
+  },
+  {
+    "id": "mn-064",
+    "question": "話しかけているのだから、こっちをちゃんと ＿＿ 。",
+    "choices": [
+      "見やすい",
+      "見ないで",
+      "見にくい",
+      "見なさい"
+    ],
+    "answer": 3,
+    "chapter": 33,
+    "grammarPoint": "命令形",
+    "explanation": "Imperative form 見なさい commands direct action. Orders the listener to look at the speaker who is talking.",
+    "sourceSlug": "7"
+  },
+  {
+    "id": "mn-065",
+    "question": "田中さんは風邪をひいている ＿＿ 、プールで泳いでいます。 のに ても より",
+    "choices": [
+      "なら",
+      "次の文の",
+      "…★…",
+      "に入る最もよいものを、１・２・３・４から一つ選びなさい。"
+    ],
+    "answer": 0,
+    "chapter": 45,
+    "grammarPoint": "～ても",
+    "explanation": "Even though (～ても) Tanaka has a cold, he swims anyway, expressing unexpected contrast against expectations.",
+    "sourceSlug": "7"
+  },
+  {
+    "id": "mn-066",
+    "question": "あなたから ＿＿ ＿＿ …★… ＿＿ と思っていた。",
+    "choices": [
+      "もう",
+      "はない",
+      "連絡",
+      "かもしれない"
+    ],
+    "answer": 1,
+    "explanation": "Due to formatting irregularities, the exact structure cannot be confidently parsed. Likely involves negative/absence construction.",
+    "sourceSlug": "7"
+  },
+  {
+    "id": "mn-067",
+    "question": "父はなんでも作れたんだ。戸棚が ＿＿ ＿＿ …★… ＿＿ 。",
+    "choices": [
+      "父が",
+      "なら",
+      "作ってくれた",
+      "必要"
+    ],
+    "answer": 0,
+    "chapter": 37,
+    "grammarPoint": "受身形",
+    "explanation": "Subject marker 父が indicates father in a structure with made/provided items, using passive or receiving construction.",
+    "sourceSlug": "7"
+  },
+  {
+    "id": "mn-068",
+    "question": "私が何がいいたいか、あなたには ＿＿ ＿＿ …★… ＿＿ 。",
+    "choices": [
+      "わかって",
+      "はずだ",
+      "いる",
+      "よく"
+    ],
+    "answer": 2,
+    "chapter": 46,
+    "grammarPoint": "はずです",
+    "explanation": "Should (understand/know) expresses confident expectation. You should comprehend what the speaker is trying to say.",
+    "sourceSlug": "7"
+  },
+  {
+    "id": "mn-069",
+    "question": "＿＿ ＿＿ …★… ＿＿ 東京へ行ってたんじゃないかと思う。",
+    "choices": [
+      "進まな",
+      "大学",
+      "に",
+      "ければ"
+    ],
+    "answer": 0,
+    "chapter": 35,
+    "grammarPoint": "条件形",
+    "explanation": "The conditional ～なければ (if not) creates a hypothetical. Not advancing to university triggers thought about going to Tokyo.",
+    "sourceSlug": "7"
+  },
+  {
+    "id": "mn-070",
+    "question": "その事件のあと、彼は両親よりも自分のほうが ＿＿ ＿＿ …★… ＿＿ なった。",
+    "choices": [
+      "ように",
+      "らしい",
+      "頭がいい",
+      "と思う"
+    ],
+    "answer": 3,
+    "chapter": 36,
+    "grammarPoint": "～ようになりました",
+    "explanation": "Change of state expressing how he came to believe he was smarter than his parents after the incident.",
+    "sourceSlug": "7"
+  },
+  {
+    "id": "mn-071",
+    "question": "わたしはあいさつをするのはいやでしたが、母はわたしにあいさつを ＿＿ 。",
+    "choices": [
+      "されました",
+      "させてあげました",
+      "させました",
+      "させてもらいました"
+    ],
+    "answer": 2,
+    "chapter": 48,
+    "grammarPoint": "使役形",
+    "explanation": "Causative form させました means to make someone do something. Mother made the child greet despite dislike.",
+    "sourceSlug": "8"
+  },
+  {
+    "id": "mn-072",
+    "question": "私にはあなたに説明 ＿＿ ことがいくつあるのです。",
+    "choices": [
+      "しないでならない",
+      "しなくてならない",
+      "しなくてはならない",
+      "しないではならない"
+    ],
+    "answer": 2,
+    "grammarPoint": "～なくてはならない",
+    "explanation": "Strong obligation structure meaning must explain. The speaker has several necessary explanations for the listener.",
+    "sourceSlug": "8"
+  },
+  {
+    "id": "mn-073",
+    "question": "あなたは誰かと話をなさる前に、すべてのじじつを知って ＿＿ ほうがいいでしょう。",
+    "choices": [
+      "おく",
+      "おって",
+      "おいている",
+      "おいた"
+    ],
+    "answer": 3,
+    "chapter": 30,
+    "grammarPoint": "～ておきます",
+    "explanation": "Preparation in advance before speaking to someone. Know all facts beforehand using the preparatory form.",
+    "sourceSlug": "8"
+  },
+  {
+    "id": "mn-074",
+    "question": "何かいやなことが ＿＿ 、彼女はいつもほほえみをうかべていた。",
+    "choices": [
+      "あったら",
+      "あっても",
+      "いったら",
+      "いっても"
+    ],
+    "answer": 1,
+    "chapter": 45,
+    "grammarPoint": "～ても",
+    "explanation": "Even though (～ても) something bad occurs, the subject continues smiling, showing resilience despite difficulties.",
+    "sourceSlug": "8"
+  },
+  {
+    "id": "mn-075",
+    "question": "ハンバーガーを１００円でなんて売れる ＿＿ と思う。",
+    "choices": [
+      "はずない",
+      "はずにない",
+      "はずがない",
+      "はずではない"
+    ],
+    "answer": 2,
+    "chapter": 46,
+    "grammarPoint": "はずがない",
+    "explanation": "Impossible/unthinkable that (はずがない) expresses strong negation. Selling 100-yen hamburgers is inconceivable.",
+    "sourceSlug": "8"
+  },
+  {
+    "id": "mn-076",
+    "question": "どうもおじゃま ＿＿ 。それではひるご飯のおすみになるまでは、どうぞごゆっくりお休みください。",
+    "choices": [
+      "でございます",
+      "ございました",
+      "いたしました",
+      "になりました"
+    ],
+    "answer": 2,
+    "chapter": 50,
+    "grammarPoint": "謙譲語",
+    "explanation": "Humble past form (お＋stem＋いたしました) politely apologizes for intrusion, showing deference to listener.",
+    "sourceSlug": "8"
+  },
+  {
+    "id": "mn-077",
+    "question": "兄はわたし ＿＿ えいがにつれて行ってくれました。",
+    "choices": [
+      "と",
+      "に",
+      "が",
+      "を"
+    ],
+    "answer": 3,
+    "chapter": 48,
+    "grammarPoint": "使役形",
+    "explanation": "Particle を marks the object of causative action. Older brother took the speaker to the movie using を with the giving verb.",
+    "sourceSlug": "8"
+  },
+  {
+    "id": "mn-078",
+    "question": "日本ではさとうより塩のほう ＿＿ 安いです。",
+    "choices": [
+      "で",
+      "が",
+      "は",
+      "に"
+    ],
+    "answer": 1,
+    "chapter": 27,
+    "grammarPoint": "～のほう + が",
+    "explanation": "After comparison with より, が marks the adjective. Salt is the one that is cheaper than sugar.",
+    "sourceSlug": "8"
+  },
+  {
+    "id": "mn-079",
+    "question": "私は夜の七時半 ＿＿ の電車で大阪に行く予定です。",
+    "choices": [
+      "まえ",
+      "あと",
+      "とき",
+      "ごろ"
+    ],
+    "answer": 3,
+    "explanation": "Time word ごろ means around a specific time. Taking the 7:30 PM train to Osaka indicates approximate timing.",
+    "sourceSlug": "8"
+  },
+  {
+    "id": "mn-080",
+    "question": "私はその会話を楽しんだと ＿＿ と思います。",
+    "choices": [
+      "言ってもいい",
+      "言ったらいい",
+      "言うといい",
+      "言おうといい"
+    ],
+    "answer": 0,
+    "chapter": 45,
+    "grammarPoint": "～てもいい",
+    "explanation": "It's okay/acceptable to (～てもいい) express permission. Saying one enjoyed the conversation is permissible.",
+    "sourceSlug": "8"
+  },
+  {
+    "id": "mn-081",
+    "question": "そういえばベルが鳴っている ＿＿ 。きっと木村さんだろう。",
+    "choices": [
+      "ところだ",
+      "ことだ",
+      "つもりだ",
+      "ようだ"
+    ],
+    "answer": 3,
+    "chapter": 47,
+    "grammarPoint": "～ようです",
+    "explanation": "Appears/seems (～ようです) expresses subjective inference. The bell seems to be ringing currently.",
+    "sourceSlug": "9"
+  },
+  {
+    "id": "mn-082",
+    "question": "明日図書館があいている ＿＿ どうか知っていますか。",
+    "choices": [
+      "が",
+      "を",
+      "に",
+      "か"
+    ],
+    "answer": 3,
+    "chapter": 40,
+    "grammarPoint": "～かどうか",
+    "explanation": "Whether or not (～かどうか) presents two possibilities. Asks if the library will be open tomorrow.",
+    "sourceSlug": "9"
+  },
+  {
+    "id": "mn-083",
+    "question": "あなたのその鳥をどこで手においれになったか、聞かせて ＿＿ か？",
+    "choices": [
+      "いただけます",
+      "いただけましょう",
+      "いただけろ",
+      "いただこう"
+    ],
+    "answer": 0,
+    "chapter": 41,
+    "grammarPoint": "～ていただけます",
+    "explanation": "Humble request (～ていただけますか) politely asks for a favor. May I ask where you obtained that bird?",
+    "sourceSlug": "9"
+  },
+  {
+    "id": "mn-084",
+    "question": "あの人はたいへんあたまがよくてやさしいかたと ＿＿ います。",
+    "choices": [
+      "いって",
+      "いわせて",
+      "いわれて",
+      "いわせられて"
+    ],
+    "answer": 2,
+    "chapter": 37,
+    "grammarPoint": "受身形",
+    "explanation": "Passive form いわれて means is said/it is said. That person is said to be intelligent and kind.",
+    "sourceSlug": "9"
+  },
+  {
+    "id": "mn-085",
+    "question": "きっとあなたは新しいところで新しい友だちを作って、私のことなんか忘れてしまったんだ ＿＿ 思っていたわ。",
+    "choices": [
+      "を",
+      "に",
+      "と",
+      "は"
+    ],
+    "answer": 2,
+    "chapter": 47,
+    "grammarPoint": "～と思う",
+    "explanation": "Expression of thought (～と思う) conveys belief. The speaker thought the other had forgotten about her.",
+    "sourceSlug": "9"
+  },
+  {
+    "id": "mn-086",
+    "question": "この切符はとても手に ＿＿ のです。",
+    "choices": [
+      "入にくい",
+      "入ってにくい",
+      "入りにくい",
+      "入るにくい"
+    ],
+    "answer": 2,
+    "chapter": 44,
+    "grammarPoint": "～にくい",
+    "explanation": "Difficult to (～にくい) means hard to do. This ticket is difficult to get by hand, implying hard to obtain.",
+    "sourceSlug": "9"
+  },
+  {
+    "id": "mn-087",
+    "question": "ほかの人の手紙を ＿＿ はいけません。",
+    "choices": [
+      "読み",
+      "読む",
+      "読んで",
+      "読んだ"
+    ],
+    "answer": 2,
+    "chapter": 34,
+    "grammarPoint": "Verb-て禁止",
+    "explanation": "Te-form in prohibition means do not do. You shouldn't read other people's letters as direct negative instruction.",
+    "sourceSlug": "9"
+  },
+  {
+    "id": "mn-088",
+    "question": "わたしが言ったこと、あの子に ＿＿ 。じゃないと、あの子とっても気を悪くするわ。",
+    "choices": [
+      "言えない",
+      "言わない",
+      "言わなくて",
+      "言わないで"
+    ],
+    "answer": 3,
+    "chapter": 34,
+    "grammarPoint": "Verb-ないで",
+    "explanation": "Without doing/don't do (～ないで) expresses prohibition. Don't tell that child, or they'll be upset.",
+    "sourceSlug": "9"
+  },
+  {
+    "id": "mn-089",
+    "question": "祖父はアル中で、ベルトで父をなぐったりした ＿＿ 。",
+    "choices": [
+      "しか",
+      "らしい",
+      "のよう",
+      "まで"
+    ],
+    "answer": 1,
+    "chapter": 47,
+    "grammarPoint": "～らしい",
+    "explanation": "Hearsay/apparently (～らしい) reports heard information. Grandfather apparently was alcoholic and abusive.",
+    "sourceSlug": "9"
+  },
+  {
+    "id": "mn-090",
+    "question": "これからそこへ行ってみるところですが、いっしょに ＿＿ か？",
+    "choices": [
+      "いらっしゃいます",
+      "いたします",
+      "なさいます",
+      "もうしあげます"
+    ],
+    "answer": 0,
+    "chapter": 49,
+    "grammarPoint": "尊敬語",
+    "explanation": "Honorific form (いらっしゃる) shows deference to the listener. Politely invites the other to come along.",
+    "sourceSlug": "9"
+  },
+  {
+    "id": "mn-091",
+    "question": "A 「その本、かりてもいいですか。」 B 「どうぞ。わたし、今ちょうど読みおわった ＿＿ ですから。」",
+    "choices": [
+      "らしい",
+      "ところ",
+      "かた",
+      "はず"
+    ],
+    "answer": 1,
+    "chapter": 46,
+    "grammarPoint": "～たところ",
+    "explanation": "～たところ marks a just-completed action; explains why the book is available to borrow.",
+    "sourceSlug": "10"
+  },
+  {
+    "id": "mn-092",
+    "question": "さいふは走っている ＿＿ ポケットから落ちたのかもしれないよ。",
+    "choices": [
+      "ごろ",
+      "だけで",
+      "あとで",
+      "ときに"
+    ],
+    "answer": 3,
+    "grammarPoint": "ときに",
+    "explanation": "ときに indicates timing; the wallet likely fell while the person was running.",
+    "sourceSlug": "10"
+  },
+  {
+    "id": "mn-093",
+    "question": "学校までは車で母に送って ＿＿ 。",
+    "choices": [
+      "あげました",
+      "もらいました",
+      "くれました",
+      "やりました"
+    ],
+    "answer": 1,
+    "chapter": 41,
+    "grammarPoint": "～てもらう",
+    "explanation": "～てもらいました expresses receiving a favor; speaker received a ride to school from mother.",
+    "sourceSlug": "10"
+  },
+  {
+    "id": "mn-094",
+    "question": "わたしは本 ＿＿ 読んだことがありません。",
+    "choices": [
+      "など",
+      "なら",
+      "だけ",
+      "でも"
+    ],
+    "answer": 0,
+    "grammarPoint": "など",
+    "explanation": "など is a listing particle; speaker means they've never read such books.",
+    "sourceSlug": "10"
+  },
+  {
+    "id": "mn-095",
+    "question": "あのびじゅつ館へ行けば、日本のふるい絵を見る ＿＿ ができます。",
+    "choices": [
+      "こと",
+      "もの",
+      "よう",
+      "ところ"
+    ],
+    "answer": 0,
+    "chapter": 38,
+    "grammarPoint": "Verb + こと",
+    "explanation": "こと nominalizes verbs; 'ability to see old paintings' uses nominalization with ～ことができます.",
+    "sourceSlug": "10"
+  },
+  {
+    "id": "mn-096",
+    "question": "たしかに娘をいいところにかたづけますのはとてもうれしいこと ＿＿ 。",
+    "choices": [
+      "ございます",
+      "ございました",
+      "でございます",
+      "ではございます"
+    ],
+    "answer": 2,
+    "chapter": 50,
+    "grammarPoint": "でございます",
+    "explanation": "でございます is extra-polite copula; emphasizes formality in expressing something joyful.",
+    "sourceSlug": "10"
+  },
+  {
+    "id": "mn-097",
+    "question": "彼の父親は歯科医で、うでの良 ＿＿ と料金の高 ＿＿ で知られていた。",
+    "choices": [
+      "さ/さ",
+      "し/し",
+      "げ/げ",
+      "の/の"
+    ],
+    "answer": 0,
+    "grammarPoint": "い-adj + さ",
+    "explanation": "い-adjective + さ creates nouns; 良さ (goodness) and 高さ (height) transform adjectives.",
+    "sourceSlug": "10"
+  },
+  {
+    "id": "mn-098",
+    "question": "問題が ＿＿ こんごもきがるにご連絡ください。",
+    "choices": [
+      "起きるたら",
+      "起きてら",
+      "起きたら",
+      "起きていたら"
+    ],
+    "answer": 2,
+    "chapter": 35,
+    "grammarPoint": "～たら",
+    "explanation": "～たら is flexible conditional; 'if a problem occurs, contact us' uses this conditional.",
+    "sourceSlug": "10"
+  },
+  {
+    "id": "mn-099",
+    "question": "わたしは子どもが二人います。 上の子がほしいと言えば、すぐに下の子も同じものを ＿＿ 。",
+    "choices": [
+      "ほしいです",
+      "ほしがります",
+      "ほしいでした",
+      "ほしがっています"
+    ],
+    "answer": 1,
+    "grammarPoint": "～がります",
+    "explanation": "～がります expresses others' emotions; younger sibling wants same thing when older one does.",
+    "sourceSlug": "10"
+  },
+  {
+    "id": "mn-100",
+    "question": "おじゃま ＿＿ すみませんでした。すぐしつれいします。",
+    "choices": [
+      "して",
+      "しても",
+      "したら",
+      "したなら"
+    ],
+    "answer": 0,
+    "chapter": 39,
+    "grammarPoint": "～て",
+    "explanation": "～て shows causality; 'being an intrusion, I apologize' links reason to consequence.",
+    "sourceSlug": "10"
+  },
+  {
+    "id": "mn-101",
+    "question": "友だちと ＿＿ 約束を忘れてはいけません。",
+    "choices": [
+      "に",
+      "で",
+      "や",
+      "の"
+    ],
+    "answer": 3,
+    "grammarPoint": "の",
+    "explanation": "の marks possession/relationship; creates 'friend's promise' showing connection.",
+    "sourceSlug": "11"
+  },
+  {
+    "id": "mn-102",
+    "question": "昼ごはんを食べ ＿＿ から話しましょう。",
+    "choices": [
+      "はじめて",
+      "しまって",
+      "おいて",
+      "おわって"
+    ],
+    "answer": 3,
+    "grammarPoint": "～おわる",
+    "explanation": "～おわる indicates completion; 'after finishing lunch' shows action complete before speaking.",
+    "sourceSlug": "11"
+  },
+  {
+    "id": "mn-103",
+    "question": "ひまだからゲーム ＿＿ しましょう。",
+    "choices": [
+      "でも",
+      "しか",
+      "まで",
+      "ながら"
+    ],
+    "answer": 0,
+    "grammarPoint": "でも",
+    "explanation": "でも suggests alternatives; 'let's play a game' proposes something to do.",
+    "sourceSlug": "11"
+  },
+  {
+    "id": "mn-104",
+    "question": "風景がわたしたちの前をゆっくりと通りすぎて ＿＿ 。",
+    "choices": [
+      "みた",
+      "いった",
+      "つづけた",
+      "あった"
+    ],
+    "answer": 1,
+    "grammarPoint": "～ていった",
+    "explanation": "～ていった shows movement away; landscape passes slowly away from their view.",
+    "sourceSlug": "11"
+  },
+  {
+    "id": "mn-105",
+    "question": "この公園には歩きまわっている人はたくさん ＿＿ 。",
+    "choices": [
+      "ございます",
+      "なさいます",
+      "いたします",
+      "でございます"
+    ],
+    "answer": 0,
+    "chapter": 50,
+    "grammarPoint": "ございます",
+    "explanation": "ございます politely states existence; used formally for 'there are many people in park.'",
+    "sourceSlug": "11"
+  },
+  {
+    "id": "mn-106",
+    "question": "あなたはお金の心配をする必要が ＿＿ よ。",
+    "choices": [
+      "なりません",
+      "いません",
+      "しません",
+      "ありません"
+    ],
+    "answer": 3,
+    "grammarPoint": "～必要がない",
+    "explanation": "～必要がない negates necessity; 'you don't need to worry about money' denies necessity.",
+    "sourceSlug": "11"
+  },
+  {
+    "id": "mn-107",
+    "question": "鈴木さんはバス ＿＿ 気分が悪くなったそうです。",
+    "choices": [
+      "の中",
+      "の中に",
+      "の中で",
+      "の中の"
+    ],
+    "answer": 2,
+    "grammarPoint": "で",
+    "explanation": "で marks action location; 'in the bus' indicates where Suzuki felt ill.",
+    "sourceSlug": "11"
+  },
+  {
+    "id": "mn-108",
+    "question": "いま、母の手作りチョコが ＿＿ どんなにいいだろう。",
+    "choices": [
+      "食べたら",
+      "食べれたら",
+      "食べられてたら",
+      "食べられたら"
+    ],
+    "answer": 3,
+    "chapter": 27,
+    "grammarPoint": "可能形",
+    "explanation": "可能形 + ～たら creates conditional; 'if one could eat mother's chocolate' expresses wish.",
+    "sourceSlug": "11"
+  },
+  {
+    "id": "mn-109",
+    "question": "それで、彼女から、ちかごろ便りはあったの ＿＿ ？",
+    "choices": [
+      "で",
+      "さ",
+      "かい",
+      "や"
+    ],
+    "answer": 2,
+    "grammarPoint": "かい",
+    "explanation": "かい is informal question particle; makes the question casual and emphatic.",
+    "sourceSlug": "11"
+  },
+  {
+    "id": "mn-110",
+    "question": "あの人は、なにかを ＿＿ より人にさせるほうが得意なんですよ。",
+    "choices": [
+      "させられる",
+      "させる",
+      "される",
+      "されさせる"
+    ],
+    "answer": 0,
+    "chapter": 48,
+    "grammarPoint": "させられる",
+    "explanation": "させられる combines causative-passive; 'person is good at making others do things.'",
+    "sourceSlug": "11"
+  },
+  {
+    "id": "mn-111",
+    "question": "田中は楽し ＿＿ 顔をしている。",
+    "choices": [
+      "そうな",
+      "ような",
+      "らしいな",
+      "みたいな"
+    ],
+    "answer": 0,
+    "chapter": 43,
+    "grammarPoint": "Adj + そうな",
+    "explanation": "Adj + そうな expresses appearance; 'Tanaka looks happy' shows facial expression.",
+    "sourceSlug": "12"
+  },
+  {
+    "id": "mn-112",
+    "question": "もう一度勉強しなさいよ。 ＿＿ できるわ。できたら、すてきなごほうびをあげるわ。",
+    "choices": [
+      "やるなら",
+      "やったら",
+      "やると",
+      "やれば"
+    ],
+    "answer": 3,
+    "chapter": 35,
+    "grammarPoint": "～ば",
+    "explanation": "～ば conditional; 'if you do it, I'll give you a reward' uses flexible conditional.",
+    "sourceSlug": "12"
+  },
+  {
+    "id": "mn-113",
+    "question": "僕たち、女みたい ＿＿ 見えるんだよ。",
+    "choices": [
+      "な",
+      "が",
+      "に",
+      "を"
+    ],
+    "answer": 2,
+    "chapter": 27,
+    "grammarPoint": "見える",
+    "explanation": "見える with に expresses appearance; 'we appear like women' shows how something seems.",
+    "sourceSlug": "12"
+  },
+  {
+    "id": "mn-114",
+    "question": "山本は新聞のきりぬき ＿＿ ものを持っている。",
+    "choices": [
+      "のよう",
+      "のようの",
+      "のような",
+      "のように"
+    ],
+    "answer": 2,
+    "grammarPoint": "～ような",
+    "explanation": "～ような means 'like/similar'; 'newspaper clippings similar to' describes like objects.",
+    "sourceSlug": "12"
+  },
+  {
+    "id": "mn-115",
+    "question": "すみませんが、これは二人 ＿＿ の話です。 だけ でも ごろ",
+    "choices": [
+      "など",
+      "次の文の",
+      "…★…",
+      "に入る最もよいものを、１・２・３・４から一つ選びなさい。"
+    ],
+    "answer": 0,
+    "grammarPoint": "など",
+    "explanation": "など lists items; 'story about two people' suggests excluding others from situation.",
+    "sourceSlug": "12"
+  },
+  {
+    "id": "mn-116",
+    "question": "来週渋谷でテニス ＿＿ ＿＿ …★… ＿＿ 。",
+    "choices": [
+      "行われます",
+      "が",
+      "の",
+      "試合"
+    ],
+    "answer": 1,
+    "grammarPoint": "が",
+    "explanation": "が marks subject in passive; 'tennis match is held' uses が as subject particle.",
+    "sourceSlug": "12"
+  },
+  {
+    "id": "mn-117",
+    "question": "あなたにはわたしのくろう ＿＿ ＿＿ …★… ＿＿ わ。",
+    "choices": [
+      "なりません",
+      "おわかりに",
+      "など",
+      "とても"
+    ],
+    "answer": 1,
+    "chapter": 49,
+    "grammarPoint": "お + Verb",
+    "explanation": "お + verb creates honorific; おわかりに acknowledges person's understanding respectfully.",
+    "sourceSlug": "12"
+  },
+  {
+    "id": "mn-118",
+    "question": "息子が大学そつぎょう後にどんな仕事につくか ＿＿ ＿＿ …★… ＿＿ 。",
+    "choices": [
+      "ところです",
+      "いる",
+      "を",
+      "決めて"
+    ],
+    "answer": 1,
+    "chapter": 46,
+    "grammarPoint": "～ているところです",
+    "explanation": "～ているところです shows ongoing action; decision about son's job is currently in progress.",
+    "sourceSlug": "12"
+  },
+  {
+    "id": "mn-119",
+    "question": "あなたなら何を ＿＿ ＿＿ …★… ＿＿ 、明さん。",
+    "choices": [
+      "でしょう",
+      "成功",
+      "手がけても",
+      "なさる"
+    ],
+    "answer": 3,
+    "chapter": 49,
+    "grammarPoint": "なさる",
+    "explanation": "なさる is special honorific 'do'; respectfully asks what other person would undertake.",
+    "sourceSlug": "12"
+  },
+  {
+    "id": "mn-120",
+    "question": "今朝めざめたとき、昨夜何 ＿＿ ＿＿ …★… ＿＿ 少し時間がかかった。",
+    "choices": [
+      "まで",
+      "が",
+      "あったか",
+      "思い出す"
+    ],
+    "answer": 3,
+    "chapter": 40,
+    "grammarPoint": "疑問詞 + か",
+    "explanation": "疑問詞 + か nominalizes questions; recalling what happened is what takes time.",
+    "sourceSlug": "12"
+  },
+  {
+    "id": "mn-121",
+    "question": "じしょを ＿＿ に日本語の新聞を読むことができますか。",
+    "choices": [
+      "使わず",
+      "使わない",
+      "使わなく",
+      "使わなくて"
+    ],
+    "answer": 0,
+    "chapter": 34,
+    "grammarPoint": "～ずに",
+    "explanation": "Verb stem + ずに (without) creates negative manner; read without consulting a dictionary.",
+    "sourceSlug": "13"
+  },
+  {
+    "id": "mn-122",
+    "question": "あとですてるから、ごみを ＿＿ おいてください。",
+    "choices": [
+      "集まる",
+      "集める",
+      "集まって",
+      "集めて"
+    ],
+    "answer": 3,
+    "chapter": 30,
+    "grammarPoint": "～ておきます",
+    "explanation": "Verb て-form + おきます prepares/leaves something in advance; gather trash before disposal.",
+    "sourceSlug": "13"
+  },
+  {
+    "id": "mn-123",
+    "question": "青木「川田さんはケーキを ＿＿ か。」 川田「はい、一度だけ。でも、うまくできませんでした。」",
+    "choices": [
+      "作りたいです",
+      "作るでしょう",
+      "作ったことがあります",
+      "作ることができます"
+    ],
+    "answer": 2,
+    "grammarPoint": "～たことがあります",
+    "explanation": "Past form + ことがあります asks about past experience; inquiring whether someone has made a cake before.",
+    "sourceSlug": "13"
+  },
+  {
+    "id": "mn-124",
+    "question": "あの人は入院しているので、あしたの旅行に ＿＿ はずがない。",
+    "choices": [
+      "来る",
+      "来ます",
+      "来て",
+      "来た"
+    ],
+    "answer": 0,
+    "chapter": 46,
+    "grammarPoint": "～はずがない",
+    "explanation": "Dictionary form + はずがない means 'shouldn't be expected'; the hospitalized person shouldn't come.",
+    "sourceSlug": "13"
+  },
+  {
+    "id": "mn-125",
+    "question": "テキストを ＿＿ 答えてください。",
+    "choices": [
+      "見なく",
+      "見なくて",
+      "見ずに",
+      "見ずで"
+    ],
+    "answer": 2,
+    "chapter": 34,
+    "grammarPoint": "～ずに",
+    "explanation": "Verb stem + ずに (without) shows manner; answer the questions without looking at text.",
+    "sourceSlug": "13"
+  },
+  {
+    "id": "mn-126",
+    "question": "めがねをかけた ＿＿ ねてしまいました。",
+    "choices": [
+      "あいだ",
+      "ながら",
+      "まま",
+      "まえに"
+    ],
+    "answer": 2,
+    "grammarPoint": "～まま",
+    "explanation": "Past form + まま maintains previous state; fell asleep still wearing glasses.",
+    "sourceSlug": "13"
+  },
+  {
+    "id": "mn-127",
+    "question": "１時間ぐらい ＿＿ つづけたので、のどがかわいた。",
+    "choices": [
+      "話し",
+      "話す",
+      "話さ",
+      "話せ"
+    ],
+    "answer": 0,
+    "grammarPoint": "V-stem + つづける",
+    "explanation": "Verb stem + つづけた shows continued prolonged action; talking for one hour caused dry throat.",
+    "sourceSlug": "13"
+  },
+  {
+    "id": "mn-128",
+    "question": "まだこのマンガを ＿＿ ことがありません。",
+    "choices": [
+      "読むの",
+      "読んで",
+      "読んだ",
+      "読みます"
+    ],
+    "answer": 2,
+    "grammarPoint": "～たことがありません",
+    "explanation": "Past form + ことがありません means 'have never'; expressing that the manga has never been read.",
+    "sourceSlug": "13"
+  },
+  {
+    "id": "mn-129",
+    "question": "やんさんはいつ国へ帰る ＿＿ ？",
+    "choices": [
+      "な",
+      "の",
+      "し",
+      "わ"
+    ],
+    "answer": 1,
+    "chapter": 40,
+    "grammarPoint": "～の (nominalizer)",
+    "explanation": "The nominalizer の transforms a verb clause into a noun for questioning; asks when the person will return home.",
+    "sourceSlug": "13"
+  },
+  {
+    "id": "mn-130",
+    "question": "だれかにさいふ ＿＿ とられた。",
+    "choices": [
+      "の",
+      "に",
+      "か",
+      "を"
+    ],
+    "answer": 3,
+    "chapter": 37,
+    "grammarPoint": "迷惑の受身",
+    "explanation": "Adversity passive with を-marked object; having one's wallet taken away expresses the negative impact.",
+    "sourceSlug": "13"
+  },
+  {
+    "id": "mn-131",
+    "question": "そつぎょうしてから何をする ＿＿ ですか。",
+    "choices": [
+      "こと",
+      "たい",
+      "ほしい",
+      "つもり"
+    ],
+    "answer": 3,
+    "chapter": 31,
+    "grammarPoint": "～つもりです",
+    "explanation": "Dictionary form + つもり expresses intention/plan; asking what someone intends to do after graduation.",
+    "sourceSlug": "14"
+  },
+  {
+    "id": "mn-132",
+    "question": "いろいろしらべて、その駅がいちばんべんりだ ＿＿ がわかった。",
+    "choices": [
+      "というもの",
+      "ということ",
+      "こと",
+      "もの"
+    ],
+    "answer": 1,
+    "chapter": 33,
+    "grammarPoint": "～ということ",
+    "explanation": "Quoted content + ということ nominalizes reported facts; discovered that this station is most convenient.",
+    "sourceSlug": "14"
+  },
+  {
+    "id": "mn-133",
+    "question": "たぶん明日も風が ＿＿ だろう。",
+    "choices": [
+      "強く",
+      "強い",
+      "強くて",
+      "強いと"
+    ],
+    "answer": 1,
+    "chapter": 32,
+    "grammarPoint": "～だろう",
+    "explanation": "い-adjective + だろう expresses inference/probability; the wind will probably be strong tomorrow.",
+    "sourceSlug": "14"
+  },
+  {
+    "id": "mn-134",
+    "question": "父は 声 ＿＿ 大きい。",
+    "choices": [
+      "に",
+      "の",
+      "が",
+      "で"
+    ],
+    "answer": 2,
+    "grammarPoint": "は～が (double-subject)",
+    "explanation": "In は～が construction, は marks topic and が marks the specific attribute; Father has a loud voice.",
+    "sourceSlug": "14"
+  },
+  {
+    "id": "mn-135",
+    "question": "あしたは家でゆっくり ＿＿ と思う。",
+    "choices": [
+      "休もう",
+      "休みよう",
+      "休むよう",
+      "休むろう"
+    ],
+    "answer": 0,
+    "chapter": 31,
+    "grammarPoint": "意向形 + と思う",
+    "explanation": "Volitional form + と思う expresses thinking/intention; planning to rest quietly at home tomorrow.",
+    "sourceSlug": "14"
+  },
+  {
+    "id": "mn-136",
+    "question": "外は ＿＿ ようですね。",
+    "choices": [
+      "寒",
+      "寒い",
+      "寒く",
+      "寒いの"
+    ],
+    "answer": 1,
+    "chapter": 47,
+    "grammarPoint": "い-adj + ようです",
+    "explanation": "い-adjective + ようです indicates outward appearance or subjective inference; it seems cold outside.",
+    "sourceSlug": "14"
+  },
+  {
+    "id": "mn-137",
+    "question": "たばこの ＿＿ すぎは よくないですよ。",
+    "choices": [
+      "すい",
+      "すう",
+      "すって",
+      "すった"
+    ],
+    "answer": 0,
+    "chapter": 44,
+    "grammarPoint": "～すぎます",
+    "explanation": "Verb stem + すぎ means 'excess/too much'; smoking too much is not good for health.",
+    "sourceSlug": "14"
+  },
+  {
+    "id": "mn-138",
+    "question": "レポートはペン ＿＿ 書いてください。",
+    "choices": [
+      "か",
+      "の",
+      "が",
+      "で"
+    ],
+    "answer": 3,
+    "grammarPoint": "で (tool/means)",
+    "explanation": "The で particle marks the tool or instrument used; write the report using a pen.",
+    "sourceSlug": "14"
+  },
+  {
+    "id": "mn-139",
+    "question": "せんぱい ＿＿ 私におみやげをくださいました。",
+    "choices": [
+      "が",
+      "を",
+      "で",
+      "に"
+    ],
+    "answer": 0,
+    "chapter": 41,
+    "grammarPoint": "～をくださいます",
+    "explanation": "Respectful くださいます form with を-marked object; a senior respectfully gave me a souvenir.",
+    "sourceSlug": "14"
+  },
+  {
+    "id": "mn-140",
+    "question": "私のへやの ＿＿ はこのへやとだいたい同じです。",
+    "choices": [
+      "広さ",
+      "広く",
+      "広い",
+      "広くて"
+    ],
+    "answer": 0,
+    "chapter": 40,
+    "grammarPoint": "い-adj + さ",
+    "explanation": "い-adjective + さ creates an abstract noun; the spaciousness of my room equals this room's.",
+    "sourceSlug": "14"
+  },
+  {
+    "id": "mn-141",
+    "question": "「ここにごみを ＿＿ な！」と書いてある。",
+    "choices": [
+      "すてろ",
+      "すてる",
+      "すてます",
+      "すてない"
+    ],
+    "answer": 1,
+    "chapter": 33,
+    "grammarPoint": "禁止形",
+    "explanation": "Dictionary form + な serves as prohibition in warnings and signage; don't throw trash here.",
+    "sourceSlug": "15"
+  },
+  {
+    "id": "mn-142",
+    "question": "この 仕事は日本語が ＿＿ なくてもかまいません。",
+    "choices": [
+      "じょうず",
+      "じょうずに",
+      "じょうずだ",
+      "じょうずで"
+    ],
+    "answer": 3,
+    "grammarPoint": "～でなくてもかまいません",
+    "explanation": "な-adjective て-form + ないても permits absence of quality; Japanese fluency is not necessary for this job.",
+    "sourceSlug": "15"
+  },
+  {
+    "id": "mn-143",
+    "question": "先生はもう ＿＿ 。",
+    "choices": [
+      "お帰りになりました",
+      "お帰りなさいました",
+      "お帰りございました",
+      "お帰りいたしました"
+    ],
+    "answer": 0,
+    "chapter": 49,
+    "grammarPoint": "お + Verb-stem + になりました",
+    "explanation": "Honorific form お + stem + になりました respectfully states someone's action; the teacher has left.",
+    "sourceSlug": "15"
+  },
+  {
+    "id": "mn-144",
+    "question": "カトレア ＿＿ いう店を知っていますか。",
+    "choices": [
+      "と",
+      "が",
+      "に",
+      "を"
+    ],
+    "answer": 0,
+    "chapter": 33,
+    "grammarPoint": "～という",
+    "explanation": "Noun + という identifies or names something; a store called Cattleya.",
+    "sourceSlug": "15"
+  },
+  {
+    "id": "mn-145",
+    "question": "日本にりゅうがくしている ＿＿ ふじさんをのぼりたい。",
+    "choices": [
+      "あいだに",
+      "ところが",
+      "まえに",
+      "ことが"
+    ],
+    "answer": 0,
+    "grammarPoint": "～あいだに",
+    "explanation": "Continuous verb + あいだに means 'during/while'; climbing Mt. Fuji during the study-abroad period.",
+    "sourceSlug": "15"
+  },
+  {
+    "id": "mn-146",
+    "question": "このへやに ＿＿ いけません。",
+    "choices": [
+      "入るは",
+      "入っては",
+      "入りますは",
+      "入らないは"
+    ],
+    "answer": 1,
+    "grammarPoint": "～てはいけません",
+    "explanation": "Verb て-form + は + いけません expresses prohibition or prohibition; you cannot enter this room.",
+    "sourceSlug": "15"
+  },
+  {
+    "id": "mn-147",
+    "question": "空を鳥がとんでいる ＿＿ 見えます。",
+    "choices": [
+      "が",
+      "を",
+      "のが",
+      "のを"
+    ],
+    "answer": 2,
+    "chapter": 38,
+    "grammarPoint": "Verb-ている + のが",
+    "explanation": "Nominalized verb clause + が marks subject of perception; can see birds flying in the sky.",
+    "sourceSlug": "15"
+  },
+  {
+    "id": "mn-148",
+    "question": "Ａ「カメラを 買いたいんですが、どこが いいですか。」 Ｂ「カメラを ＿＿ 、駅の そばの 店が 安くて いいですよ。",
+    "choices": [
+      "買うと",
+      "買えば",
+      "買ったら",
+      "買うなら"
+    ],
+    "answer": 3,
+    "grammarPoint": "～なら",
+    "explanation": "Dictionary form + なら presents hypothetical condition for advice; if buying a camera, the store near the station is good.",
+    "sourceSlug": "15"
+  },
+  {
+    "id": "mn-149",
+    "question": "かれは来月 ＿＿ ということを、まだだれにも知らせていない。",
+    "choices": [
+      "けっこんしろ",
+      "けっこんして",
+      "けっこんする",
+      "けっこんしよう"
+    ],
+    "answer": 2,
+    "chapter": 33,
+    "grammarPoint": "Verb + ということ",
+    "explanation": "Dictionary form + ということ nominalizes facts for reporting; hasn't told anyone about the matter that he will marry.",
+    "sourceSlug": "15"
+  },
+  {
+    "id": "mn-150",
+    "question": "さっき起きた ＿＿ で、まだねむいです。",
+    "choices": [
+      "とき",
+      "ほう",
+      "こと",
+      "ばかり"
+    ],
+    "answer": 3,
+    "chapter": 46,
+    "grammarPoint": "～たばかり",
+    "explanation": "Past form + ばかり means 'just' or 'immediately after'; right after waking up, still very sleepy.",
+    "sourceSlug": "15"
+  },
+  {
+    "id": "mn-151",
+    "question": "母のたんじょう日のプレゼントはセ－タ－ ＿＿ しました。",
+    "choices": [
+      "に",
+      "を",
+      "で",
+      "が"
+    ],
+    "answer": 0,
+    "chapter": 44,
+    "grammarPoint": "にします",
+    "explanation": "に + する means 'to make/decide on.' The sweater was chosen as the birthday gift—a decision expressed with にしました.",
+    "sourceSlug": "16"
+  },
+  {
+    "id": "mn-152",
+    "question": "Ａ「うちのむすこは肉より野菜のほうが好きなんですよ。」 Ｂ「いいですね。うちの子どもは野菜を ＿＿ こまっているんですよ。」",
+    "choices": [
+      "食べたがって",
+      "食べたがらなくて",
+      "食べたくて",
+      "食べたくなくて"
+    ],
+    "answer": 1,
+    "grammarPoint": "～たがらなくて",
+    "explanation": "～たがらなくて (refusing to want) contrasts with the first speaker; the child resists eating vegetables, troubling the parent.",
+    "sourceSlug": "16"
+  },
+  {
+    "id": "mn-153",
+    "question": "このしゅくだいは10日 ＿＿ 出してください。",
+    "choices": [
+      "まで",
+      "までに",
+      "までは",
+      "までも"
+    ],
+    "answer": 1,
+    "grammarPoint": "までに",
+    "explanation": "までに marks a deadline. 'Submit the homework by the 10th' specifies completion by that date.",
+    "sourceSlug": "16"
+  },
+  {
+    "id": "mn-154",
+    "question": "いろいろさがした ＿＿ 見つからないんです。",
+    "choices": [
+      "に",
+      "で",
+      "を",
+      "が"
+    ],
+    "answer": 3,
+    "grammarPoint": "が (conjunction)",
+    "explanation": "The conjunction が shows contrast/concession: 'Despite searching hard, I cannot find it' joins contradictory ideas.",
+    "sourceSlug": "16"
+  },
+  {
+    "id": "mn-155",
+    "question": "キムさん、田中さん ＿＿ あした10時に来るように言ってください。",
+    "choices": [
+      "を",
+      "に",
+      "や",
+      "の"
+    ],
+    "answer": 1,
+    "chapter": 33,
+    "grammarPoint": "に (with 言う)",
+    "explanation": "に marks the target of a request. 'Tell Tanaka to come at 10 tomorrow'—に specifies who receives the instruction.",
+    "sourceSlug": "16"
+  },
+  {
+    "id": "mn-156",
+    "question": "じしょをわすれたので、友だち ＿＿ 貸してもらった。",
+    "choices": [
+      "へ",
+      "に",
+      "を",
+      "か"
+    ],
+    "answer": 1,
+    "chapter": 41,
+    "grammarPoint": "～てもらう",
+    "explanation": "～てもらう expresses receiving a favor; に marks the person providing it. 'My friend lent me a dictionary.'",
+    "sourceSlug": "16"
+  },
+  {
+    "id": "mn-157",
+    "question": "私は仕事を ＿＿ つもりです。",
+    "choices": [
+      "やめない",
+      "やめたい",
+      "やめよう",
+      "やめたくない"
+    ],
+    "answer": 0,
+    "chapter": 31,
+    "grammarPoint": "ない + つもりです",
+    "explanation": "ないつもりです (negative intention) expresses intent not to do something: 'I intend not to quit my job.'",
+    "sourceSlug": "16"
+  },
+  {
+    "id": "mn-158",
+    "question": "あのレストランはいつ ＿＿ もこんでいる。",
+    "choices": [
+      "行った",
+      "行こう",
+      "行って",
+      "行く"
+    ],
+    "answer": 2,
+    "chapter": 45,
+    "grammarPoint": "いつ～ても",
+    "explanation": "いつ + te-form + も means 'any time/always.' 'That restaurant is always crowded no matter when [people] go.'",
+    "sourceSlug": "16"
+  },
+  {
+    "id": "mn-159",
+    "question": "学生「先生、何時まで大学にいらっしゃいますか。」 先生「きょうは５時まで ＿＿ よ。」",
+    "choices": [
+      "います",
+      "いらっしゃいます",
+      "あります",
+      "まいります"
+    ],
+    "answer": 0,
+    "chapter": 50,
+    "grammarPoint": "丁寧語",
+    "explanation": "Speaker uses humble form (います) about themselves instead of honorific いらっしゃいます; politeness requires self-deprecation.",
+    "sourceSlug": "16"
+  },
+  {
+    "id": "mn-160",
+    "question": "今度国に帰ること ＿＿ なりました。",
+    "choices": [
+      "が",
+      "に",
+      "を",
+      "で"
+    ],
+    "answer": 1,
+    "grammarPoint": "に (with なった)",
+    "explanation": "The particle に in 'Noun + に + なった' marks relationships: 'It has come to pass that I return home.'",
+    "sourceSlug": "16"
+  },
+  {
+    "id": "mn-161",
+    "question": "仕事をつづけるのは ＿＿ と思う。",
+    "choices": [
+      "むりに",
+      "むりで",
+      "むりだ",
+      "むりな"
+    ],
+    "answer": 2,
+    "chapter": 38,
+    "grammarPoint": "Verb-の + は + Adjective",
+    "explanation": "The cleft construction emphasizes the nominalized verb. 'Continuing work is impossible'—の + は + adjective focuses on the topic.",
+    "sourceSlug": "17"
+  },
+  {
+    "id": "mn-162",
+    "question": "A 「あした、いっしょに出かけませんか。」 B 「あしたは友達がうちに来るよてい ＿＿ 。」",
+    "choices": [
+      "なんです",
+      "なんですから",
+      "ので",
+      "からです"
+    ],
+    "answer": 0,
+    "chapter": 26,
+    "grammarPoint": "～んです",
+    "explanation": "～んです provides explanation/context. 'I have a plan [that a friend is coming]' justifies why the speaker cannot go out.",
+    "sourceSlug": "17"
+  },
+  {
+    "id": "mn-163",
+    "question": "中田さんが大学をそつぎょうできた ＿＿ 知っていますか。",
+    "choices": [
+      "ように",
+      "かどうか",
+      "だろうを",
+      "ことが"
+    ],
+    "answer": 1,
+    "chapter": 40,
+    "grammarPoint": "～かどうか",
+    "explanation": "～かどうか expresses uncertainty about whether something occurred. 'Do you know whether Nakada could graduate?'",
+    "sourceSlug": "17"
+  },
+  {
+    "id": "mn-164",
+    "question": "これから食事に行く ＿＿ なんですが、いっしょにいかがですか。",
+    "choices": [
+      "ながら",
+      "までに",
+      "ところ",
+      "ぐらい"
+    ],
+    "answer": 2,
+    "chapter": 46,
+    "grammarPoint": "～ところです (about to)",
+    "explanation": "～ところです marks the immediate moment before an action begins. '[Right now] I'm about to go eat.'",
+    "sourceSlug": "17"
+  },
+  {
+    "id": "mn-165",
+    "question": "木田「それ、林さんのじしょですか。いいじしょですね。」 林「ええ。兄が私に ＿＿ んです。」",
+    "choices": [
+      "いただいた",
+      "もらった",
+      "あげた",
+      "くれた"
+    ],
+    "answer": 3,
+    "chapter": 41,
+    "grammarPoint": "くれる",
+    "explanation": "くれる means 'someone gives to the speaker.' 'My older brother gave it to me' expresses a direct received favor.",
+    "sourceSlug": "17"
+  },
+  {
+    "id": "mn-166",
+    "question": "Ａ「あ、たいへんだ。この車ガソリンが ＿＿ よ。」 Ｂ「ほんとうだ。早く入れたほうがいいですね。」",
+    "choices": [
+      "なくなるらしいです",
+      "なくなるそうです",
+      "なくなるはずです",
+      "なくなりそうです"
+    ],
+    "answer": 3,
+    "chapter": 43,
+    "grammarPoint": "～そうです (looks like)",
+    "explanation": "Verb-stem + そうです indicates appearance or near future. 'The gas looks like it's running out' prompts refueling.",
+    "sourceSlug": "17"
+  },
+  {
+    "id": "mn-167",
+    "question": "あの先生の話は留学生 ＿＿ はむずかしすぎる。",
+    "choices": [
+      "と",
+      "に",
+      "から",
+      "より"
+    ],
+    "answer": 1,
+    "grammarPoint": "に (experiencer)",
+    "explanation": "に + は marks the experiencer/target: 'For international students, that teacher's speech is too difficult.'",
+    "sourceSlug": "17"
+  },
+  {
+    "id": "mn-168",
+    "question": "あの店はあまり ＿＿ 、店員も親切です。",
+    "choices": [
+      "高くて",
+      "高いで",
+      "高くなくて",
+      "高くないで"
+    ],
+    "answer": 2,
+    "chapter": 39,
+    "grammarPoint": "～くなくて",
+    "explanation": "い-adjective negative te-form (~くなくて) connects clauses: 'Not expensive AND the staff is kind'—lists positive qualities.",
+    "sourceSlug": "17"
+  },
+  {
+    "id": "mn-169",
+    "question": "病気が早く ＿＿ といいですね。",
+    "choices": [
+      "よくする",
+      "いいにする",
+      "よくなる",
+      "いいになる"
+    ],
+    "answer": 2,
+    "grammarPoint": "～といいですね",
+    "explanation": "Conditional with いい expresses hope/wish: 'If the illness gets better soon, that would be good—I hope so.'",
+    "sourceSlug": "17"
+  },
+  {
+    "id": "mn-170",
+    "question": "とちゅうで雨が ＿＿ かもしれないから、かさを持って行きましょう。",
+    "choices": [
+      "ふった",
+      "ふって",
+      "ふり",
+      "ふる"
+    ],
+    "answer": 3,
+    "chapter": 32,
+    "grammarPoint": "～かもしれません",
+    "explanation": "～かもしれません indicates possibility. 'It might rain on the way'—expresses uncertainty, so bringing an umbrella is prudent.",
+    "sourceSlug": "17"
+  },
+  {
+    "id": "mn-171",
+    "question": "今までねていた赤ちゃんが急に ＿＿ だした。",
+    "choices": [
+      "ないて",
+      "なく",
+      "なき",
+      "なけ"
+    ],
+    "answer": 2,
+    "grammarPoint": "～だす",
+    "explanation": "Verb-stem + だす means 'start/begin suddenly.' 'The baby suddenly started crying' captures abrupt action onset.",
+    "sourceSlug": "21"
+  },
+  {
+    "id": "mn-172",
+    "question": "そのアパ－トは駅 ＿＿ 近い。",
+    "choices": [
+      "を",
+      "の",
+      "で",
+      "に"
+    ],
+    "answer": 3,
+    "grammarPoint": "に (proximity/relation)",
+    "explanation": "The particle に marks spatial relation. 'The apartment is close to the station'—に shows locational reference point.",
+    "sourceSlug": "21"
+  },
+  {
+    "id": "mn-173",
+    "question": "すみません、きっぷの ＿＿ 方を教えてください。",
+    "choices": [
+      "買った",
+      "買って",
+      "買い",
+      "買う"
+    ],
+    "answer": 2,
+    "grammarPoint": "～方",
+    "explanation": "Verb-stem + 方 means 'way/method of [verb].' 'Please teach me the way to buy tickets'—how to purchase.",
+    "sourceSlug": "21"
+  },
+  {
+    "id": "mn-174",
+    "question": "医者「ねつが下がりましたね。でも、もう少しこの薬を飲んでください。」 田中「うんどうをしてもいいですか。」 医者「いいえ、まだ ＿＿ 。」",
+    "choices": [
+      "してください",
+      "してもいいですぐ",
+      "しなくてもいいです",
+      "しないでください"
+    ],
+    "answer": 3,
+    "chapter": 33,
+    "grammarPoint": "禁止形",
+    "explanation": "The prohibitive form ～ないでください forbids action. Doctor says 'Don't exercise yet'—direct prohibition due to recovery needs.",
+    "sourceSlug": "21"
+  },
+  {
+    "id": "mn-175",
+    "question": "楽しかった旅行のこと ＿＿ 思い出しています。",
+    "choices": [
+      "ながら",
+      "ばかり",
+      "しか",
+      "までに"
+    ],
+    "answer": 1,
+    "grammarPoint": "～ばかり",
+    "explanation": "～ばかり means 'only' or 'continuously.' 'I keep remembering only the fun trip'—shows focused/repeated recall.",
+    "sourceSlug": "21"
+  },
+  {
+    "id": "mn-176",
+    "question": "チケットはあとでお ＿＿ いたします。",
+    "choices": [
+      "わたして",
+      "わたす",
+      "わたせ",
+      "わたし"
+    ],
+    "answer": 3,
+    "chapter": 50,
+    "grammarPoint": "お + Verb-stem + します",
+    "explanation": "Humble form with お~ prefix expresses respectful offering. 'I will humbly give you the ticket'—formal, deferential action.",
+    "sourceSlug": "21"
+  },
+  {
+    "id": "mn-177",
+    "question": "先週かぜをひきましたが、もう ＿＿ なりました。",
+    "choices": [
+      "元気",
+      "元気に",
+      "元気く",
+      "元気で"
+    ],
+    "answer": 1,
+    "grammarPoint": "な-adj + に + なりました",
+    "explanation": "な-adjective + に + なった marks change of state. 'I became well'—indicates transition to the state expressed by the adjective.",
+    "sourceSlug": "21"
+  },
+  {
+    "id": "mn-178",
+    "question": "ひこうきが空 ＿＿ 東から西へとんで行きました。",
+    "choices": [
+      "を",
+      "は",
+      "で",
+      "と"
+    ],
+    "answer": 0,
+    "grammarPoint": "を (path of movement)",
+    "explanation": "を marks the space or path through which movement occurs. 'The plane flew through the sky'—を shows transit space.",
+    "sourceSlug": "21"
+  },
+  {
+    "id": "mn-179",
+    "question": "毎日れんしゅうしたので、 ＿＿ ように なりました。",
+    "choices": [
+      "およいで",
+      "およいだ",
+      "およげる",
+      "およぎ"
+    ],
+    "answer": 2,
+    "chapter": 36,
+    "grammarPoint": "～ようになりました",
+    "explanation": "～ようになりました expresses change of state to ability. 'I became able to swim'—practice led to acquired skill.",
+    "sourceSlug": "21"
+  },
+  {
+    "id": "mn-180",
+    "question": "その映画はとてもおもしろいので、一度 ＿＿ 見てください。",
+    "choices": [
+      "見た",
+      "見て",
+      "見ていて",
+      "見る"
+    ],
+    "answer": 1,
+    "chapter": 33,
+    "grammarPoint": "～てください",
+    "explanation": "te-form + ください makes a polite request. 'Please watch it'—casual, friendly recommendation in casual speech.",
+    "sourceSlug": "21"
+  },
+  {
+    "id": "mn-181",
+    "question": "その仕事はぜひわたしに ＿＿ 。",
+    "choices": [
+      "やりましょう",
+      "やりませんか",
+      "やらせてください",
+      "やってください"
+    ],
+    "answer": 2,
+    "chapter": 48,
+    "grammarPoint": "使役形",
+    "explanation": "The causative form やらせて + ください expresses a polite request for permission to do something.",
+    "sourceSlug": "22"
+  },
+  {
+    "id": "mn-182",
+    "question": "ねつが高いときは、むりを ＿＿ ほうがいい。",
+    "choices": [
+      "しない",
+      "しなくて",
+      "しないで",
+      "せず"
+    ],
+    "answer": 0,
+    "chapter": 32,
+    "grammarPoint": "～ないほうがいいです",
+    "explanation": "The plain negative form しない before ほうがいい expresses advice that it's better not to exert oneself.",
+    "sourceSlug": "22"
+  },
+  {
+    "id": "mn-183",
+    "question": "外国語を勉強しても、 ＿＿ ばわすれてしまいます。",
+    "choices": [
+      "話さなく",
+      "話さない",
+      "話さないで",
+      "話さなけれ"
+    ],
+    "answer": 3,
+    "chapter": 35,
+    "grammarPoint": "条件形 ば",
+    "explanation": "The conditional ば form of negative expresses a condition: 'If one doesn't speak, one forgets.'",
+    "sourceSlug": "22"
+  },
+  {
+    "id": "mn-184",
+    "question": "このきせつはたくさんの人が病院に ＿＿ やすい。",
+    "choices": [
+      "なり",
+      "なった",
+      "なって",
+      "なる"
+    ],
+    "answer": 0,
+    "chapter": 44,
+    "grammarPoint": "～やすい",
+    "explanation": "Verb stem + やすい means 'easy to become' or 'tendency to become.' It describes seasonal illness susceptibility.",
+    "sourceSlug": "22"
+  },
+  {
+    "id": "mn-185",
+    "question": "おきゃくさんが 来るからテーブルの上におさらを ＿＿ おきます。",
+    "choices": [
+      "ならべて",
+      "ならんで",
+      "ならべる",
+      "ならぶ"
+    ],
+    "answer": 0,
+    "chapter": 30,
+    "grammarPoint": "～ておきます",
+    "explanation": "The te-form ならべて + おきます means 'arrange (plates) in advance' as preparation for guests' arrival.",
+    "sourceSlug": "22"
+  },
+  {
+    "id": "mn-186",
+    "question": "先月からテニスを ＿＿ 。",
+    "choices": [
+      "始まりました",
+      "始まります",
+      "始めました",
+      "始めます"
+    ],
+    "answer": 2,
+    "explanation": "始めました is transitive past tense for actions the subject performs, distinct from intransitive 始まった.",
+    "sourceSlug": "22"
+  },
+  {
+    "id": "mn-187",
+    "question": "風がとても強いので、外に出ない ＿＿ あんぜんだ。",
+    "choices": [
+      "ほうが",
+      "までに",
+      "ながら",
+      "だから"
+    ],
+    "answer": 0,
+    "chapter": 32,
+    "grammarPoint": "～ほうが",
+    "explanation": "ほうが (better way) completes the idea that 'not going outside is the safer option' given strong wind.",
+    "sourceSlug": "22"
+  },
+  {
+    "id": "mn-188",
+    "question": "田中ともうします ＿＿ 、山下さんを おねがいします。",
+    "choices": [
+      "と",
+      "が",
+      "から",
+      "のに"
+    ],
+    "answer": 1,
+    "grammarPoint": "が",
+    "explanation": "Here が creates polite contrast: 'I'm called Tanaka, but I'm requesting Yamashita (instead).'",
+    "sourceSlug": "22"
+  },
+  {
+    "id": "mn-189",
+    "question": "友だち ＿＿ そうじをてつだってくれた。",
+    "choices": [
+      "を",
+      "の",
+      "が",
+      "で"
+    ],
+    "answer": 2,
+    "explanation": "The particle が marks the subject/agent performing the helping action with a friend.",
+    "sourceSlug": "22"
+  },
+  {
+    "id": "mn-190",
+    "question": "学校をそつぎょうしても、日本語の勉強をつづけて ＿＿ つもりだ。",
+    "choices": [
+      "くる",
+      "いく",
+      "いこう",
+      "こよう"
+    ],
+    "answer": 1,
+    "chapter": 31,
+    "grammarPoint": "つもり",
+    "explanation": "Dictionary form + つもり expresses personal intention: 'I intend to continue Japanese studies after graduation.'",
+    "sourceSlug": "22"
+  },
+  {
+    "id": "mn-191",
+    "question": "けいたい電話を ＿＿ ために、れんらくできませんでした。",
+    "choices": [
+      "わすれた",
+      "わすれる",
+      "わすれて",
+      "わすれ"
+    ],
+    "answer": 0,
+    "chapter": 42,
+    "grammarPoint": "～ために",
+    "explanation": "Verb-ta + ために expresses cause/reason: 'Because I forgot my phone, I couldn't contact anyone.'",
+    "sourceSlug": "23"
+  },
+  {
+    "id": "mn-192",
+    "question": "このケーキは ＿＿ ば、おいしくありません。",
+    "choices": [
+      "つめたくなけれ",
+      "つめたくなく",
+      "つめたくじゃない",
+      "つめたくなかった"
+    ],
+    "answer": 0,
+    "chapter": 35,
+    "grammarPoint": "条件形 ば",
+    "explanation": "The conditional negative つめたくなければ expresses the necessary condition: 'Unless cold, cake won't taste good.'",
+    "sourceSlug": "23"
+  },
+  {
+    "id": "mn-193",
+    "question": "A 「きょうは 寒かったですね。あしたも寒いでしょうか。」 B 「 ＿＿ 。」",
+    "choices": [
+      "へえ、寒いですね",
+      "ええ、きっと寒いと思います",
+      "ああ、あしたも寒くないでしょう",
+      "なるほど、とても寒かったですよ"
+    ],
+    "answer": 1,
+    "explanation": "This response agrees and expresses expectation using きっと + ～と思います, softly presenting opinion.",
+    "sourceSlug": "23"
+  },
+  {
+    "id": "mn-194",
+    "question": "ふうとう ＿＿ 切手をはってください。",
+    "choices": [
+      "に",
+      "で",
+      "を",
+      "が"
+    ],
+    "answer": 0,
+    "grammarPoint": "に",
+    "explanation": "に marks the target location (envelope) where the action (affixing a stamp) is performed.",
+    "sourceSlug": "23"
+  },
+  {
+    "id": "mn-195",
+    "question": "わたしは子ども ＿＿ しゅくだいをさせた。",
+    "choices": [
+      "を",
+      "が",
+      "で",
+      "に"
+    ],
+    "answer": 3,
+    "chapter": 48,
+    "grammarPoint": "使役形",
+    "explanation": "In causative sentences, に marks the child (recipient made to do homework). Transitive causatives take に.",
+    "sourceSlug": "23"
+  },
+  {
+    "id": "mn-196",
+    "question": "兄 ＿＿ 弟のほうがせが高い。",
+    "choices": [
+      "から",
+      "まで",
+      "より",
+      "ほど"
+    ],
+    "answer": 2,
+    "grammarPoint": "より",
+    "explanation": "より marks the comparison standard: 'Compared to the older brother, younger brother is taller.'",
+    "sourceSlug": "23"
+  },
+  {
+    "id": "mn-197",
+    "question": "A 「日本に来て、どのぐらいですか。」 B 「 ＿＿ 。」",
+    "choices": [
+      "先週です",
+      "21さいです",
+      "2週間です",
+      "11月18日です"
+    ],
+    "answer": 2,
+    "explanation": "Tests understanding of duration expressions. '2 weeks' correctly answers 'how long,' unlike ages or dates.",
+    "sourceSlug": "23"
+  },
+  {
+    "id": "mn-198",
+    "question": "たくさんの料理があった ＿＿ 、ぜんぶ食べる時間がなかった。",
+    "choices": [
+      "のに",
+      "でも",
+      "ながら",
+      "と"
+    ],
+    "answer": 0,
+    "chapter": 45,
+    "grammarPoint": "～のに",
+    "explanation": "のに connects contradictory ideas: 'Despite lots of food, no time to eat it all,' expressing disappointment.",
+    "sourceSlug": "23"
+  },
+  {
+    "id": "mn-199",
+    "question": "学生 ＿＿ もっと勉強しなさい。",
+    "choices": [
+      "みたい",
+      "みたいな",
+      "らしく",
+      "らしい"
+    ],
+    "answer": 2,
+    "grammarPoint": "らしく",
+    "explanation": "らしく means 'in the manner befitting' or 'as one should as a student,' modifying how command is followed.",
+    "sourceSlug": "23"
+  },
+  {
+    "id": "mn-200",
+    "question": "図書館でこの町のれきしを ＿＿ ことができます。",
+    "choices": [
+      "しらべた",
+      "しらべられる",
+      "しらべる",
+      "しらべて"
+    ],
+    "answer": 2,
+    "explanation": "Dictionary form with ことができます expresses ability: 'One can investigate this town's history at library.'",
+    "sourceSlug": "23"
+  },
+  {
+    "id": "mn-201",
+    "question": "その本をどこで買った ＿＿ おぼえていますか。",
+    "choices": [
+      "の",
+      "を",
+      "は",
+      "か"
+    ],
+    "answer": 3,
+    "chapter": 40,
+    "grammarPoint": "疑問詞 + 普通形 + か",
+    "explanation": "か functions as embedded question marker, converting direct question 'where did you buy?' into dependent clause.",
+    "sourceSlug": "24"
+  },
+  {
+    "id": "mn-202",
+    "question": "お金もない ＿＿ 、時間もないから、あそびに行けない。",
+    "choices": [
+      "や",
+      "で",
+      "し",
+      "とか"
+    ],
+    "answer": 2,
+    "chapter": 28,
+    "grammarPoint": "～し、～",
+    "explanation": "し lists multiple reasons for not going out: no money AND no time; it connects contributing causes.",
+    "sourceSlug": "24"
+  },
+  {
+    "id": "mn-203",
+    "question": "しょうらい先生に ＿＿ ために勉強しています。",
+    "choices": [
+      "なる",
+      "なろう",
+      "なった",
+      "なれる"
+    ],
+    "answer": 0,
+    "chapter": 42,
+    "grammarPoint": "～ために",
+    "explanation": "Dictionary form なる + ために expresses purposeful goal: 'I study to become a teacher in future.'",
+    "sourceSlug": "24"
+  },
+  {
+    "id": "mn-204",
+    "question": "銀行の名前がかわった ＿＿ 知りませんでした。",
+    "choices": [
+      "ものを",
+      "ことを",
+      "ように",
+      "のが"
+    ],
+    "answer": 1,
+    "explanation": "Verb-ta + ことを nominalizes the verb, allowing it as object of 知る: 'Didn't know the bank name changed.'",
+    "sourceSlug": "24"
+  },
+  {
+    "id": "mn-205",
+    "question": "前の人につづいてまっすぐ ＿＿ なさい。",
+    "choices": [
+      "歩いた",
+      "歩く",
+      "歩き",
+      "歩け"
+    ],
+    "answer": 2,
+    "chapter": 33,
+    "grammarPoint": "命令形",
+    "explanation": "The imperative stem 歩き directly commands: 'Walk straight following the person in front!'",
+    "sourceSlug": "24"
+  },
+  {
+    "id": "mn-206",
+    "question": "ここをおす ＿＿ 、にんぎょうが動きます。",
+    "choices": [
+      "の",
+      "で",
+      "と",
+      "か"
+    ],
+    "answer": 2,
+    "chapter": 35,
+    "grammarPoint": "～と",
+    "explanation": "と expresses conditional consequence: 'If you push here, doll moves,' showing direct cause-effect.",
+    "sourceSlug": "24"
+  },
+  {
+    "id": "mn-207",
+    "question": "天気よほう ＿＿ 今夜はゆきがふるそうです。",
+    "choices": [
+      "になると",
+      "によると",
+      "だったら",
+      "だから"
+    ],
+    "answer": 1,
+    "grammarPoint": "によると",
+    "explanation": "によると introduces information source: 'According to the weather forecast, snow will fall tonight.'",
+    "sourceSlug": "24"
+  },
+  {
+    "id": "mn-208",
+    "question": "あぶないですから、子どもを一人で ＿＿ ないでください。",
+    "choices": [
+      "あそばし",
+      "あそばせ",
+      "あそびさせ",
+      "あそばさせ"
+    ],
+    "answer": 1,
+    "chapter": 48,
+    "grammarPoint": "使役形",
+    "explanation": "Causative form あそばせ + ないでください means 'don't let the child play alone,' combining causative with prohibition.",
+    "sourceSlug": "24"
+  },
+  {
+    "id": "mn-209",
+    "question": "おなかがいたくて病院へ行ったら、1時間も ＿＿ 。",
+    "choices": [
+      "待たれさせた",
+      "待たせさせた",
+      "待たされた",
+      "待たされられた"
+    ],
+    "answer": 2,
+    "explanation": "待たされた is passive-causative form: 'was forced to wait an hour,' expressing unwilled suffering.",
+    "sourceSlug": "24"
+  },
+  {
+    "id": "mn-210",
+    "question": "父は おもしろいことを言ってよくみんなを ＿＿ 。",
+    "choices": [
+      "わらわせる",
+      "わらいたい",
+      "わらわれる",
+      "わらえる"
+    ],
+    "answer": 0,
+    "chapter": 48,
+    "grammarPoint": "使役形",
+    "explanation": "Causative form わらわせる means 'make (people) laugh,' expressing causing an emotion in others through humor.",
+    "sourceSlug": "24"
+  },
+  {
+    "id": "mn-211",
+    "question": "きょうはきのうほど風が ＿＿ 。",
+    "choices": [
+      "強いだろう",
+      "強くない",
+      "強かった",
+      "強い"
+    ],
+    "answer": 1,
+    "explanation": "Negation of い-adjective showing comparison: today's wind is not as strong as yesterday's wind.",
+    "sourceSlug": "25"
+  },
+  {
+    "id": "mn-212",
+    "question": "日本で ＿＿ ために日本語を勉強している。",
+    "choices": [
+      "働く",
+      "働き",
+      "働いて",
+      "働こう"
+    ],
+    "answer": 0,
+    "chapter": 42,
+    "grammarPoint": "～ために",
+    "explanation": "Dictionary form before ～ために expresses purpose: I study Japanese for the purpose of working in Japan.",
+    "sourceSlug": "25"
+  },
+  {
+    "id": "mn-213",
+    "question": "きゃく 「すみません、このぼうし、かぶって ＿＿ いいですか。」 店員 「はい、どうぞ。」",
+    "choices": [
+      "しても",
+      "みても",
+      "くれても",
+      "あっても"
+    ],
+    "answer": 1,
+    "chapter": 40,
+    "grammarPoint": "～てみます",
+    "explanation": "Pattern ～てみていいですか means trying something with permission granted: Can I try wearing this hat?",
+    "sourceSlug": "25"
+  },
+  {
+    "id": "mn-214",
+    "question": "夜は暗くて歩いている人が ＿＿ にくいので、注意してうんてんします。",
+    "choices": [
+      "見える",
+      "見えた",
+      "見えて",
+      "見え"
+    ],
+    "answer": 3,
+    "chapter": 44,
+    "grammarPoint": "～にくい",
+    "explanation": "い-adjective stem + にくい shows difficulty: people walking at night are hard to see (hard-to-see).",
+    "sourceSlug": "25"
+  },
+  {
+    "id": "mn-215",
+    "question": "急に大きな音がしたので、その子どもは ＿＿ ないてしまった。",
+    "choices": [
+      "こわかったがって",
+      "こわいがって",
+      "こわくがって",
+      "こわがって"
+    ],
+    "answer": 3,
+    "chapter": 48,
+    "grammarPoint": "使役形",
+    "explanation": "Causative-like form expressing emotion as action: the child got scared and cried from the sudden loud noise.",
+    "sourceSlug": "25"
+  },
+  {
+    "id": "mn-216",
+    "question": "コピーの字が ＿＿ すぎて、読めません。",
+    "choices": [
+      "うす",
+      "うすく",
+      "うすい",
+      "うすくて"
+    ],
+    "answer": 0,
+    "chapter": 44,
+    "grammarPoint": "～すぎます",
+    "explanation": "い-adjective stem + すぎます shows excess: the copy is too faint, making it unreadable.",
+    "sourceSlug": "25"
+  },
+  {
+    "id": "mn-217",
+    "question": "先生、わたしがそのにもつを ＿＿ 。",
+    "choices": [
+      "お持ちします",
+      "お持ちになります",
+      "お持ちいただきます",
+      "お持ちくださいます"
+    ],
+    "answer": 0,
+    "chapter": 50,
+    "grammarPoint": "お + Verb-stem + します",
+    "explanation": "Humble form shows speaker's humility: I humbly carry that luggage for you (humble offer).",
+    "sourceSlug": "25"
+  },
+  {
+    "id": "mn-218",
+    "question": "このじしょで漢字の読みかたが ＿＿ ます。",
+    "choices": [
+      "しらべ",
+      "しらばれ",
+      "しらべられ",
+      "しらばられ"
+    ],
+    "answer": 2,
+    "chapter": 37,
+    "grammarPoint": "受身形",
+    "explanation": "Passive form shows potential action: in this dictionary, kanji readings can be looked up/checked.",
+    "sourceSlug": "25"
+  },
+  {
+    "id": "mn-219",
+    "question": "＿＿ ので、そのきかいにさわってはいけません。",
+    "choices": [
+      "きけん",
+      "きけんに",
+      "きけんな",
+      "きけんだ"
+    ],
+    "answer": 2,
+    "chapter": 39,
+    "grammarPoint": "～ので",
+    "explanation": "な-adjective + ～ので shows objective reason: since it's dangerous, you must not touch the machine.",
+    "sourceSlug": "25"
+  },
+  {
+    "id": "mn-220",
+    "question": "A「ごはんを食べてから、おふろに入りますか。」 B「いいえ、わたしは ＿＿ 。」",
+    "choices": [
+      "ごはんのまえに入ります",
+      "いつも一入で食べます",
+      "食べたあとで入ります",
+      "ごはんをたくさん食べません"
+    ],
+    "answer": 0,
+    "explanation": "Sequence marker ～のまえに (before): I take a bath before eating, contrasting with typical order.",
+    "sourceSlug": "25"
+  },
+  {
+    "id": "mn-221",
+    "question": "会社をやめてどう ＿＿ つもりですか。",
+    "choices": [
+      "する",
+      "した",
+      "したい",
+      "しよう"
+    ],
+    "answer": 0,
+    "chapter": 31,
+    "grammarPoint": "～つもりです",
+    "explanation": "Dictionary form + ～つもりです expresses intention: What do you intend to do after quitting the company?",
+    "sourceSlug": "26"
+  },
+  {
+    "id": "mn-222",
+    "question": "Ａ「この 問題がわからなくてこまっているんですが。」 Ｂ「じゃあ、この本を ＿＿ どうですか。」",
+    "choices": [
+      "読んでみる",
+      "読んでみても",
+      "読んでみて",
+      "読んでみたら"
+    ],
+    "answer": 3,
+    "chapter": 40,
+    "grammarPoint": "～てみたら",
+    "explanation": "Combining ～てみ (try) + ～たら (conditional) suggests action: How about trying to read this book?",
+    "sourceSlug": "26"
+  },
+  {
+    "id": "mn-223",
+    "question": "あした ＿＿ ならせんたくをしません。",
+    "choices": [
+      "雨",
+      "雨だ",
+      "雨の",
+      "雨に"
+    ],
+    "answer": 0,
+    "chapter": 35,
+    "grammarPoint": "たら",
+    "explanation": "Conditional with noun: if it rains tomorrow, I won't do laundry (flexible conditional on noun).",
+    "sourceSlug": "26"
+  },
+  {
+    "id": "mn-224",
+    "question": "あと5分 ＿＿ ありません。 急ぎましょう。",
+    "choices": [
+      "ごろ",
+      "しか",
+      "だけ",
+      "で"
+    ],
+    "answer": 1,
+    "chapter": 27,
+    "grammarPoint": "～しか～ない",
+    "explanation": "Quantity restriction emphasizes minimum only: I have only 5 minutes left, no more time available.",
+    "sourceSlug": "26"
+  },
+  {
+    "id": "mn-225",
+    "question": "あ、たいへん。 急いで来たからさいふを ＿＿ 。",
+    "choices": [
+      "わすれなくちゃ",
+      "わすれといて",
+      "わすれなきゃ",
+      "わすれちゃった"
+    ],
+    "answer": 3,
+    "chapter": 29,
+    "grammarPoint": "～てしまう",
+    "explanation": "Contracted form ～ちゃった shows regret/unintentional action: Oh no, I forgot my wallet while rushing.",
+    "sourceSlug": "26"
+  },
+  {
+    "id": "mn-226",
+    "question": "＿＿ ので、 よくパソコンを使います。",
+    "choices": [
+      "へんりで",
+      "べんり",
+      "べんりな",
+      "べんりだ"
+    ],
+    "answer": 2,
+    "chapter": 39,
+    "grammarPoint": "～ので",
+    "explanation": "な-adjective + ～ので shows objective reason: since it's convenient, I use computers frequently.",
+    "sourceSlug": "26"
+  },
+  {
+    "id": "mn-227",
+    "question": "この薬を飲めば病気はなおる ＿＿ です。",
+    "choices": [
+      "はず",
+      "ため",
+      "こと",
+      "ばかり"
+    ],
+    "answer": 0,
+    "chapter": 46,
+    "grammarPoint": "～はずです",
+    "explanation": "Shows confident expectation based on logic: this medicine should definitely cure the illness.",
+    "sourceSlug": "26"
+  },
+  {
+    "id": "mn-228",
+    "question": "ひまが ＿＿ 、あそびに来てくださいね。",
+    "choices": [
+      "あると",
+      "あって",
+      "あったら",
+      "あったため"
+    ],
+    "answer": 2,
+    "chapter": 35,
+    "grammarPoint": "たら",
+    "explanation": "Conditional ～たら with い-adjective: if you have free time, please come visit us.",
+    "sourceSlug": "26"
+  },
+  {
+    "id": "mn-229",
+    "question": "ここをおすとドアが ＿＿ 。 開きます 開けます",
+    "choices": [
+      "開いて",
+      "います",
+      "開けて",
+      "います"
+    ],
+    "answer": 0,
+    "chapter": 29,
+    "grammarPoint": "Verb て-form (resultant state)",
+    "explanation": "Intransitive verb て-form shows resultant state: when you press here, the door opens (stands open).",
+    "sourceSlug": "26"
+  },
+  {
+    "id": "mn-230",
+    "question": "おなかがいたいから半分 ＿＿ 食べます。",
+    "choices": [
+      "だけ",
+      "しか",
+      "も",
+      "と"
+    ],
+    "answer": 0,
+    "explanation": "Quantity particle ～だけ restricts to only that amount: since my stomach hurts, I eat only half.",
+    "sourceSlug": "26"
+  },
+  {
+    "id": "mn-231",
+    "question": "となりの家でピアノの音 ＿＿ している。",
+    "choices": [
+      "が",
+      "を",
+      "と",
+      "に"
+    ],
+    "answer": 0,
+    "chapter": 47,
+    "grammarPoint": "音 + がします",
+    "explanation": "Spontaneous sound perception with particle が: I hear piano sounds coming from the neighbor's house.",
+    "sourceSlug": "27"
+  },
+  {
+    "id": "mn-232",
+    "question": "このバスは大きなはし ＿＿ わたって、駅へ行きます。",
+    "choices": [
+      "を",
+      "に",
+      "で",
+      "が"
+    ],
+    "answer": 0,
+    "explanation": "Object particle を marks direct object of わたる (cross): this bus crosses the bridge to reach the station.",
+    "sourceSlug": "27"
+  },
+  {
+    "id": "mn-233",
+    "question": "じゅぎょうで手紙 ＿＿ 方を習いました。",
+    "choices": [
+      "書か",
+      "書き",
+      "書く",
+      "書いた"
+    ],
+    "answer": 1,
+    "explanation": "Noun suffix ～方 means 'how to do': we learned how to write letters in class (writing method).",
+    "sourceSlug": "27"
+  },
+  {
+    "id": "mn-234",
+    "question": "わたしはどこ ＿＿ ねられます。",
+    "choices": [
+      "など",
+      "でも",
+      "か",
+      "は"
+    ],
+    "answer": 1,
+    "explanation": "Pattern 疑問詞 + でも means 'any/anywhere': I can sleep anywhere, no matter the location.",
+    "sourceSlug": "27"
+  },
+  {
+    "id": "mn-235",
+    "question": "食事の前にはかならず手を ＿＿ なければなりません。",
+    "choices": [
+      "洗う",
+      "洗い",
+      "洗わ",
+      "洗おう"
+    ],
+    "answer": 2,
+    "explanation": "Negative ない-form in obligation structure: I must wash my hands before eating (obligation pattern).",
+    "sourceSlug": "27"
+  },
+  {
+    "id": "mn-236",
+    "question": "意見がある方は、 ＿＿ ください。",
+    "choices": [
+      "おっしゃりて",
+      "おっしゃって",
+      "おっしゃい",
+      "おっしゃり"
+    ],
+    "answer": 1,
+    "chapter": 49,
+    "grammarPoint": "特別な尊敬語",
+    "explanation": "Special honorific おっしゃる + て-form + ください: those with opinions, please share them respectfully.",
+    "sourceSlug": "27"
+  },
+  {
+    "id": "mn-237",
+    "question": "このメ－ルをだれかに ＿＿ とこまる。",
+    "choices": [
+      "見れれる",
+      "見られる",
+      "見れる",
+      "見る"
+    ],
+    "answer": 1,
+    "chapter": 37,
+    "grammarPoint": "受身形",
+    "explanation": "Passive form shows potential for unwanted action: if someone sees this email, it would be troubling.",
+    "sourceSlug": "27"
+  },
+  {
+    "id": "mn-238",
+    "question": "かみのけを ＿＿ 切った。",
+    "choices": [
+      "みじかい",
+      "みじかく",
+      "みじかいに",
+      "みじかくに"
+    ],
+    "answer": 1,
+    "chapter": 44,
+    "grammarPoint": "い-adj → く",
+    "explanation": "い-adjective adverbial form modifies verb manner: she cut her hair short (short-in-manner).",
+    "sourceSlug": "27"
+  },
+  {
+    "id": "mn-239",
+    "question": "どなたか質問のある方は ＿＿ か。",
+    "choices": [
+      "いらっしゃるです",
+      "いらっしゃいです",
+      "いらっしゃいません",
+      "いらっしゃるではありません"
+    ],
+    "answer": 2,
+    "chapter": 49,
+    "grammarPoint": "特別な尊敬語",
+    "explanation": "Special honorific いらっしゃる in polite question: is there anyone with questions present?",
+    "sourceSlug": "27"
+  },
+  {
+    "id": "mn-240",
+    "question": "きゃく「すみません、コーヒーと サンドイッチを ＿＿ 。」 店員「はい。かしこまりました。」",
+    "choices": [
+      "くださいますよ",
+      "おねがいします",
+      "ございますね",
+      "めしあがります"
+    ],
+    "answer": 1,
+    "chapter": 50,
+    "grammarPoint": "お + Verb-stem + します",
+    "explanation": "Humble request form おねがいします: I humbly request coffee and a sandwich (polite customer request).",
+    "sourceSlug": "27"
+  },
+  {
+    "id": "mn-241",
+    "question": "かれは同じ小説を5回 ＿＿ 読んだ。",
+    "choices": [
+      "も",
+      "が",
+      "で",
+      "しか"
+    ],
+    "answer": 0,
+    "chapter": 42,
+    "grammarPoint": "も (quantity)",
+    "explanation": "The particle も with quantities means 'as many as'; he read that novel as many as 5 times.",
+    "sourceSlug": "28"
+  },
+  {
+    "id": "mn-242",
+    "question": "今日は運動を ＿＿ にしてください。",
+    "choices": [
+      "しないで",
+      "しない",
+      "しなさそう",
+      "しないよう"
+    ],
+    "answer": 3,
+    "chapter": 36,
+    "grammarPoint": "～ないように",
+    "explanation": "～ないように expresses preventive purpose; refrain from exercising is the command.",
+    "sourceSlug": "28"
+  },
+  {
+    "id": "mn-243",
+    "question": "６さいから小学校に ＿＿ はじめる。",
+    "choices": [
+      "通わ",
+      "通う",
+      "通った",
+      "通い"
+    ],
+    "answer": 3,
+    "grammarPoint": "V-stem + はじめる",
+    "explanation": "The verb stem 通い combines with はじめる to express beginning an action from age 6.",
+    "sourceSlug": "28"
+  },
+  {
+    "id": "mn-244",
+    "question": "夜はあまいものを ＿＿ にしています。",
+    "choices": [
+      "食べない",
+      "食べよう",
+      "食べるそう",
+      "食べないよう"
+    ],
+    "answer": 3,
+    "chapter": 36,
+    "grammarPoint": "～ないようにしています",
+    "explanation": "～ないようにしています shows ongoing effort to prevent an action; habitually avoiding sweets at night.",
+    "sourceSlug": "28"
+  },
+  {
+    "id": "mn-245",
+    "question": "このレストランはいつもたくさん人が ＿＿ ね。",
+    "choices": [
+      "ならべています",
+      "ならべてあります",
+      "ならんでいます",
+      "ならんであります"
+    ],
+    "answer": 2,
+    "chapter": 29,
+    "grammarPoint": "て-form + います (intransitive state)",
+    "explanation": "ならんでいます shows the continuous state of people standing in line; the restaurant always has customers waiting.",
+    "sourceSlug": "28"
+  },
+  {
+    "id": "mn-246",
+    "question": "小林さんが ＿＿ 、かならず私に知らせて下さい。",
+    "choices": [
+      "来たら",
+      "来ると",
+      "来なら",
+      "来るまま"
+    ],
+    "answer": 0,
+    "chapter": 35,
+    "grammarPoint": "たら (conditional)",
+    "explanation": "The conditional たら means 'if'; if Kobayashi comes, the listener must inform the speaker.",
+    "sourceSlug": "28"
+  },
+  {
+    "id": "mn-247",
+    "question": "あの鳥は ＿＿ 声でなくのかなあ。",
+    "choices": [
+      "どこ",
+      "どう",
+      "どれ",
+      "どんな"
+    ],
+    "answer": 3,
+    "grammarPoint": "どんな",
+    "explanation": "The interrogative どんな asks for a description; what kind of voice does that bird cry with?",
+    "sourceSlug": "28"
+  },
+  {
+    "id": "mn-248",
+    "question": "はをみがいてから ＿＿ なさい。",
+    "choices": [
+      "ね",
+      "ねる",
+      "ねれ",
+      "ねろ"
+    ],
+    "answer": 0,
+    "chapter": 33,
+    "grammarPoint": "命令形 (imperative)",
+    "explanation": "The imperative form ね commands to sleep; after brushing teeth is when you must go to sleep.",
+    "sourceSlug": "28"
+  },
+  {
+    "id": "mn-249",
+    "question": "だれがこの本を書いた ＿＿ 知っていますか。",
+    "choices": [
+      "は",
+      "を",
+      "か",
+      "で"
+    ],
+    "answer": 2,
+    "chapter": 40,
+    "grammarPoint": "疑問詞 + か (embedded question)",
+    "explanation": "The embedded question pattern with か marks the interrogative; who wrote this book is the question.",
+    "sourceSlug": "28"
+  },
+  {
+    "id": "mn-250",
+    "question": "先生がなかなか来ないので、学生がさわぎ ＿＿ 。",
+    "choices": [
+      "つづいた",
+      "はじまった",
+      "おわった",
+      "だした"
+    ],
+    "answer": 3,
+    "grammarPoint": "～だした",
+    "explanation": "The inchoative だした marks the beginning of an action; the students started making noise.",
+    "sourceSlug": "28"
+  },
+  {
+    "id": "mn-251",
+    "question": "きのうは ＿＿ 。",
+    "choices": [
+      "あたたかくないでした",
+      "あたたかくありませんでした",
+      "あたたかいじゃなかったです",
+      "あたたかいじゃないでした"
+    ],
+    "answer": 1,
+    "grammarPoint": "い-adj negative past",
+    "explanation": "The negative past form of い-adjectives uses くありませんでした; yesterday was not warm.",
+    "sourceSlug": "29"
+  },
+  {
+    "id": "mn-252",
+    "question": "あのレストランはよやくした人 ＿＿ 入れません。",
+    "choices": [
+      "しか",
+      "から",
+      "より",
+      "ぐらい"
+    ],
+    "answer": 0,
+    "chapter": 27,
+    "grammarPoint": "～しか～ない",
+    "explanation": "The pattern しか with negative means 'only'; only reserved customers can enter that restaurant.",
+    "sourceSlug": "29"
+  },
+  {
+    "id": "mn-253",
+    "question": "その仕事についてはわたしから ＿＿ 。",
+    "choices": [
+      "ご説明なさいます",
+      "ご説明になります",
+      "ご説明いたします",
+      "ご説明ございます"
+    ],
+    "answer": 2,
+    "chapter": 50,
+    "grammarPoint": "ご + V-stem + します (humble)",
+    "explanation": "The humble form ご説明いたします respectfully offers service; I humbly explain the matter.",
+    "sourceSlug": "29"
+  },
+  {
+    "id": "mn-254",
+    "question": "みんなが子どもの ＿＿ 元気に歌いはじめた。",
+    "choices": [
+      "ように",
+      "ぐらいに",
+      "ほどに",
+      "そうに"
+    ],
+    "answer": 0,
+    "chapter": 36,
+    "grammarPoint": "～ように (manner)",
+    "explanation": "～ように for comparison/manner; singing energetically in the manner of happy children.",
+    "sourceSlug": "29"
+  },
+  {
+    "id": "mn-255",
+    "question": "日本の音楽はまだ聞いたこと ＿＿ ありません。",
+    "choices": [
+      "を",
+      "に",
+      "で",
+      "が"
+    ],
+    "answer": 3,
+    "grammarPoint": "～たことがない",
+    "explanation": "The experience pattern ～たことがありません means never done; I have never heard Japanese music.",
+    "sourceSlug": "29"
+  },
+  {
+    "id": "mn-256",
+    "question": "Ａ 「すみません。寒いのでまどを ＿＿ 。」 Ｂ 「ええ、どうぞ。」",
+    "choices": [
+      "しめたいですか",
+      "しめてください",
+      "しめてもいいですか",
+      "しめるでしょうか"
+    ],
+    "answer": 2,
+    "grammarPoint": "～てもいいですか",
+    "explanation": "This permission request politely asks if an action is acceptable; may I close the window?",
+    "sourceSlug": "29"
+  },
+  {
+    "id": "mn-257",
+    "question": "田中さんはちこくをしないと言った ＿＿ 、またちこくをした。",
+    "choices": [
+      "から",
+      "でも",
+      "ので",
+      "のに"
+    ],
+    "answer": 3,
+    "chapter": 45,
+    "grammarPoint": "～のに (despite)",
+    "explanation": "～のに expresses contrast with regret/disappointment; despite his promise, he was late again.",
+    "sourceSlug": "29"
+  },
+  {
+    "id": "mn-258",
+    "question": "上手に ＿＿ ように何度もれんしゅうします。",
+    "choices": [
+      "話し",
+      "話せる",
+      "話そう",
+      "話される"
+    ],
+    "answer": 1,
+    "chapter": 27,
+    "grammarPoint": "可能形 + ～ように",
+    "explanation": "V-potential with ように expresses purpose; I practice to become able to speak well.",
+    "sourceSlug": "29"
+  },
+  {
+    "id": "mn-259",
+    "question": "あ、お金が ＿＿ 。",
+    "choices": [
+      "おちています",
+      "おちてあります",
+      "おとしています",
+      "おとしてあります"
+    ],
+    "answer": 0,
+    "chapter": 29,
+    "grammarPoint": "て-form + います (resultant state)",
+    "explanation": "おちています shows the resultant state (intransitive); money is falling or has fallen.",
+    "sourceSlug": "29"
+  },
+  {
+    "id": "mn-260",
+    "question": "急に雨がふり ＿＿ 。",
+    "choices": [
+      "つづけた",
+      "だした",
+      "でた",
+      "きた"
+    ],
+    "answer": 1,
+    "grammarPoint": "～だした",
+    "explanation": "The inchoative だした marks the start of an action; it suddenly began to rain.",
+    "sourceSlug": "29"
+  },
+  {
+    "id": "mn-261",
+    "question": "かさがいっぱいありますね。どれがあなた ＿＿ ですか。",
+    "choices": [
+      "も",
+      "が",
+      "に",
+      "の"
+    ],
+    "answer": 3,
+    "grammarPoint": "possessive の",
+    "explanation": "The particle の marks possession or relation; which umbrella belongs to you?",
+    "sourceSlug": "30"
+  },
+  {
+    "id": "mn-262",
+    "question": "かばんを買いに行ったが、どれ ＿＿ 高くて買えなかった。",
+    "choices": [
+      "か",
+      "も",
+      "でも",
+      "ばかり"
+    ],
+    "answer": 1,
+    "chapter": 27,
+    "grammarPoint": "も (inclusive)",
+    "explanation": "The particle も after どれ means all/everything; all the bags were too expensive.",
+    "sourceSlug": "30"
+  },
+  {
+    "id": "mn-263",
+    "question": "すぐへんじができないので、すこし ＿＿ ください。",
+    "choices": [
+      "考えさせて",
+      "考えさせられて",
+      "考えたくて",
+      "考えたがって"
+    ],
+    "answer": 0,
+    "chapter": 48,
+    "grammarPoint": "使役形 (causative)",
+    "explanation": "The causative 考えさせて with ください makes a polite request; allow me to think.",
+    "sourceSlug": "30"
+  },
+  {
+    "id": "mn-264",
+    "question": "兄がけがをしたので、あしたはアルバイトを ＿＿ ください。",
+    "choices": [
+      "休めさせて",
+      "休むさせて",
+      "休みさせて",
+      "休ませて"
+    ],
+    "answer": 3,
+    "chapter": 48,
+    "grammarPoint": "使役形 (causative)",
+    "explanation": "The causative 休ませて with ください requests permission; allow me to take a day off.",
+    "sourceSlug": "30"
+  },
+  {
+    "id": "mn-265",
+    "question": "おとしたさいふ ＿＿ あって、よかったですね。",
+    "choices": [
+      "が",
+      "に",
+      "を",
+      "の"
+    ],
+    "answer": 0,
+    "grammarPoint": "existential が",
+    "explanation": "The particle が marks object of existence; fortunately the dropped wallet exists/was found.",
+    "sourceSlug": "30"
+  },
+  {
+    "id": "mn-266",
+    "question": "Ａ「会話の試験、 ＿＿ 。」 Ｂ「あまり上手に話せませんでした。」",
+    "choices": [
+      "どうでしたか",
+      "どうしましょうか",
+      "どうしたらいいですか",
+      "どうしたいですか"
+    ],
+    "answer": 0,
+    "grammarPoint": "question word どう",
+    "explanation": "This simple inquiry uses どう (how); asking about the test experience/performance.",
+    "sourceSlug": "30"
+  },
+  {
+    "id": "mn-267",
+    "question": "あの花は5月に ＿＿ とさきません。",
+    "choices": [
+      "ならず",
+      "ならなけれ",
+      "ならなく",
+      "ならない"
+    ],
+    "answer": 3,
+    "grammarPoint": "～ないと (conditional)",
+    "explanation": "The conditional ～ないと～ない means unless; the flower won't bloom if it's not May.",
+    "sourceSlug": "30"
+  },
+  {
+    "id": "mn-268",
+    "question": "ここに車を ＿＿ 。 じゃまだ 。",
+    "choices": [
+      "止まるな",
+      "止めるな",
+      "止めろな",
+      "止まれな"
+    ],
+    "answer": 1,
+    "chapter": 33,
+    "grammarPoint": "禁止形 (prohibitive)",
+    "explanation": "The prohibitive form 止めるな commands not to do something; don't park the car here.",
+    "sourceSlug": "30"
+  },
+  {
+    "id": "mn-269",
+    "question": "電車におくれる。 ＿＿ 。",
+    "choices": [
+      "急がず",
+      "急ぐな",
+      "急ぎ",
+      "急げ"
+    ],
+    "answer": 3,
+    "chapter": 33,
+    "grammarPoint": "命令形 (imperative)",
+    "explanation": "The imperative form 急げ is a direct command; hurry before the train departs.",
+    "sourceSlug": "30"
+  },
+  {
+    "id": "mn-270",
+    "question": "駅 ＿＿ 近くにいいホテルがあります。",
+    "choices": [
+      "が",
+      "で",
+      "の",
+      "に"
+    ],
+    "answer": 2,
+    "grammarPoint": "possessive の",
+    "explanation": "The particle の shows relation between noun and location; there's a nice hotel near the station.",
+    "sourceSlug": "30"
+  }
+]
