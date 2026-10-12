@@ -143,19 +143,6 @@ function QuestionCard({ question, picked, onPick, onNext, isLast }: QuestionCard
   return (
     <div className="w-full max-w-2xl mx-auto">
       <div className="bg-white rounded-2xl border border-neutral-200 p-8 sm:p-10">
-        {(question.chapter !== undefined || question.grammarPoint) && (
-          <div className="text-xs uppercase tracking-wider text-neutral-400 mb-4">
-            {question.chapter !== undefined && `Chapter ${question.chapter}`}
-            {question.chapter !== undefined && question.grammarPoint && " · "}
-            {question.grammarPoint}
-          </div>
-        )}
-        {question.chapter === undefined && question.sourceSlug && (
-          <div className="text-xs uppercase tracking-wider text-neutral-400 mb-4">
-            minnanihongo.com · exercise {question.sourceSlug}
-          </div>
-        )}
-
         <p className="font-jp text-2xl sm:text-3xl text-neutral-900 leading-relaxed mb-8">
           {question.question}
         </p>
@@ -205,6 +192,13 @@ function QuestionCard({ question, picked, onPick, onNext, isLast }: QuestionCard
             >
               {isCorrect ? "Correct" : "Not quite"}
             </div>
+            {(question.chapter !== undefined || question.grammarPoint) && (
+              <div className="text-xs uppercase tracking-wider text-neutral-400 mb-2">
+                {question.chapter !== undefined && `Chapter ${question.chapter}`}
+                {question.chapter !== undefined && question.grammarPoint && " · "}
+                {question.grammarPoint}
+              </div>
+            )}
             {question.explanation ? (
               <p className="text-sm text-neutral-600 leading-relaxed">
                 {question.explanation}
