@@ -383,60 +383,60 @@ function rowToProgress(row: ProgressRow): Progress {
 
 // ---- auth helpers ----
 //
-// We deliberately avoid email-based auth because magic links don't work on
-// iOS PWAs (Safari has a separate storage origin from home-screen PWAs) and
-// editing email templates to use OTP codes is locked behind custom SMTP on
-// Supabase free projects.
-//
-// Instead: anonymous sign-in. Device 1 calls signInAnonymously() to mint an
-// auth.users row with a UUID. To sync to device 2, we export the session's
-// refresh token as a paste-able code; device 2 calls setSession() with that
-// token, and both devices then share the same auth.uid() — RLS keeps working
-// unchanged.
-//
-// This requires two project-level Supabase settings:
-//   - Auth → Sign In/Up → Anonymous Sign-Ins: ON
-//   - Auth → Sessions → Refresh Token Rotation: OFF (otherwise token rotation
-//     invalidates one device when the other refreshes).
+// Email + password, with "Confirm email" turned off in Supabase Auth settings
+// so no email is ever sent (magic links can't reach an iOS home-screen PWA).
+// Each device signs in on its own and gets its own refresh-token chain;
+// sharing one session across devices breaks as soon as either refreshes,
+// because Supabase always rotates refresh tokens.
 
-export async function enableSync(): Promise<{ error?: string }> {
-  if (!supabase) return { error: "Supabase not configured" };
-  const { error } = await supabase.auth.signInAnonymously();
-  return error ? { error: error.message } : {};
-}
+const CONFIRM_EMAIL_ERROR =
+  'Supabase requires email confirmation — turn off "Confirm email" in Auth settings.';
 
-// Returns the current refresh token, base64-encoded so it's safe to paste
-// across devices via password manager / AirDrop / etc. Returns null if no
-// session is active.
-export async function getSyncCode(): Promise<string | null> {
-  if (!supabase) return null;
-  const { data } = await supabase.auth.getSession();
-  const refresh = data.session?.refresh_token;
-  if (!refresh) return null;
-  // btoa is fine here — refresh tokens are ASCII.
-  return btoa(JSON.stringify({ v: 1, refresh_token: refresh }));
-}
-
-export async function redeemSyncCode(
-  code: string
+export async function signInWithPassword(
+  email: string,
+  password: string
 ): Promise<{ error?: string }> {
   if (!supabase) return { error: "Supabase not configured" };
-  let refreshToken: string;
-  try {
-    const decoded = JSON.parse(atob(code.trim()));
-    if (decoded.v !== 1 || typeof decoded.refresh_token !== "string") {
-      return { error: "Unrecognized sync code format" };
-    }
-    refreshToken = decoded.refresh_token;
-  } catch {
-    return { error: "Couldn't parse sync code — check for paste artifacts" };
-  }
-  // refreshSession exchanges the token for a fresh access+refresh pair and
-  // installs the result as the active session.
-  const { error } = await supabase.auth.refreshSession({
-    refresh_token: refreshToken,
+  const { error } = await supabase.auth.signInWithPassword({
+    email: email.trim(),
+    password,
   });
   return error ? { error: error.message } : {};
+}
+
+export async function signUpWithPassword(
+  email: string,
+  password: string
+): Promise<{ error?: string }> {
+  if (!supabase) return { error: "Supabase not configured" };
+  const { data, error } = await supabase.auth.signUp({
+    email: email.trim(),
+    password,
+  });
+  if (error) return { error: error.message };
+  return data.session ? {} : { error: CONFIRM_EMAIL_ERROR };
+}
+
+// Turns a legacy anonymous account into an email + password one without
+// changing its user id, so existing rows stay visible under RLS. The email
+// is set first and checked before the password, so a project that still
+// requires confirmation doesn't end up with a password but no usable email.
+export async function upgradeAnonymousAccount(
+  email: string,
+  password: string
+): Promise<{ error?: string }> {
+  if (!supabase) return { error: "Supabase not configured" };
+  const { data, error } = await supabase.auth.updateUser({
+    email: email.trim(),
+  });
+  if (error) return { error: error.message };
+  const savedEmail = data.user.email;
+  if (!savedEmail) return { error: CONFIRM_EMAIL_ERROR };
+  const { error: passwordError } = await supabase.auth.updateUser({
+    email: savedEmail,
+    password,
+  });
+  return passwordError ? { error: passwordError.message } : {};
 }
 
 export async function signOut(): Promise<void> {

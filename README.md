@@ -96,22 +96,23 @@ Pushes to `main` trigger `.github/workflows/deploy.yml`, which builds and publis
 
 ## Optional: Supabase sync
 
-Progress is local-first; when Supabase is configured the same data also syncs across devices via anonymous sign-in plus a paste-able sync code. With no env vars set the app runs in localStorage-only mode (no sign-in UI, no network calls).
+Progress is local-first; when Supabase is configured the same data also syncs across devices via email + password sign-in. With no env vars set the app runs in localStorage-only mode (no sign-in UI, no network calls).
 
-**Why anonymous + sync code, instead of email?** iOS opens email links in Safari, which has a separate storage origin from a home-screen PWA — magic links never reach the PWA. Email OTP codes work but require editing the email template, which Supabase locks behind custom SMTP on free projects. Anonymous sign-in skips email entirely: the first device creates an anonymous user, then exports a one-time sync code that the second device pastes to share the same `auth.uid()`.
+**Why password instead of magic links?** iOS opens email links in Safari, which has a separate storage origin from a home-screen PWA — magic links never reach the PWA. With "Confirm email" turned off, password sign-in never sends an email at all, so it works on free projects without custom SMTP. Each device signs in on its own and gets its own session; sharing one session between devices doesn't work, because Supabase rotates the refresh token on every refresh and the other device's copy goes stale.
 
 To enable:
 
 1. Create a free Supabase project at [supabase.com](https://supabase.com).
 2. Run [`docs/supabase-schema.sql`](docs/supabase-schema.sql) in the project's SQL editor — creates the `progress` and `active_chapters` tables with Row Level Security so each user only sees their own rows.
-3. In **Authentication → Sign In/Up**, toggle **"Allow anonymous sign-ins"** ON.
-4. In **Authentication → Sessions**, set **"Refresh token rotation"** to OFF (or extend the reuse interval). Default rotation invalidates the refresh token after first use, which would break the second device when its session refreshes. For a single-user, multi-device setup, disabling rotation is fine.
-5. Add two repository secrets under **Settings → Secrets and variables → Actions**:
+3. In **Authentication → Sign In / Providers → Email**, keep the Email provider enabled and turn **"Confirm email"** OFF.
+4. Add two repository secrets under **Settings → Secrets and variables → Actions**:
    - `VITE_SUPABASE_URL` — your project URL (e.g. `https://abc123.supabase.co`)
    - `VITE_SUPABASE_ANON_KEY` — the public anon key (Settings → API). Safe to embed in client code; Row Level Security is what enforces access control.
-6. Push to `main` to redeploy.
+5. Push to `main` to redeploy.
 
-After that, the dashboard shows a "Sign in to sync" chip. On the first device, click **Enable sync** — your progress starts syncing immediately. To add a second device, click **Add device** to copy a sync code, then paste it on the new device under "I have a sync code from another device". Anyone with the code gets full access to your data — treat it like a password, store it in your password manager.
+After that, the dashboard shows a "Sign in to sync" chip. On the first device, choose **Create account**; on every other device, **Sign in** with the same email and password. Once your account exists you can turn off **"Allow new users to sign up"** in Authentication settings so nobody else can create accounts on your project.
+
+**Migrating from the old anonymous sync code:** on a device that's still signed in, tap **Set password** next to "Synced". That adds an email and password to the existing account, keeping its user id and all synced data. Then sign out on your other devices and sign back in with the new credentials. If every device has already been signed out, just create a new account — each device pushes its local progress up on first sign-in. Afterwards you can turn off **"Allow anonymous sign-ins"** and turn **"Detect and revoke potentially compromised refresh tokens"** back on.
 
 ## Roadmap
 
