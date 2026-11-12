@@ -1,0 +1,702 @@
+[
+  {
+    "id": "gen-001",
+    "question": "Ａ：来週は 田中さんの 誕生日だね。プレゼント、何を ＿＿ 。 Ｂ：本が 好きだから、本は どう？",
+    "choices": [
+      "もらったら いいかな",
+      "あげた ことが あるかな",
+      "あげたら いいかな",
+      "くれたら いいかな"
+    ],
+    "answer": 2,
+    "chapter": 26,
+    "grammarPoint": "疑問詞 + ～たらいいですか",
+    "explanation": "何をあげたらいいかな asks for advice on what to give; もらう/くれる are the wrong direction, and あげたことがある asks about experience."
+  },
+  {
+    "id": "gen-002",
+    "question": "（図書館で）コピー機の 使い方が わからないんですが、ちょっと 教えて ＿＿ 。",
+    "choices": [
+      "いただけませんか",
+      "いただきませんか",
+      "あげませんか",
+      "もらいましたか"
+    ],
+    "answer": 0,
+    "chapter": 26,
+    "grammarPoint": "～んですが、～ていただけませんか",
+    "explanation": "After んですが, ていただけませんか makes a polite request; いただきませんか isn't a request, and あげる/もらう don't fit."
+  },
+  {
+    "id": "gen-003",
+    "question": "夜 静かに なると、遠くから 電車の 音が ＿＿ 。",
+    "choices": [
+      "聞けます",
+      "聞きます",
+      "聞いています",
+      "聞こえます"
+    ],
+    "answer": 3,
+    "chapter": 27,
+    "grammarPoint": "聞こえます (spontaneous audibility)",
+    "explanation": "聞こえます means a sound naturally reaches the ear; 聞けます means having the chance or ability to listen."
+  },
+  {
+    "id": "gen-004",
+    "question": "わたしの 町の 駅には ＿＿ ＿＿ ＿＿ ★ 止まらない。",
+    "choices": [
+      "しか",
+      "電車が",
+      "一時間に",
+      "一本"
+    ],
+    "answer": 0,
+    "chapter": 27,
+    "grammarPoint": "～しか～ない (with counters)",
+    "explanation": "Full sentence: わたしの町の駅には電車が一時間に一本しか止まらない。 しか follows the counter 一本 and takes a negative verb."
+  },
+  {
+    "id": "gen-005",
+    "question": "兄は 会社で ＿＿ 、大学に 通って います。",
+    "choices": [
+      "働いたり",
+      "働きながら",
+      "働くと",
+      "働くまで"
+    ],
+    "answer": 1,
+    "chapter": 28,
+    "grammarPoint": "～ながら (long-term parallel activities)",
+    "explanation": "Stem + ながら shows two long-term activities done in parallel; 働いたり needs a second たり, and 働くと/働くまで don't fit."
+  },
+  {
+    "id": "gen-006",
+    "question": "Ａ：どうして この アパートに 決めたんですか。 Ｂ：駅から 近いんです。＿＿ 、家賃も 安いですから。",
+    "choices": [
+      "それで",
+      "だから",
+      "でも",
+      "それに"
+    ],
+    "answer": 3,
+    "chapter": 28,
+    "grammarPoint": "それに",
+    "explanation": "それに adds another reason; それで and だから introduce a result, and でも introduces a contrast."
+  },
+  {
+    "id": "gen-007",
+    "question": "この 椅子は ＿＿ から、座らないで ください。",
+    "choices": [
+      "壊れています",
+      "壊しています",
+      "壊れていません",
+      "壊していません"
+    ],
+    "answer": 0,
+    "chapter": 29,
+    "grammarPoint": "Verb て-form + います (broken / damaged state)",
+    "explanation": "壊れています describes the chair's broken state; 壊しています means someone is breaking it, and the negatives contradict 座らないで."
+  },
+  {
+    "id": "gen-008",
+    "question": "あーあ、また 傘を ★ ＿＿ ＿＿ ＿＿ 。",
+    "choices": [
+      "忘れて",
+      "みたい",
+      "どこかに",
+      "しまった"
+    ],
+    "answer": 2,
+    "chapter": 29,
+    "grammarPoint": "～てしまいました (regret, lost / dropped)",
+    "explanation": "Full sentence: あーあ、また傘をどこかに忘れてしまったみたい。 てしまった expresses regret about losing something; どこかに marks an unknown place."
+  },
+  {
+    "id": "gen-009",
+    "question": "Ａ：会議は 何時からですか。 Ｂ：ホワイトボードに 書いて ＿＿ よ。ほら、３時からです。",
+    "choices": [
+      "おきます",
+      "ください",
+      "しまいます",
+      "あります"
+    ],
+    "answer": 3,
+    "chapter": 30,
+    "grammarPoint": "～てあります (schedule / written down)",
+    "explanation": "書いてあります means the information is already written there; ほら shows B is reading it now, so おきます/ください don't fit."
+  },
+  {
+    "id": "gen-010",
+    "question": "Ａ：この 窓、閉めましょうか。 Ｂ：まだ 暑いですから、開けて ＿＿ ください。",
+    "choices": [
+      "あって",
+      "おいて",
+      "しまって",
+      "あげて"
+    ],
+    "answer": 1,
+    "chapter": 30,
+    "grammarPoint": "～ておきます (leave as is)",
+    "explanation": "開けておいてください asks to leave the window open as it is; てしまって implies finishing, てあげて doing a favor."
+  },
+  {
+    "id": "gen-011",
+    "question": "Ａ：旅行の ホテルは もう 予約しましたか。 Ｂ：いいえ、まだ ＿＿ 。今夜 インターネットで 探します。",
+    "choices": [
+      "予約していません",
+      "予約しませんでした",
+      "予約しています",
+      "予約しました"
+    ],
+    "answer": 0,
+    "chapter": 31,
+    "grammarPoint": "まだ + Verb て-form + いません",
+    "explanation": "まだ + ていません means not done yet; まだ with 予約しませんでした is a common learner error."
+  },
+  {
+    "id": "gen-012",
+    "question": "Ａ：もう ６時だね。そろそろ ＿＿ 。 Ｂ：うん、そうしよう。",
+    "choices": [
+      "帰れるか",
+      "帰ったか",
+      "帰ろうか",
+      "帰っているか"
+    ],
+    "answer": 2,
+    "chapter": 31,
+    "grammarPoint": "意向形 (volitional)",
+    "explanation": "Volitional 帰ろうか makes a suggestion; うん、そうしよう accepts it, so questions about ability or the past don't fit."
+  },
+  {
+    "id": "gen-013",
+    "question": "Ａ：きのうから 熱が あって、のども 痛いんだ。 Ｂ：え、大丈夫？ 今日は 学校を 休んで、病院へ ＿＿ よ。",
+    "choices": [
+      "行かない ほうが いい",
+      "行った ほうが いい",
+      "行かなくても いい",
+      "行っては いけない"
+    ],
+    "answer": 1,
+    "chapter": 32,
+    "grammarPoint": "～たほうがいいです",
+    "explanation": "Someone with a fever should be advised to see a doctor, so 行ったほうがいい fits; the other choices discourage or forbid going."
+  },
+  {
+    "id": "gen-014",
+    "question": "Ａ：山田さん、遅いね。 Ｂ：＿＿ ＿＿ ＿＿ ★ ね。",
+    "choices": [
+      "かもしれない",
+      "道が",
+      "もしかしたら",
+      "混んでいる"
+    ],
+    "answer": 0,
+    "chapter": 32,
+    "grammarPoint": "もしかしたら～かもしれません",
+    "explanation": "Full sentence: もしかしたら道が混んでいるかもしれないね。 もしかしたら pairs with かもしれない; ★ is the same if 道が comes first."
+  },
+  {
+    "id": "gen-015",
+    "question": "Ａ：あの 「ＥＸＩＴ」は どういう 意味ですか。 Ｂ：「出口」＿＿ 意味です。",
+    "choices": [
+      "と",
+      "という",
+      "の",
+      "が"
+    ],
+    "answer": 1,
+    "chapter": 33,
+    "grammarPoint": "Noun1 は Noun2 という意味です",
+    "explanation": "The pattern is Noun1 は Noun2 という意味です; the meaning must be linked to 意味 with という."
+  },
+  {
+    "id": "gen-016",
+    "question": "（電話で）Ａ：すみません、田中は 今 出かけて います。 Ｂ：そうですか。では、山本から 電話が あったと ＿＿ 。",
+    "choices": [
+      "伝えて おきましょうか",
+      "言って いましたか",
+      "伝えて あげましょうか",
+      "伝えて いただけませんか"
+    ],
+    "answer": 3,
+    "chapter": 33,
+    "grammarPoint": "～と伝えていただけませんか",
+    "explanation": "B, the caller Yamamoto, asks A to pass on a message: と伝えていただけませんか. おきましょうか/あげましょうか are offers, and 言っていましたか asks about the past."
+  },
+  {
+    "id": "gen-017",
+    "question": "料理の 本 ＿＿ とおりに 作ったら、おいしい カレーが できました。",
+    "choices": [
+      "に",
+      "の",
+      "と",
+      "な"
+    ],
+    "answer": 1,
+    "chapter": 34,
+    "grammarPoint": "Noun + のとおりに",
+    "explanation": "Noun + のとおりに means exactly as the noun shows; nouns connect to とおり with の."
+  },
+  {
+    "id": "gen-018",
+    "question": "日曜日は どこへも ＿＿ 、一日中 うちで 部屋の 掃除を した。",
+    "choices": [
+      "出かけなくて",
+      "出かけないと",
+      "出かけなければ",
+      "出かけないで"
+    ],
+    "answer": 3,
+    "chapter": 34,
+    "grammarPoint": "Verb-ないで (instead of)",
+    "explanation": "ないで means doing one thing instead of another; なくて marks a cause, and と/なければ are conditions that don't fit a past fact."
+  },
+  {
+    "id": "gen-019",
+    "question": "この 歌は ＿＿ 聞く ほど 好きに なります。",
+    "choices": [
+      "聞くと",
+      "聞けば",
+      "聞いて",
+      "聞いたら"
+    ],
+    "answer": 1,
+    "chapter": 35,
+    "grammarPoint": "～ば～ほど",
+    "explanation": "～ば～ほど means the more, the more; only the ば form pairs with 聞くほど."
+  },
+  {
+    "id": "gen-020",
+    "question": "もう少し 値段が ＿＿ 、この 靴、買うんだけどなあ。",
+    "choices": [
+      "安いから",
+      "安くても",
+      "安ければ",
+      "安いのに"
+    ],
+    "answer": 2,
+    "chapter": 35,
+    "grammarPoint": "条件形 ば (い-adj / な-adj / noun)",
+    "explanation": "安ければ sets an unreal condition: I would buy them if they were cheaper; から, ても and のに cannot express that condition."
+  },
+  {
+    "id": "gen-021",
+    "question": "冬は 子どもが ＿＿ ★ ＿＿ ＿＿ 帰ったら、すぐ 手を 洗わせて いる。",
+    "choices": [
+      "ひかない",
+      "外から",
+      "ように",
+      "風邪を"
+    ],
+    "answer": 0,
+    "chapter": 36,
+    "grammarPoint": "～ないように (preventive purpose)",
+    "explanation": "Full sentence: 冬は子どもが風邪をひかないように外から帰ったら、すぐ手を洗わせている。 ないように states a preventive purpose."
+  },
+  {
+    "id": "gen-022",
+    "question": "（図書館の お知らせ）借りた 本は 決められた 日までに 返す ように ＿＿ 。",
+    "choices": [
+      "なって ください",
+      "して います",
+      "して ください",
+      "なりました"
+    ],
+    "answer": 2,
+    "chapter": 36,
+    "grammarPoint": "～ようにしてください (polite effort request)",
+    "explanation": "ようにしてください asks readers to make sure they do something; ようになる describes a change, and しています describes the writer's own habit."
+  },
+  {
+    "id": "gen-023",
+    "question": "この 絵は ピカソ ＿＿ 描かれました。",
+    "choices": [
+      "に",
+      "から",
+      "で",
+      "によって"
+    ],
+    "answer": 3,
+    "chapter": 37,
+    "grammarPoint": "～によって + 受身 (creator / inventor)",
+    "explanation": "In the passive, the creator of a work takes によって; に is not used for the painter."
+  },
+  {
+    "id": "gen-024",
+    "question": "もう、いやだ。弟に ★ ＿＿ ＿＿ ＿＿ 。",
+    "choices": [
+      "自転車を",
+      "使われた",
+      "大切に",
+      "して いた"
+    ],
+    "answer": 2,
+    "chapter": 37,
+    "grammarPoint": "迷惑の受身 (with personal items)",
+    "explanation": "Full sentence: 弟に大切にしていた自転車を使われた。 Adversity passive: person + に, personal item + を, showing annoyance."
+  },
+  {
+    "id": "gen-025",
+    "question": "あ、いけない。部屋の 電気を 消す ＿＿ 忘れちゃった。",
+    "choices": [
+      "のが",
+      "ものを",
+      "ことに",
+      "のを"
+    ],
+    "answer": 3,
+    "chapter": 38,
+    "grammarPoint": "Verb-の + を忘れました",
+    "explanation": "Verb + のを忘れました means forgot to do something; 忘れる takes を, so のが and ことに are wrong."
+  },
+  {
+    "id": "gen-026",
+    "question": "わたしが 生まれた ＿＿ 山の 中の 小さな 町です。",
+    "choices": [
+      "ことは",
+      "のは",
+      "のを",
+      "のと"
+    ],
+    "answer": 1,
+    "chapter": 38,
+    "grammarPoint": "Verb-の + は + Noun です (cleft)",
+    "explanation": "Cleft Verb-のは + Noun です focuses on the place; こと can't stand for a place, and のを/のと break the structure."
+  },
+  {
+    "id": "gen-027",
+    "question": "国の 家族から 久しぶりに 手紙が 来て、＿＿ 。",
+    "choices": [
+      "安心しました",
+      "安心しましょう",
+      "安心してください",
+      "安心したいです"
+    ],
+    "answer": 0,
+    "chapter": 39,
+    "grammarPoint": "～て / ～で (cause, emotional)",
+    "explanation": "A て-form cause must be followed by a feeling or result, so 安心しました fits; volitional, request and desire forms can't follow it."
+  },
+  {
+    "id": "gen-028",
+    "question": "Ａ：きのう 傘、持って いなかったよね。大丈夫だった？ Ｂ：ううん。学校から ＿＿ 、急に 雨が 降って きて、大変だったよ。",
+    "choices": [
+      "帰った あとで",
+      "帰りながら",
+      "帰る 途中で",
+      "帰る ために"
+    ],
+    "answer": 2,
+    "chapter": 39,
+    "grammarPoint": "～途中で",
+    "explanation": "途中で means on the way: the rain caught B walking home without an umbrella; あとで contradicts that, and ながら/ために don't fit."
+  },
+  {
+    "id": "gen-029",
+    "question": "Ａ：今度の 休み、何 したい？ Ｂ：一度 着物を ＿＿ な。",
+    "choices": [
+      "着てほしい",
+      "着てみた",
+      "着てあげたい",
+      "着てみたい"
+    ],
+    "answer": 3,
+    "chapter": 40,
+    "grammarPoint": "～てみたいです",
+    "explanation": "てみたい says B wants to try wearing a kimono; てほしい wants someone else to, てみた is past, and てあげたい implies a favor."
+  },
+  {
+    "id": "gen-030",
+    "question": "Ａ：あしたの パーティー、何か 持って 行く？ Ｂ：うーん、＿＿ ＿＿ ★ ＿＿ 、山田さんに 聞いて みるよ。",
+    "choices": [
+      "何人",
+      "わからない から",
+      "来るか",
+      "ぐらい"
+    ],
+    "answer": 2,
+    "chapter": 40,
+    "grammarPoint": "疑問詞 + 普通形 + か",
+    "explanation": "Full sentence: うーん、何人ぐらい来るかわからないから、山田さんに聞いてみるよ。 Question word + plain form + か embeds a question inside the sentence."
+  },
+  {
+    "id": "gen-031",
+    "question": "毎朝 庭の 花に 水を ＿＿ 。",
+    "choices": [
+      "くれます",
+      "やります",
+      "もらいます",
+      "いただきます"
+    ],
+    "answer": 1,
+    "chapter": 41,
+    "grammarPoint": "やります (giving downward)",
+    "explanation": "やります is used for giving to plants, animals or people below you; くれます, もらいます and いただきます are the wrong direction."
+  },
+  {
+    "id": "gen-032",
+    "question": "道に 迷って いた とき、知らない おばあさんが 駅まで 連れて 行って ＿＿ 。",
+    "choices": [
+      "くださいました",
+      "いただきました",
+      "さしあげました",
+      "やりました"
+    ],
+    "answer": 0,
+    "chapter": 41,
+    "grammarPoint": "～てくださいます (respectful done-for-me)",
+    "explanation": "てくださいました shows respect for a favor done for me; いただきました would need に, not が."
+  },
+  {
+    "id": "gen-033",
+    "question": "この はさみは 花を 切る ＿＿ 使います。",
+    "choices": [
+      "のを",
+      "のに",
+      "ように",
+      "ので"
+    ],
+    "answer": 1,
+    "chapter": 42,
+    "grammarPoint": "Verb dictionary form + のに (purpose / use)",
+    "explanation": "Dictionary form + のに使います shows what something is used for; のを, ように and ので don't connect this way."
+  },
+  {
+    "id": "gen-034",
+    "question": "Ａ：大学まで 自転車で どのぐらい かかる？ Ｂ：そうだね、★ ＿＿ ＿＿ ＿＿ 。",
+    "choices": [
+      "は",
+      "と 思う",
+      "かかる",
+      "３０分"
+    ],
+    "answer": 3,
+    "chapter": 42,
+    "grammarPoint": "Quantity + は (at least)",
+    "explanation": "Full sentence: そうだね、３０分はかかると思う。 Quantity + は means at least that amount."
+  },
+  {
+    "id": "gen-035",
+    "question": "Ａ：どこへ 行くんですか。 Ｂ：ちょっと コンビニで 飲み物を 買って ＿＿ 。すぐ 戻ります。",
+    "choices": [
+      "きます",
+      "あります",
+      "しまいます",
+      "いきます"
+    ],
+    "answer": 0,
+    "chapter": 43,
+    "grammarPoint": "～てきます (go do and return)",
+    "explanation": "てきます means going to do something and coming back; すぐ戻ります rules out いきます."
+  },
+  {
+    "id": "gen-036",
+    "question": "あ、シャツの ボタンが ＿＿ ですよ。",
+    "choices": [
+      "取れるそう",
+      "取りそう",
+      "取れそう",
+      "取れたそう"
+    ],
+    "answer": 2,
+    "chapter": 43,
+    "grammarPoint": "Verb-stem + そうです (looks about to)",
+    "explanation": "Stem + そう means the button looks about to come off; 取れる/取れたそう are hearsay, wrong for noticing it, and 取る is transitive."
+  },
+  {
+    "id": "gen-037",
+    "question": "あしたは お客さんが 来るから、部屋を きれいに ＿＿ おいてね。",
+    "choices": [
+      "して",
+      "なって",
+      "されて",
+      "なれて"
+    ],
+    "answer": 0,
+    "chapter": 44,
+    "grammarPoint": "な-adj / Noun + にします (transform)",
+    "explanation": "部屋を needs transitive する: きれいにしておいて means tidy it up; なって would need 部屋が, and されて is passive."
+  },
+  {
+    "id": "gen-038",
+    "question": "Ａ：弟が 勉強して いるから、テレビの 音を ＿＿ ★ ＿＿ ＿＿ ？ Ｂ：あ、ごめん。",
+    "choices": [
+      "して",
+      "もう少し",
+      "くれない",
+      "小さく"
+    ],
+    "answer": 3,
+    "chapter": 44,
+    "grammarPoint": "い-adj → くします (transform)",
+    "explanation": "Full sentence: テレビの音をもう少し小さくしてくれない？ An い-adjective drops い and adds く before する."
+  },
+  {
+    "id": "gen-039",
+    "question": "雨の ＿＿ は、あしたの ハイキングは 来週に なります。",
+    "choices": [
+      "ため",
+      "場合",
+      "あと",
+      "前"
+    ],
+    "answer": 1,
+    "chapter": 45,
+    "grammarPoint": "Noun + の場合は",
+    "explanation": "Noun + の場合は sets a hypothetical case; ため can't take は here, and あと/前 express time, not a condition."
+  },
+  {
+    "id": "gen-040",
+    "question": "Ａ：田中さん、来なかったね。 Ｂ：うん。きのう 「行く」と ＿＿ 、どうしたんだろう。",
+    "choices": [
+      "言っても",
+      "言ったので",
+      "言ったから",
+      "言ったのに"
+    ],
+    "answer": 3,
+    "chapter": 45,
+    "grammarPoint": "～のに vs が / ても",
+    "explanation": "のに contrasts his promise with his not coming, showing surprise; ても means 'even if', and ので/から give reasons that don't fit."
+  },
+  {
+    "id": "gen-041",
+    "question": "この パソコンは 先月 ＿＿ なのに、もう 壊れて しまいました。",
+    "choices": [
+      "買うばかり",
+      "買ったところ",
+      "買ったばかり",
+      "買っているところ"
+    ],
+    "answer": 2,
+    "chapter": 46,
+    "grammarPoint": "～たばかりです (recently)",
+    "explanation": "たばかり means a short time has passed in the speaker's view; たところ fits only a moment ago, not 先月."
+  },
+  {
+    "id": "gen-042",
+    "question": "Ａ：宿題、まだ 終わらないの？ Ｂ：うん、今 ＿＿ なんだ。もう 半分ぐらい 終わったよ。",
+    "choices": [
+      "やっているところ",
+      "やるところ",
+      "やったところ",
+      "やったばかり"
+    ],
+    "answer": 0,
+    "chapter": 46,
+    "grammarPoint": "～ているところです (right now)",
+    "explanation": "Half done means B is in the middle of it, so ているところ fits; るところ is about to start, and たところ/たばかり mean finished."
+  },
+  {
+    "id": "gen-043",
+    "question": "Ａ：となりに 引っ越して きた 人、もう 会った？ Ｂ：ううん。でも、母の 話だと ＿＿ ＿＿ ★ ＿＿ よ。",
+    "choices": [
+      "親切で",
+      "とても",
+      "おもしろい",
+      "そうだ"
+    ],
+    "answer": 2,
+    "chapter": 47,
+    "grammarPoint": "～そうです (hearsay, adjective)",
+    "explanation": "Full sentence: 母の話だととても親切でおもしろいそうだよ。 Hearsay そうだ follows plain おもしろい; ★ is the same if とても moves."
+  },
+  {
+    "id": "gen-044",
+    "question": "Ａ：あれ？ ドアの 方で 何か 音が ＿＿ 。 Ｂ：だれか 来たのかな。",
+    "choices": [
+      "した",
+      "出た",
+      "あった",
+      "聞いた"
+    ],
+    "answer": 0,
+    "chapter": 47,
+    "grammarPoint": "音/声/におい/味 + がします",
+    "explanation": "A sound you perceive takes がする: 音がした; 音があった/出た are unnatural here, and 聞く needs を, not が."
+  },
+  {
+    "id": "gen-045",
+    "question": "先生は 遅れて 来た 学生を 教室の 外に ＿＿ 。",
+    "choices": [
+      "立てました",
+      "立たせました",
+      "立たれました",
+      "立てさせました"
+    ],
+    "answer": 1,
+    "chapter": 48,
+    "grammarPoint": "使役 (intransitive verb, person takes を)",
+    "explanation": "Intransitive 立つ becomes causative 立たせる with person + を; 立てる is for objects, 立てさせる is its causative, and 立たれる is passive."
+  },
+  {
+    "id": "gen-046",
+    "question": "（サッカー部で）Ａ：先生、あしたは 家族で 出かけるので、練習を ＿＿ いただけませんか。 Ｂ：ええ、いいですよ。",
+    "choices": [
+      "休んで",
+      "休まれて",
+      "休ませて",
+      "休めて"
+    ],
+    "answer": 2,
+    "chapter": 48,
+    "grammarPoint": "使役て + いただけませんか",
+    "explanation": "休ませていただけませんか asks permission to miss practice; 休んでいただけませんか would ask the teacher himself to take the day off."
+  },
+  {
+    "id": "gen-047",
+    "question": "Ａ：部長は もう この メールを ＿＿ か。 Ｂ：はい、さっき お読みに なりました。",
+    "choices": [
+      "読まれました",
+      "お読みしました",
+      "読ませました",
+      "読んで さしあげました"
+    ],
+    "answer": 0,
+    "chapter": 49,
+    "grammarPoint": "尊敬語 (passive-form honorific)",
+    "explanation": "Passive-form 読まれる honors the manager's action; お読みします is humble (for your own actions), and 読ませました means he made someone read it."
+  },
+  {
+    "id": "gen-048",
+    "question": "（病院の 受付で）お名前が ＿＿ ＿＿ ★ ＿＿ 。",
+    "choices": [
+      "ください",
+      "呼ばれるまで",
+      "こちらで",
+      "お待ち"
+    ],
+    "answer": 3,
+    "chapter": 49,
+    "grammarPoint": "お + Verb-stem + ください",
+    "explanation": "Full sentence: お名前が呼ばれるまでこちらでお待ちください。 お + stem + ください is a respectful request."
+  },
+  {
+    "id": "gen-049",
+    "question": "（電話で）では、あしたの ３時に わたしが そちらへ ＿＿ 。(=行く)",
+    "choices": [
+      "いらっしゃいます",
+      "まいります",
+      "行かれます",
+      "おいでに なります"
+    ],
+    "answer": 1,
+    "chapter": 50,
+    "grammarPoint": "特別な謙譲語 (special humble verbs)",
+    "explanation": "まいります is the humble form of 行く for the speaker's own action; the other choices are respectful forms for others."
+  },
+  {
+    "id": "gen-050",
+    "question": "店員：朝ごはんは パンと ごはんと、どちらが ＿＿ か。 客：パンを お願いします。",
+    "choices": [
+      "ございましょう",
+      "いかがでしょう",
+      "よろしいでしょう",
+      "いたしましょう"
+    ],
+    "answer": 2,
+    "chapter": 50,
+    "grammarPoint": "丁寧語 (asking preference)",
+    "explanation": "どちらがよろしいでしょうか politely asks a preference; いかが needs は (～はいかがですか), and ございます/いたします don't fit."
+  }
+]
